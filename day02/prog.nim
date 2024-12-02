@@ -1,5 +1,4 @@
 import strutils
-import algorithm
 
 proc getInput(fname: string): seq[seq[int]] =
   result = @[]
@@ -39,12 +38,19 @@ proc part1(fname: string): int =
       result += 1
 
 proc part2(fname: string): int =
-  return 0
-  # var (a, b) = getInput(fname)
-  # result = 0
-  # for n in b:
-  #   if a.contains(n):
-  #     result += n
+  let ls = getInput(fname)
+  result = 0
+  for l in ls:
+    if isSafe(l):
+      result += 1
+    else:
+      # Very inefficient but works for this data...
+      for idx in 0..<len(l):
+        var nl = l
+        nl.delete(idx)
+        if isSafe(nl):
+          result += 1
+          break
 
 echo "Part1: ", part1("input.txt")
 echo "Part2: ", part2("input.txt")
