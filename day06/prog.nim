@@ -64,7 +64,7 @@ assert getNumVisited("ex0.txt") == 41
 type GuardState =
   tuple[x: int, y: int, dx: int, dy: int]
 
-proc hasLoop(d: Data, xo, yo: int): bool =
+proc hasLoop(d: var Data, xo, yo: int): bool =
   var v = initHashSet[GuardState]()
   v.incl((x: d.x0, y: d.y0, dx: 0, dy: -1))
 
@@ -105,7 +105,7 @@ proc hasLoop(d: Data, xo, yo: int): bool =
     v.incl(st)
 
 proc getNumLoops(fname: string): int =
-  let d = getInput(fname)
+  var d = getInput(fname)
   for y in 0..<d.map.len:
     for x in 0..<d.map[0].len:
       if y == d.y0 and x == d.x0 or d.map[y][x] == '#':
@@ -113,7 +113,7 @@ proc getNumLoops(fname: string): int =
       if hasLoop(d, x, y):
         result += 1
 
-let exData = getInput("ex0.txt")
+var exData = getInput("ex0.txt")
 assert hasLoop(exData, exData.x0 - 1, exData.y0)
 
 echo getNumLoops("ex0.txt")
