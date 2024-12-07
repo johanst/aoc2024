@@ -1,6 +1,4 @@
 import strutils
-import sequtils
-import sets
 import math
 
 type
@@ -29,7 +27,10 @@ proc getCalibration(d: Data): int =
         res *= d.op[j+1]
       else:
         res += d.op[j+1]
+      if res > d.res:
+        break
     if res == d.res:
+      echo "*+  :", d.res, " ", d.op
       return d.res
   return 0
 
@@ -43,109 +44,91 @@ proc getCalibrationSum(fname: string): int =
 
 assert getCalibrationSum("ex0.txt") == 3749
 
-# proc getNumVisited(fname: string): int =
-#   let d = getInput(fname)
-#   var v: seq[seq[bool]]
-#   for _ in 0..<d.map.len:
-#     v.add(newSeq[bool](d.map[0].len))
-#   v[d.y0][d.x0] = true
+proc concatInt(a, b: int): int =
+  var bb = b
+  var m = 1
+  while bb > 0:
+    bb = bb div 10
+    m *= 10
+  return a * m + b
 
-#   let ysz = v.len
-#   let xsz = v[0].len
-#   var x = d.x0
-#   var y = d.y0
-#   var dx = 0
-#   var dy = -1
-#   while true:
-#     var xx = x + dx
-#     var yy = y + dy
-#     if xx < 0 or xx >= xsz or yy < 0 or yy >= ysz:
-#       break
-#     elif d.map[yy][xx] == '#':
-#       if (dy, dx) == (-1, 0):
-#         (dy, dx) = (0, 1)
-#       elif (dy, dx) == (0, 1):
-#         (dy, dx) = (1, 0)
-#       elif (dy, dx) == (1, 0):
-#         (dy, dx) = (0, -1)
-#       elif (dy, dx) == (0, -1):
-#         (dy, dx) = (-1, 0)
-#       else:
-#         assert false, "WTF"
-#       continue
-#     y = yy
-#     x = xx
-#     v[y][x] = true
+assert concatInt(123, 45) == 12345
 
-#   for vr in v:
-#     result += countIt(vr, it)
+proc printOps(d: Data, n: int) =
+  var s: seq[string]
+  s.add(intToStr(d.op[0]))
+  for j in 0..<d.op.len-1:
+    let optype = ((n shr (2 * j)) and 3)
+    case optype
+    of 0:
+      s.add("*")
+    of 1:
+      s.add("+")
+    of 2:
+      s.add("||")
+    else:
+      echo "******** invalid optype ", optype, " n=", n, " j=", j, " s=", s
+      assert false
+    s.add(intToStr(d.op[j]))
+  let st = s.join(" ")
+  echo "    -> ", st
 
-# assert getNumVisited("ex0.txt") == 41
+proc getCalibration2(d: Data): int =
+  let n = 4 ^ d.op.len
+  for i in 0..<n:
+    # echo "--- ", i, " ---- "
+    var res = d.op[0]
+    for j in 0..<d.op.len-1:
+      let optype = ((i shr (2 * j)) and 3)
+      case optype
+      of 0:
+        # echo "*"
+        res *= d.op[j+1]
+      of 1:
+        # echo "+"
+        res += d.op[j+1]
+      of 2:
+        # echo "||"
+        res = concatInt(res, d.op[j+1])
+      else:
+        res = 0
+        break
+      if res > d.res:
+        break
+    if res == d.res:
+      echo "*+||:", d.res, " ", d.op
+      printOps(d, i)
+      return d.res
+  return 0
 
-# type GuardState =
-#   tuple[x: int, y: int, dx: int, dy: int]
+assert getCalibration2(Data(res: 192, op: @[17, 8, 14])) == 192
+assert getCalibration2(Data(res: 7290, op: @[6, 8, 6, 15])) == 7290
 
-# proc hasLoop(d: Data, xo, yo: int): bool =
-#   var v = initHashSet[GuardState]()
-#   v.incl((x: d.x0, y: d.y0, dx: 0, dy: -1))
+assert getCalibration2(Data(res: 577634740, op: @[4, 843, 8, 60, 86, 294, 1, 4,
+    4])) == 577634740
 
-#   let ysz = d.map.len
-#   let xsz = d.map[0].len
-#   var x = d.x0
-#   var y = d.y0
-#   var dx = 0
-#   var dy = -1
-#   while true:
-#     var xx = x + dx
-#     var yy = y + dy
-#     # echo (x: x, y: y, dx: dx, dy: dy)
-#     if xx < 0 or xx >= xsz or yy < 0 or yy >= ysz:
-#       # echo "false after ", v.len
-#       return false
-#     var c = d.map[yy][xx]
-#     if yy == yo and xx == xo:
-#       c = '#'
-#     if c == '#':
-#       if (dy, dx) == (-1, 0):
-#         (dy, dx) = (0, 1)
-#       elif (dy, dx) == (0, 1):
-#         (dy, dx) = (1, 0)
-#       elif (dy, dx) == (1, 0):
-#         (dy, dx) = (0, -1)
-#       elif (dy, dx) == (0, -1):
-#         (dy, dx) = (-1, 0)
-#       else:
-#         assert false, "WTF"
-#     else:
-#       y = yy
-#       x = xx
-#     let st = (x: x, y: y, dx: dx, dy: dy)
-#     if v.contains(st):
-#       # echo "true after ", v.len
-#       return true
-#     v.incl(st)
 
-# proc getNumLoops(fname: string): int =
-#   let d = getInput(fname)
-#   for y in 0..<d.map.len:
-#     for x in 0..<d.map[0].len:
-#       if y == d.y0 and x == d.x0 or d.map[y][x] == '#':
-#         continue
-#       if hasLoop(d, x, y):
-#         result += 1
+proc getCalibrationSum2(fname: string): int =
+  let d = getInput(fname)
+  for dd in d:
+    var c1 = getCalibration(dd)
+    if c1 > 0:
+      result += c1
+    else:
+      c1 = getCalibration2(dd)
+      if c1 > 0:
+        result += c1
+      else:
+        echo "----:", dd.res, " ", dd.op
 
-# let exData = getInput("ex0.txt")
-# assert hasLoop(exData, exData.x0 - 1, exData.y0)
+assert getCalibrationSum2("ex0.txt") == 11387
 
-# echo getNumLoops("ex0.txt")
-# assert getNumLoops("ex0.txt") == 6
-
-# 414138 not correct
 proc part1(fname: string): int =
   return getCalibrationSum(fname)
 
+# 426214138756653 wrong answer
 proc part2(fname: string): int =
-  return 0
+  return getCalibrationSum2(fname)
 
 echo "Part1: ", part1("input.txt")
 echo "Part2: ", part2("input.txt")
