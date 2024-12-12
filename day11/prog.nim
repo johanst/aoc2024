@@ -1,7 +1,4 @@
-import strutils
 import math
-import sets
-import deques
 import tables
 
 let data_input = [2u64, 77706, 5847, 9258441, 0, 741, 883933, 12]
