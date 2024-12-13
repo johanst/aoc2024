@@ -1,8 +1,5 @@
 import strutils
 import math
-import sets
-import tables
-import algorithm
 import re
 
 type Pos = tuple[x, y: int]
@@ -32,42 +29,31 @@ proc getInput(fname: string): seq[Data] =
     sd.add(parseInput(l[idx*3..<(idx+1)*3]))
   return sd
 
-proc calcToken(d: Data): int =
-  # let xmax = min(min(d.p.x div d.a.x, d.p.x div d.b.x), 100)
-  # let ymax = min(min(d.p.y div d.a.y, d.p.y div d.b.y), 100)
-  var cost = high(int)
-  for na in 0..100:
-    let xa = na * d.a.x
-    let ya = na * d.a.y
-    if xa > d.p.x or ya > d.p.y:
-      break
-    for nb in 0..100:
-      let xb = nb * d.b.x
-      let yb = nb * d.b.y
-      let x = xa + xb
-      let y = ya + yb
-      if x > d.p.x or y > d.p.y:
-        break
-      if x == d.p.x and y == d.p.y:
-        cost = min(3*na + nb, cost)
-  if cost == high(int):
-    cost = 0
-  return cost
-
-assert calcToken(getInput("ex0.txt")[0]) == 280
+proc calcToken(d: Data, offset: int): int =
+  let px = d.p.x + offset
+  let py = d.p.y + offset
+  let na = (px * d.b.y - py * d.b.x) div (d.a.x * d.b.y - d.a.y * d.b.x)
+  let nb = (px - d.a.x * na) div d.b.x
+  if na * d.a.x + nb * d.b.x == px and na * d.a.y + nb * d.b.y == py:
+    result = na * 3 + nb
 
 proc calcTokens(fname: string): int =
   let d = getInput(fname)
   for n, dd in d:
-    result += calcToken(dd)
+    result += calcToken(dd, 0)
 
 assert calcTokens("ex0.txt") == 480
+
+proc calcTokens2(fname: string): int =
+  let d = getInput(fname)
+  for n, dd in d:
+    result += calcToken(dd, 10000000000000)
 
 proc part1(fname: string): int =
   return calcTokens(fname)
 
 proc part2(fname: string): int =
-  return 0
+  return calcTokens2(fname)
 
 echo "Part1: ", part1("input.txt")
 echo "Part2: ", part2("input.txt")
