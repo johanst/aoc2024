@@ -172,12 +172,17 @@ proc getMinPushes(d: Data, code: string): int =
   dq.addLast((0, s0))
   while dq.len > 0:
     let (cost, s) = dq.popFirst()
+    echo ""
+    echo ""
+    echo s
+    echo "----"
     if s.pushed == 4:
       result = min(result, cost)
       continue
     for c in "A<>^v":
       let costn = cost + 1
       let (ok, sn) = pushButton(c, d, s, code)
+      echo c, " -> ", sn
       if ok:
         if v.contains(sn):
           if costn >= v[sn]:
