@@ -6,6 +6,7 @@ import tables
 import sets
 import algorithm
 import heapqueue
+import deques
 
 let numpad: seq[string] =
   @[
@@ -90,7 +91,86 @@ proc printStuff() =
   echo d.dpc2p
   echo d.dpp2c
 
-printStuff()
+# printStuff()
+
+type
+  State = object
+    pushed: int   # number of times pressed
+    dp0, dp1: int # dpop, controls dp0 which controls dp1
+    np: int       # dp1 controls np
+
+proc getInitState(d: Data): State =
+  var s: State
+  s.pushed = 0
+  s.dp0 = d.dpc2p['A']
+  s.dp1 = d.dpc2p['A']
+  s.np = d.npc2p['A']
+  return s
+
+# echo getInitState(getInput("ex0.txt"))
+
+proc dirpad_move(c: char, d: Data, fromp: int): int =
+  for (cn, pn) in d.dpm[fromp]:
+    if c == cn:
+      return pn
+  return -1
+
+proc numpad_move(c: char, d: Data, fromp: int): int =
+  for (cn, pn) in d.npm[fromp]:
+    if c == cn:
+      return pn
+  return -1
+
+proc pushButton(c: char, d: Data, s: State, code: string): (bool, State) =
+  var sn: State = s
+  if c == 'A':
+    # Button push on dp0
+    let c0 = d.dpp2c[s.dp0]
+    if c0 == 'A':
+      # Button push on dp1
+      let c1 = d.dpp2c[s.dp1]
+      if c1 == 'A':
+        # Button push on numpad
+        let ok = code[sn.pushed] == d.dpp2c[s.np]
+        sn.pushed += 1
+        return (ok, sn)
+      else:
+        # Move robot on numpad
+        sn.np = numpad_move(c, d, s.np)
+        let ok = sn.np != -1
+        return (ok, sn)
+    else:
+      # Move robot on dp1
+      sn.dp1 = dirpad_move(c0, d, s.dp1)
+      let ok = sn.dp0 != -1
+      return (ok, sn)
+  else:
+    # Move robot on dp0
+    sn.dp0 = dirpad_move(c, d, s.dp0)
+    let ok = sn.dp0 != -1
+    return (ok, sn)
+
+proc testSequence(pushseq: string, code: string) =
+  let d = getInput("ex0.txt")
+  var s = getInitState(d)
+  for c in pushseq:
+    var ok: bool
+    (ok, s) = pushButton(c, d, s, code)
+    assert ok
+  assert s.pushed == 4
+
+testSequence("<vA<AA>>^AvAA<^A>A<v<A>>^AvA^A<vA>^A<v<A>^A>AAvA^A<v<A>A>^AAAvA<^A>A", "029A")
+
+proc getMinPushes(d: Data, code: string): int =
+  let s0 = getInitState(d)
+  var v: Table[State, int]
+  var dq: Deque[(int, State)]
+  v[s0] = 0
+  dq.addLast((0, s0))
+  while dq.len > 0:
+    let (cost, s) = dq.popFirst()
+
+assert getMinPushes(getInput("ex0.txt"), "029A") == 68
 
 proc part1(fname: string): int =
   return 0
