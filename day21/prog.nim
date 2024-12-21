@@ -47,13 +47,13 @@ proc getInput(fname: string): Data =
         continue
       let p = y * 3 + x
       var moves: seq[(char, int)]
-      if y > 0:
+      if y > 0 and numpad[y-1][x] != 'X':
         moves.add(('^', d.npc2p[numpad[y-1][x]]))
       if y < 3 and numpad[y+1][x] != 'X':
         moves.add(('v', d.npc2p[numpad[y+1][x]]))
       if x > 0 and numpad[y][x-1] != 'X':
         moves.add(('<', d.npc2p[numpad[y][x-1]]))
-      if x < 2:
+      if x < 2 and numpad[y][x+1] != 'X':
         moves.add(('>', d.npc2p[numpad[y][x+1]]))
       d.npm[p] = moves
   for y in 0..1:
@@ -67,13 +67,13 @@ proc getInput(fname: string): Data =
         continue
       let p = y * 3 + x
       var moves: seq[(char, int)]
-      if y == 1:
+      if y == 1 and dirpad[y-1][x] != 'X':
         moves.add(('^', d.dpc2p[dirpad[y-1][x]]))
       if y == 0 and dirpad[y+1][x] != 'X':
         moves.add(('v', d.dpc2p[dirpad[y+1][x]]))
       if x > 0 and dirpad[y][x-1] != 'X':
         moves.add(('<', d.dpc2p[dirpad[y][x-1]]))
-      if x < 2:
+      if x < 2 and dirpad[y][x+1] != 'X':
         moves.add(('>', d.dpc2p[dirpad[y][x+1]]))
       d.dpm[p] = moves
   return d
@@ -172,17 +172,17 @@ proc getMinPushes(d: Data, code: string): int =
   dq.addLast((0, s0))
   while dq.len > 0:
     let (cost, s) = dq.popFirst()
-    echo ""
-    echo ""
-    echo s
-    echo "----"
+    # echo ""
+    # echo ""
+    # echo s
+    # echo "----"
     if s.pushed == 4:
       result = min(result, cost)
       continue
     for c in "A<>^v":
       let costn = cost + 1
       let (ok, sn) = pushButton(c, d, s, code)
-      echo c, " -> ", sn
+      # echo c, " -> ", sn
       if ok:
         if v.contains(sn):
           if costn >= v[sn]:
