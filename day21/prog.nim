@@ -142,7 +142,7 @@ proc pushButton(c: char, d: Data, s: State, code: string): (bool, State) =
     else:
       # Move robot on dp1
       sn.dp1 = dirpad_move(c0, d, s.dp1)
-      let ok = sn.dp0 != -1
+      let ok = sn.dp1 != -1
       return (ok, sn)
   else:
     # Move robot on dp0
@@ -161,9 +161,10 @@ proc testSequence(pushseq: string, code: string) =
     assert ok
   assert s.pushed == 4
 
-testSequence("<vA<AA>>^AvAA<^A>A<v<A>>^AvA^A<vA>^A<v<A>^A>AAvA^A<v<A>A>^AAAvA<^A>A", "029A")
+# testSequence("<vA<AA>>^AvAA<^A>A<v<A>>^AvA^A<vA>^A<v<A>^A>AAvA^A<v<A>A>^AAAvA<^A>A", "029A")
 
 proc getMinPushes(d: Data, code: string): int =
+  result = high(int)
   let s0 = getInitState(d)
   var v: Table[State, int]
   var dq: Deque[(int, State)]
@@ -171,6 +172,18 @@ proc getMinPushes(d: Data, code: string): int =
   dq.addLast((0, s0))
   while dq.len > 0:
     let (cost, s) = dq.popFirst()
+    if s.pushed == 4:
+      result = min(result, cost)
+      continue
+    for c in "A<>^v":
+      let costn = cost + 1
+      let (ok, sn) = pushButton(c, d, s, code)
+      if ok:
+        if v.contains(sn):
+          if costn >= v[sn]:
+            continue
+        v[sn] = costn
+        dq.addLast((costn, sn))
 
 assert getMinPushes(getInput("ex0.txt"), "029A") == 68
 
