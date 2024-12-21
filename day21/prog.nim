@@ -91,7 +91,7 @@ proc printStuff() =
   echo d.dpc2p
   echo d.dpp2c
 
-# printStuff()
+printStuff()
 
 type
   State = object
@@ -131,12 +131,12 @@ proc pushButton(c: char, d: Data, s: State, code: string): (bool, State) =
       let c1 = d.dpp2c[s.dp1]
       if c1 == 'A':
         # Button push on numpad
-        let ok = code[sn.pushed] == d.dpp2c[s.np]
+        let ok = code[sn.pushed] == d.npp2c[s.np]
         sn.pushed += 1
         return (ok, sn)
       else:
         # Move robot on numpad
-        sn.np = numpad_move(c, d, s.np)
+        sn.np = numpad_move(c1, d, s.np)
         let ok = sn.np != -1
         return (ok, sn)
     else:
@@ -153,9 +153,11 @@ proc pushButton(c: char, d: Data, s: State, code: string): (bool, State) =
 proc testSequence(pushseq: string, code: string) =
   let d = getInput("ex0.txt")
   var s = getInitState(d)
+  echo s
   for c in pushseq:
     var ok: bool
     (ok, s) = pushButton(c, d, s, code)
+    echo c, " -> ", s
     assert ok
   assert s.pushed == 4
 
