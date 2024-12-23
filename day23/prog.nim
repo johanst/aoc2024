@@ -66,11 +66,54 @@ proc getNumGroupsOfThree(fname: string): int =
 
 assert getNumGroupsOfThree("ex0.txt") == 7
 
-proc part1(fname: string): int =
-  return getNumGroupsOfThree("input.txt")
+proc getEvenLargerGroup(d: Data, combos: HashSet[seq[string]],
+    dbg: bool = false): HashSet[seq[string]] =
+  for sqseq in combos:
+    # if dbg:
+    #   echo sqseq
+    var sq: HashSet[string]
+    for c in sqseq:
+      sq.incl(c)
+    # Now try to bring in a new guest
+    for c in d.cs:
+      if sq.contains(c):
+        # already in group
+        # if dbg:
+        #   echo c, " already in ", sqseq
+        continue
+      var ok = true
+      for a in sq:
+        if not d.mm[a].contains(c):
+          # if dbg:
+          #   echo a, " not connected with ", c, " for ", sqseq
+          ok = false
+          break
+      if not ok:
+        continue
+      var sqn = sqseq
+      sqn.add(c)
+      sort(sqn)
+      result.incl(sqn)
 
-proc part2(fname: string): int =
-  return 0
+proc getLargestGroup(fname: string): string =
+  let d = getInput(fname)
+  var g = getGroupsOfThree(d)
+  var length = 3
+  while g.len > 1:
+    echo "Group size ", length, " => ", g.len, " elements"
+    let dbg: bool = length == 4
+    g = getEvenLargerGroup(d, g, dbg)
+    length += 1
+  let gseq = g.toSeq[0]
+  return gseq.join(",")
+
+assert getLargestGroup("ex0.txt") == "co,de,ka,ta"
+
+proc part1(fname: string): int =
+  return getNumGroupsOfThree(fname)
+
+proc part2(fname: string): string =
+  return getLargestGroup(fname)
 
 echo "Part1: ", part1("input.txt")
 echo "Part2: ", part2("input.txt")
