@@ -68,14 +68,48 @@ proc findSeq() =
       echo "Number ", s, " seen at both ", i + 1, " and ", sq[s]
       break
 
-findSeq()
+# findSeq()
+
+proc getSeqInfo(s: int): Table[seq[int], int] =
+  var plast = s mod 10
+  var dq: Deque[int]
+  var sn = s
+  for i in 1..2000:
+    sn = nextSecret(sn)
+    let p = sn mod 10
+    let pc = p - plast
+    dq.addLast(pc)
+    if dq.len == 4:
+      let pcs = dq.toSeq
+      if not result.contains(pcs):
+        result[pcs] = p
+      dq.popFirst()
+    plast = p
+
+proc getMaxBananas(fname: string): int =
+  let d = getInput(fname)
+  var bps: seq[Table[seq[int], int]]
+  for s in d.secrets:
+    echo "Secret: ", s
+    bps.add(getSeqInfo(s))
+  for i in -9..9:
+    for j in -9..9:
+      for k in -9..9:
+        for l in -9..9:
+          let sc = @[i, j, k, l]
+          var cnt = 0
+          for bp in bps:
+            if bp.contains(sc):
+              cnt += bp[sc]
+          result = max(result, cnt)
+
+assert getMaxBananas("ex1.txt") == 23
 
 proc part1(fname: string): int =
   return getSum2000Secret(fname)
 
 proc part2(fname: string): int =
-  return 0
-  # return getComplexity(fname, 25)
+  return getMaxBananas("input.txt")
 
 echo "Part1: ", part1("input.txt")
 echo "Part2: ", part2("input.txt")
