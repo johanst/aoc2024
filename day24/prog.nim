@@ -26,6 +26,8 @@ type
     ops: seq[Operation]
     fan_out: Table[int, seq[int]] # sender -> receivers
 
+type Signal = tuple[to: int, val: int]
+
 proc opId(d: Data, idx: int): string =
   return d.vseq[idx][0]
 
@@ -71,6 +73,41 @@ proc getInput(fname: string): Data =
     d.fan_out[v] = r
   return d
 
+proc getInitValues(d: Data): seq[int] =
+  for v in d.vseq:
+    result.add(v[1])
+
+proc getZIndices(d: Data): seq[int] =
+  var cnt = 0
+  while true:
+    let zName = "z" & intToStr(cnt, 2)
+    if not d.v2idx.contains(zName):
+      break
+    result.add(d.v2idx[zName])
+    cnt += 1
+
+proc getZValue(d: Data, v: openArray[int]): int =
+  var zseq: seq[int]
+  let zidx = d.getZIndices()
+  for i in zidx:
+    zseq.add(v[i])
+  for i in countDown(zseq.len - 1, 0):
+    result = result*2 + zseq[i]
+
+proc testGetZValue() =
+  let d = getInput("ex0.txt")
+  var v = getInitValues(d)
+  v[d.v2idx["z03"]] = 1
+  v[d.v2idx["z05"]] = 1
+  v[d.v2idx["z06"]] = 1
+  v[d.v2idx["z07"]] = 1
+  v[d.v2idx["z08"]] = 1
+  v[d.v2idx["z09"]] = 1
+  v[d.v2idx["z10"]] = 1
+  assert getZValue(d, v) == 2024
+
+testGetZValue()
+
 proc printStuff(fname: string) =
   let d = getInput(fname)
   echo d.vseq
@@ -86,6 +123,12 @@ proc printStuff(fname: string) =
     for vv in v:
       vstr.add(d.opId(vv))
     echo d.opId(k), " -> ", vstr
+  echo "--- Init values"
+  echo d.getInitValues()
+  echo "--- ZIndices"
+  let zidx = d.getZIndices()
+  for i, idx in zidx:
+    echo "z", i, " = ", idx
 
 printStuff("ex0.txt")
 # printStuff("input.txt")
