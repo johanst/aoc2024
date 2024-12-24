@@ -21,10 +21,10 @@ type
 
 type
   Data = object
-    vseq: seq[(string, int)] # name, initval
-    idx2v: Table[int, string]
+    vseq: seq[(string, int)]      # name, initval
     v2idx: Table[string, int]
     ops: seq[Operation]
+    fan_out: Table[int, seq[int]] # sender -> receivers
 
 proc opId(d: Data, idx: int): string =
   return d.vseq[idx][0]
@@ -63,12 +63,16 @@ proc getInput(fname: string): Data =
       assert false, "Illegal operation"
     d.ops.add(Operation(
       a: d.v2idx[w[0]], b: d.v2idx[w[2]], c: d.v2idx[w[4]], op: op))
-  for k, v in d.v2idx:
-    d.idx2v[v] = k
+  for v in 0..<d.vseq.len:
+    var r: seq[int]
+    for op in d.ops:
+      if v == op.a or v == op.b:
+        r.add(op.c)
+    d.fan_out[v] = r
   return d
 
-proc printStuff() =
-  let d = getInput("ex0.txt")
+proc printStuff(fname: string) =
+  let d = getInput(fname)
   echo d.vseq
   echo d.vseq.len
   for k, v in d.v2idx:
@@ -76,8 +80,15 @@ proc printStuff() =
   echo d.vseq
   for op in d.ops:
     echo d.opId(op.a), " ", op.op, " ", d.opId(op.b), " -> ", d.opId(op.c)
+  echo "--- Fan out"
+  for k, v in d.fan_out:
+    var vstr: seq[string]
+    for vv in v:
+      vstr.add(d.opId(vv))
+    echo d.opId(k), " -> ", vstr
 
-printStuff()
+printStuff("ex0.txt")
+# printStuff("input.txt")
 
 proc part1(fname: string): int =
   return 0
