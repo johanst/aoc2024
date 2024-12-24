@@ -26,6 +26,7 @@ type
     ops: seq[Operation]
     fan_out: Table[int, seq[int]]     # sender -> receivers
     fan_out_ops: Table[int, seq[int]] # sender -> operationIdx
+    fan_in_ops: seq[int]              # receiver -> operationIdx
 
 type Signal = tuple[origin: int, val: int]
 
@@ -69,10 +70,15 @@ proc getInput(fname: string): Data =
   for v in 0..<d.vseq.len:
     var r: seq[int]
     var ro: seq[int]
+    var fop = -1
     for opIdx, op in d.ops:
       if v == op.a or v == op.b:
         r.add(op.c)
         ro.add(opIdx)
+      if op.c == v:
+        assert fop == -1
+        fop = opIdx
+    d.fan_in_ops.add(fop)
     d.fan_out[v] = r
     d.fan_out_ops[v] = ro
   return d
@@ -139,42 +145,77 @@ proc printStuff(fname: string) =
   let zidx = d.getZIndices()
   for i, idx in zidx:
     echo "z", i, " = ", idx
+  echo "--- Fan in Op"
+  for i, opId in d.fan_in_ops:
+    if opId == -1:
+      echo d.opId(i), " -> ", "None"
+    else:
+      let op = d.ops[opId]
+      echo d.opId(i), " -> ", d.opId(op.a), " ", op.op, " ", d.opId(op.b),
+          " -> ", d.opId(op.c)
 
+proc getWireValue(d: Data, idx: int, s: var seq[int]): int =
+  if s[idx] != 2:
+    return s[idx]
+    let op = d.ops[d.fan_in_ops[idx]]
+    let aIdx = op.a
+    let bIdx = op.b
+    let a = getWireValue(d, aIdx, s)
+    let b = getWireValue(d, bIdx, s)
+    var c: int
+    case op.op
+    of AND:
+      c = a and b
+    of OR:
+      c = a or b
+    of XOR:
+      c = a xor b
+    s[idx] = c
+    return c
+
+  # let a = getWireValue(d, idx, s)
 printStuff("ex0.txt")
 # printStuff("input.txt")
 
 proc simulateGrid(fname: string): int =
+  echo "--- Simulate"
   let d = getInput(fname)
   var grid = getInitValues(d)
   var zIdx = getZIndices(d)
-  var zRcvd: HashSet[int]
-  var dq: Deque[Signal]
-  for idx, v in grid:
-    if v != 2:
-      dq.addLast((origin: idx, val: v))
-  while dq.len > 0:
-    let s = dq.popFirst()
-    echo d.vseq[s.origin][0], " -> ", s.val
-    grid[s.origin] = s.val
-    if s.origin in zIdx:
-      zRcvd.incl(s.origin)
-      if zIdx.len == zRcvd.len:
-        return getZValue(d, grid)
-    for op in d.fan_out_ops[s.origin]:
-      echo op
-      let a = grid[d.ops[op].a]
-      let b = grid[d.ops[op].b]
-      assert a < 2
-      assert b < 2
-      var c: int
-      case d.ops[op].op
-      of AND:
-        c = a and b
-      of OR:
-        c = a or b
-      of XOR:
-        c = a xor b
-      dq.addLast((origin: d.ops[op].c, val: c))
+  for zi in zIdx:
+    let v = getWireValue(d, zi, grid)
+    echo d.vseq[zi][0], " = ", v
+
+  # var zRcvd: HashSet[int]
+  # var dq: Deque[int] # Operations that should be performed
+  # for idx, v in grid:
+  #   if v != 2:
+  #     dq.addLast(idx)
+  #     dq.addLast((origin: idx, val: v))
+  # while dq.len > 0:
+  #   let s = dq.popFirst()
+  #   echo d.vseq[s.origin][0], " -> ", s.val
+  #   grid[s.origin] = s.val
+  #   if s.origin in zIdx:
+  #     zRcvd.incl(s.origin)
+  #     if zIdx.len == zRcvd.len:
+  #       return getZValue(d, grid)
+  #   for op in d.fan_out_ops[s.origin]:
+  #     echo op
+  #     let a = grid[d.ops[op].a]
+  #     let b = grid[d.ops[op].b]
+  #     assert a < 2
+  #     assert b < 2
+  #     var c: int
+  #     case d.ops[op].op
+  #     of AND:
+  #       c = a and b
+  #     of OR:
+  #       c = a or b
+  #     of XOR:
+  #       c = a xor b
+  #     grid[d.ops[p].c] = c
+  #     dq.addLast((origin: d.ops[op].c, val: c))
 
 assert simulateGrid("ex0.txt") == 2024
 
