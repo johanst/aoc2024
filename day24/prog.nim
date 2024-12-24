@@ -21,12 +21,13 @@ type
 
 type
   Data = object
-    vseq: seq[(string, int)]      # name, initval
+    vseq: seq[(string, int)]          # name, initval (2 = None)
     v2idx: Table[string, int]
     ops: seq[Operation]
-    fan_out: Table[int, seq[int]] # sender -> receivers
+    fan_out: Table[int, seq[int]]     # sender -> receivers
+    fan_out_ops: Table[int, seq[int]] # sender -> operationIdx
 
-type Signal = tuple[to: int, val: int]
+type Signal = tuple[origin: int, val: int]
 
 proc opId(d: Data, idx: int): string =
   return d.vseq[idx][0]
@@ -49,9 +50,9 @@ proc getInput(fname: string): Data =
       else:
         d.addVal(w[0][0..2], parseInt(w[1]))
     else:
-      d.addVal(w[0], 0)
-      d.addVal(w[2], 0)
-      d.addVal(w[4], 0)
+      d.addVal(w[0], 2)
+      d.addVal(w[2], 2)
+      d.addVal(w[4], 2)
       ops.add(w)
   for w in ops:
     var op: Operator
@@ -67,10 +68,13 @@ proc getInput(fname: string): Data =
       a: d.v2idx[w[0]], b: d.v2idx[w[2]], c: d.v2idx[w[4]], op: op))
   for v in 0..<d.vseq.len:
     var r: seq[int]
-    for op in d.ops:
+    var ro: seq[int]
+    for opIdx, op in d.ops:
       if v == op.a or v == op.b:
         r.add(op.c)
+        ro.add(opIdx)
     d.fan_out[v] = r
+    d.fan_out_ops[v] = ro
   return d
 
 proc getInitValues(d: Data): seq[int] =
@@ -90,7 +94,10 @@ proc getZValue(d: Data, v: openArray[int]): int =
   var zseq: seq[int]
   let zidx = d.getZIndices()
   for i in zidx:
-    zseq.add(v[i])
+    var n = v[i]
+    if n == 2:
+      n = 0
+    zseq.add(n)
   for i in countDown(zseq.len - 1, 0):
     result = result*2 + zseq[i]
 
@@ -123,6 +130,9 @@ proc printStuff(fname: string) =
     for vv in v:
       vstr.add(d.opId(vv))
     echo d.opId(k), " -> ", vstr
+  echo "--- Fan out Op"
+  for k, v in d.fan_out_ops:
+    echo d.opId(k), " -> ", v
   echo "--- Init values"
   echo d.getInitValues()
   echo "--- ZIndices"
@@ -132,6 +142,41 @@ proc printStuff(fname: string) =
 
 printStuff("ex0.txt")
 # printStuff("input.txt")
+
+proc simulateGrid(fname: string): int =
+  let d = getInput(fname)
+  var grid = getInitValues(d)
+  var zIdx = getZIndices(d)
+  var zRcvd: HashSet[int]
+  var dq: Deque[Signal]
+  for idx, v in grid:
+    if v != 2:
+      dq.addLast((origin: idx, val: v))
+  while dq.len > 0:
+    let s = dq.popFirst()
+    echo d.vseq[s.origin][0], " -> ", s.val
+    grid[s.origin] = s.val
+    if s.origin in zIdx:
+      zRcvd.incl(s.origin)
+      if zIdx.len == zRcvd.len:
+        return getZValue(d, grid)
+    for op in d.fan_out_ops[s.origin]:
+      echo op
+      let a = grid[d.ops[op].a]
+      let b = grid[d.ops[op].b]
+      assert a < 2
+      assert b < 2
+      var c: int
+      case d.ops[op].op
+      of AND:
+        c = a and b
+      of OR:
+        c = a or b
+      of XOR:
+        c = a xor b
+      dq.addLast((origin: d.ops[op].c, val: c))
+
+assert simulateGrid("ex0.txt") == 2024
 
 proc part1(fname: string): int =
   return 0
