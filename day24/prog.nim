@@ -157,34 +157,34 @@ proc printStuff(fname: string) =
 proc getWireValue(d: Data, idx: int, s: var seq[int]): int =
   if s[idx] != 2:
     return s[idx]
-    let op = d.ops[d.fan_in_ops[idx]]
-    let aIdx = op.a
-    let bIdx = op.b
-    let a = getWireValue(d, aIdx, s)
-    let b = getWireValue(d, bIdx, s)
-    var c: int
-    case op.op
-    of AND:
-      c = a and b
-    of OR:
-      c = a or b
-    of XOR:
-      c = a xor b
-    s[idx] = c
-    return c
+  let op = d.ops[d.fan_in_ops[idx]]
+  let aIdx = op.a
+  let bIdx = op.b
+  let a = getWireValue(d, aIdx, s)
+  let b = getWireValue(d, bIdx, s)
+  var c: int
+  case op.op
+  of AND:
+    c = a and b
+  of OR:
+    c = a or b
+  of XOR:
+    c = a xor b
+  s[idx] = c
+  return c
 
-  # let a = getWireValue(d, idx, s)
-printStuff("ex0.txt")
+# printStuff("ex0.txt")
 # printStuff("input.txt")
 
 proc simulateGrid(fname: string): int =
-  echo "--- Simulate"
+  # echo "--- Simulate"
   let d = getInput(fname)
   var grid = getInitValues(d)
   var zIdx = getZIndices(d)
   for zi in zIdx:
     let v = getWireValue(d, zi, grid)
-    echo d.vseq[zi][0], " = ", v
+    # echo d.vseq[zi][0], " = ", v
+  return getZValue(d, grid)
 
   # var zRcvd: HashSet[int]
   # var dq: Deque[int] # Operations that should be performed
@@ -220,7 +220,7 @@ proc simulateGrid(fname: string): int =
 assert simulateGrid("ex0.txt") == 2024
 
 proc part1(fname: string): int =
-  return 0
+  return simulateGrid(fname)
 
 proc part2(fname: string): int =
   return 0
