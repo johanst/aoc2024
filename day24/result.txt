@@ -1,0 +1,6478 @@
+@[("x00", 1), ("x01", 0), ("x02", 1), ("x03", 1), ("x04", 0), ("x05", 0), ("x06", 1), ("x07", 1), ("x08", 0), ("x09", 1), ("x10", 1), ("x11", 1), ("x12", 1), ("x13", 1), ("x14", 1), ("x15", 0), ("x16", 1), ("x17", 0), ("x18", 1), ("x19", 1), ("x20", 0), ("x21", 0), ("x22", 1), ("x23", 0), ("x24", 1), ("x25", 0), ("x26", 1), ("x27", 0), ("x28", 1), ("x29", 1), ("x30", 0), ("x31", 0), ("x32", 1), ("x33", 1), ("x34", 1), ("x35", 0), ("x36", 1), ("x37", 1), ("x38", 0), ("x39", 0), ("x40", 1), ("x41", 1), ("x42", 0), ("x43", 0), ("x44", 1), ("y00", 1), ("y01", 0), ("y02", 0), ("y03", 1), ("y04", 1), ("y05", 0), ("y06", 0), ("y07", 0), ("y08", 0), ("y09", 0), ("y10", 0), ("y11", 1), ("y12", 0), ("y13", 0), ("y14", 1), ("y15", 1), ("y16", 0), ("y17", 0), ("y18", 1), ("y19", 0), ("y20", 0), ("y21", 0), ("y22", 1), ("y23", 1), ("y24", 0), ("y25", 0), ("y26", 0), ("y27", 1), ("y28", 1), ("y29", 1), ("y30", 0), ("y31", 1), ("y32", 1), ("y33", 0), ("y34", 1), ("y35", 1), ("y36", 0), ("y37", 0), ("y38", 1), ("y39", 1), ("y40", 1), ("y41", 0), ("y42", 0), ("y43", 1), ("y44", 1), ("njs", 2), ("pvb", 2), ("fjh", 2), ("dcm", 2), ("srv", 2), ("dfc", 2), ("z22", 2), ("qwb", 2), ("vmp", 2), ("z14", 2), ("z10", 2), ("cjn", 2), ("dfj", 2), ("fgc", 2), ("kpp", 2), ("tvh", 2), ("z34", 2), ("tbq", 2), ("rdf", 2), ("frv", 2), ("drs", 2), ("pqh", 2), ("mmh", 2), ("z05", 2), ("jkt", 2), ("qqp", 2), ("dmw", 2), ("kqp", 2), ("qsh", 2), ("wfw", 2), ("qcr", 2), ("hvw", 2), ("qnn", 2), ("vgk", 2), ("bkc", 2), ("wsq", 2), ("ckv", 2), ("bbh", 2), ("z03", 2), ("frj", 2), ("hqq", 2), ("z02", 2), ("qff", 2), ("stw", 2), ("wsv", 2), ("qpq", 2), ("vnr", 2), ("z30", 2), ("pbk", 2), ("kqc", 2), ("z15", 2), ("mvp", 2), ("pbv", 2), ("dbj", 2), ("wcs", 2), ("cqk", 2), ("bmr", 2), ("z32", 2), ("qjf", 2), ("rng", 2), ("rsq", 2), ("nts", 2), ("brq", 2), ("fhv", 2), ("hjw", 2), ("wwg", 2), ("phw", 2), ("vtf", 2), ("gdw", 2), ("kpc", 2), ("wvv", 2), ("wbf", 2), ("qdh", 2), ("nhs", 2), ("ttv", 2), ("cts", 2), ("bcd", 2), ("rkt", 2), ("z37", 2), ("jdd", 2), ("rbm", 2), ("z36", 2), ("drt", 2), ("tpt", 2), ("z31", 2), ("gcf", 2), ("ptf", 2), ("z41", 2), ("msq", 2), ("cbr", 2), ("hjd", 2), ("z07", 2), ("mkv", 2), ("hgp", 2), ("z45", 2), ("spp", 2), ("nrk", 2), ("fhc", 2), ("ggh", 2), ("fwt", 2), ("whj", 2), ("vrh", 2), ("qpj", 2), ("mpm", 2), ("bwv", 2), ("tcd", 2), ("sgv", 2), ("jcd", 2), ("ggs", 2), ("qmw", 2), ("gdm", 2), ("jkm", 2), ("z09", 2), ("pgm", 2), ("vmc", 2), ("dtc", 2), ("ggg", 2), ("smv", 2), ("bhh", 2), ("tfq", 2), ("jmh", 2), ("cjc", 2), ("gfp", 2), ("mgj", 2), ("z12", 2), ("ftd", 2), ("wcw", 2), ("hjm", 2), ("ksd", 2), ("vwf", 2), ("fgq", 2), ("drp", 2), ("z18", 2), ("qdb", 2), ("z04", 2), ("wbk", 2), ("fcv", 2), ("z19", 2), ("pwt", 2), ("scg", 2), ("gkj", 2), ("grv", 2), ("dfn", 2), ("svg", 2), ("fkd", 2), ("z40", 2), ("pdq", 2), ("hnt", 2), ("vpm", 2), ("z21", 2), ("dbp", 2), ("z26", 2), ("wdr", 2), ("z23", 2), ("wns", 2), ("btn", 2), ("z24", 2), ("wqt", 2), ("frw", 2), ("hdp", 2), ("hgq", 2), ("frk", 2), ("wpk", 2), ("jgm", 2), ("sdn", 2), ("kqk", 2), ("vjj", 2), ("thp", 2), ("ncw", 2), ("vvr", 2), ("kcs", 2), ("z27", 2), ("z01", 2), ("brk", 2), ("z06", 2), ("z25", 2), ("hsh", 2), ("bkv", 2), ("knh", 2), ("rps", 2), ("tqj", 2), ("tbb", 2), ("pjj", 2), ("ghn", 2), ("rrb", 2), ("rms", 2), ("bgt", 2), ("z17", 2), ("z16", 2), ("dvs", 2), ("fsb", 2), ("drv", 2), ("z29", 2), ("rpw", 2), ("fbq", 2), ("bmb", 2), ("fbm", 2), ("z13", 2), ("z28", 2), ("pqp", 2), ("njt", 2), ("z00", 2), ("z42", 2), ("nhk", 2), ("mbp", 2), ("shp", 2), ("pnw", 2), ("z33", 2), ("z44", 2), ("z39", 2), ("z38", 2), ("z35", 2), ("hbq", 2), ("gpb", 2), ("qnw", 2), ("z20", 2), ("ftf", 2), ("z43", 2), ("z11", 2), ("bfd", 2), ("z08", 2), ("dbt", 2)]
+312
+x37 -> 37
+y41 -> 86
+fhc -> 187
+fkd -> 234
+x15 -> 15
+x12 -> 12
+x41 -> 41
+x28 -> 28
+wns -> 244
+y10 -> 55
+bbh -> 127
+z06 -> 264
+bkv -> 267
+y37 -> 82
+x42 -> 42
+y25 -> 70
+cjc -> 211
+x20 -> 20
+x43 -> 43
+z41 -> 177
+y43 -> 88
+x32 -> 32
+y38 -> 83
+z26 -> 241
+x13 -> 13
+sgv -> 196
+y15 -> 60
+wsv -> 134
+vmc -> 204
+frw -> 248
+x38 -> 38
+y26 -> 71
+y32 -> 77
+drs -> 110
+wcw -> 216
+z19 -> 227
+y44 -> 89
+dtc -> 205
+x18 -> 18
+dfc -> 95
+y16 -> 61
+x44 -> 44
+y42 -> 87
+kpp -> 104
+qnn -> 122
+gpb -> 303
+ncw -> 258
+z34 -> 106
+hvw -> 121
+hjd -> 180
+bhh -> 208
+kqk -> 255
+bwv -> 194
+y02 -> 47
+qqp -> 115
+x00 -> 0
+dmw -> 116
+ggs -> 198
+tbb -> 271
+wbf -> 161
+y06 -> 51
+z24 -> 246
+z37 -> 168
+dfn -> 232
+svg -> 233
+thp -> 257
+pgm -> 203
+fgc -> 103
+gfp -> 212
+z27 -> 261
+y12 -> 57
+x09 -> 9
+fbq -> 284
+hjw -> 154
+pqp -> 289
+y14 -> 59
+z08 -> 310
+qdh -> 162
+z31 -> 174
+x29 -> 29
+y22 -> 67
+y36 -> 81
+knh -> 268
+rrb -> 274
+y08 -> 53
+ptf -> 176
+pnw -> 296
+tfq -> 209
+z03 -> 128
+z25 -> 265
+z22 -> 96
+wsq -> 125
+x36 -> 36
+y13 -> 58
+y28 -> 73
+pdq -> 236
+z21 -> 239
+drp -> 221
+z10 -> 100
+tqj -> 270
+y35 -> 80
+y27 -> 72
+drt -> 172
+bmr -> 146
+y40 -> 85
+y18 -> 63
+x39 -> 39
+mmh -> 112
+x16 -> 16
+z05 -> 113
+bkc -> 124
+z02 -> 131
+z18 -> 222
+y11 -> 56
+z23 -> 243
+wqt -> 247
+kcs -> 260
+vwf -> 219
+fwt -> 189
+qdb -> 223
+scg -> 229
+jcd -> 197
+grv -> 231
+jgm -> 253
+njt -> 290
+y33 -> 78
+wvv -> 160
+spp -> 185
+jkm -> 201
+pbv -> 142
+dfj -> 102
+z28 -> 288
+shp -> 295
+z33 -> 297
+vmp -> 98
+qmw -> 199
+z00 -> 291
+sdn -> 254
+mbp -> 294
+dbj -> 143
+btn -> 245
+vjj -> 256
+x26 -> 26
+y39 -> 84
+y00 -> 45
+z12 -> 214
+z35 -> 301
+dcm -> 93
+x14 -> 14
+jmh -> 210
+x08 -> 8
+vtf -> 157
+x34 -> 34
+x17 -> 17
+vvr -> 259
+y09 -> 54
+drv -> 281
+x03 -> 3
+vgk -> 123
+bcd -> 166
+z45 -> 184
+msq -> 178
+srv -> 94
+x30 -> 30
+y24 -> 69
+whj -> 190
+ftd -> 215
+y17 -> 62
+x11 -> 11
+z11 -> 308
+vrh -> 191
+x02 -> 2
+y04 -> 49
+nhs -> 163
+frk -> 251
+vnr -> 136
+z15 -> 140
+rms -> 275
+x27 -> 27
+z43 -> 307
+tbq -> 107
+wwg -> 155
+wpk -> 252
+mkv -> 182
+kpc -> 159
+z09 -> 202
+tvh -> 105
+z29 -> 282
+pqh -> 111
+ksd -> 218
+y30 -> 75
+z13 -> 287
+rng -> 149
+wfw -> 119
+y21 -> 66
+z32 -> 147
+mvp -> 141
+z14 -> 99
+hsh -> 266
+hgq -> 250
+cjn -> 101
+ckv -> 126
+z38 -> 300
+x01 -> 1
+hbq -> 302
+qpj -> 192
+x05 -> 5
+hdp -> 249
+z30 -> 137
+pvb -> 91
+z44 -> 298
+fgq -> 220
+y03 -> 48
+qsh -> 118
+pbk -> 138
+rkt -> 167
+pwt -> 228
+bfd -> 309
+gkj -> 230
+x07 -> 7
+x35 -> 35
+mgj -> 213
+gdw -> 158
+mpm -> 193
+smv -> 207
+z40 -> 235
+x04 -> 4
+brk -> 263
+fbm -> 286
+x24 -> 24
+ghn -> 273
+z36 -> 171
+rdf -> 108
+y31 -> 76
+hjm -> 217
+frv -> 109
+tcd -> 195
+jdd -> 169
+x33 -> 33
+cqk -> 145
+qjf -> 148
+x23 -> 23
+x40 -> 40
+y20 -> 65
+wdr -> 242
+fsb -> 280
+bmb -> 285
+z20 -> 305
+wbk -> 225
+stw -> 133
+x19 -> 19
+rsq -> 150
+cbr -> 179
+rpw -> 283
+z17 -> 277
+qnw -> 304
+x25 -> 25
+ttv -> 164
+x06 -> 6
+phw -> 156
+x21 -> 21
+fcv -> 226
+z01 -> 262
+x31 -> 31
+z39 -> 299
+z42 -> 292
+y34 -> 79
+ggg -> 206
+ftf -> 306
+dbt -> 311
+y05 -> 50
+tpt -> 173
+rps -> 269
+jkt -> 114
+qpq -> 135
+y07 -> 52
+frj -> 129
+fhv -> 153
+cts -> 165
+rbm -> 170
+qcr -> 120
+z07 -> 181
+bgt -> 276
+vpm -> 238
+kqc -> 139
+fjh -> 92
+qwb -> 97
+y01 -> 46
+dbp -> 240
+qff -> 132
+z04 -> 224
+brq -> 152
+hgp -> 183
+nhk -> 293
+wcs -> 144
+nts -> 151
+x22 -> 22
+y29 -> 74
+gdm -> 200
+hqq -> 130
+kqp -> 117
+z16 -> 278
+dvs -> 279
+njs -> 90
+ggh -> 188
+x10 -> 10
+y19 -> 64
+gcf -> 175
+nrk -> 186
+hnt -> 237
+pjj -> 272
+y23 -> 68
+@[("x00", 1), ("x01", 0), ("x02", 1), ("x03", 1), ("x04", 0), ("x05", 0), ("x06", 1), ("x07", 1), ("x08", 0), ("x09", 1), ("x10", 1), ("x11", 1), ("x12", 1), ("x13", 1), ("x14", 1), ("x15", 0), ("x16", 1), ("x17", 0), ("x18", 1), ("x19", 1), ("x20", 0), ("x21", 0), ("x22", 1), ("x23", 0), ("x24", 1), ("x25", 0), ("x26", 1), ("x27", 0), ("x28", 1), ("x29", 1), ("x30", 0), ("x31", 0), ("x32", 1), ("x33", 1), ("x34", 1), ("x35", 0), ("x36", 1), ("x37", 1), ("x38", 0), ("x39", 0), ("x40", 1), ("x41", 1), ("x42", 0), ("x43", 0), ("x44", 1), ("y00", 1), ("y01", 0), ("y02", 0), ("y03", 1), ("y04", 1), ("y05", 0), ("y06", 0), ("y07", 0), ("y08", 0), ("y09", 0), ("y10", 0), ("y11", 1), ("y12", 0), ("y13", 0), ("y14", 1), ("y15", 1), ("y16", 0), ("y17", 0), ("y18", 1), ("y19", 0), ("y20", 0), ("y21", 0), ("y22", 1), ("y23", 1), ("y24", 0), ("y25", 0), ("y26", 0), ("y27", 1), ("y28", 1), ("y29", 1), ("y30", 0), ("y31", 1), ("y32", 1), ("y33", 0), ("y34", 1), ("y35", 1), ("y36", 0), ("y37", 0), ("y38", 1), ("y39", 1), ("y40", 1), ("y41", 0), ("y42", 0), ("y43", 1), ("y44", 1), ("njs", 2), ("pvb", 2), ("fjh", 2), ("dcm", 2), ("srv", 2), ("dfc", 2), ("z22", 2), ("qwb", 2), ("vmp", 2), ("z14", 2), ("z10", 2), ("cjn", 2), ("dfj", 2), ("fgc", 2), ("kpp", 2), ("tvh", 2), ("z34", 2), ("tbq", 2), ("rdf", 2), ("frv", 2), ("drs", 2), ("pqh", 2), ("mmh", 2), ("z05", 2), ("jkt", 2), ("qqp", 2), ("dmw", 2), ("kqp", 2), ("qsh", 2), ("wfw", 2), ("qcr", 2), ("hvw", 2), ("qnn", 2), ("vgk", 2), ("bkc", 2), ("wsq", 2), ("ckv", 2), ("bbh", 2), ("z03", 2), ("frj", 2), ("hqq", 2), ("z02", 2), ("qff", 2), ("stw", 2), ("wsv", 2), ("qpq", 2), ("vnr", 2), ("z30", 2), ("pbk", 2), ("kqc", 2), ("z15", 2), ("mvp", 2), ("pbv", 2), ("dbj", 2), ("wcs", 2), ("cqk", 2), ("bmr", 2), ("z32", 2), ("qjf", 2), ("rng", 2), ("rsq", 2), ("nts", 2), ("brq", 2), ("fhv", 2), ("hjw", 2), ("wwg", 2), ("phw", 2), ("vtf", 2), ("gdw", 2), ("kpc", 2), ("wvv", 2), ("wbf", 2), ("qdh", 2), ("nhs", 2), ("ttv", 2), ("cts", 2), ("bcd", 2), ("rkt", 2), ("z37", 2), ("jdd", 2), ("rbm", 2), ("z36", 2), ("drt", 2), ("tpt", 2), ("z31", 2), ("gcf", 2), ("ptf", 2), ("z41", 2), ("msq", 2), ("cbr", 2), ("hjd", 2), ("z07", 2), ("mkv", 2), ("hgp", 2), ("z45", 2), ("spp", 2), ("nrk", 2), ("fhc", 2), ("ggh", 2), ("fwt", 2), ("whj", 2), ("vrh", 2), ("qpj", 2), ("mpm", 2), ("bwv", 2), ("tcd", 2), ("sgv", 2), ("jcd", 2), ("ggs", 2), ("qmw", 2), ("gdm", 2), ("jkm", 2), ("z09", 2), ("pgm", 2), ("vmc", 2), ("dtc", 2), ("ggg", 2), ("smv", 2), ("bhh", 2), ("tfq", 2), ("jmh", 2), ("cjc", 2), ("gfp", 2), ("mgj", 2), ("z12", 2), ("ftd", 2), ("wcw", 2), ("hjm", 2), ("ksd", 2), ("vwf", 2), ("fgq", 2), ("drp", 2), ("z18", 2), ("qdb", 2), ("z04", 2), ("wbk", 2), ("fcv", 2), ("z19", 2), ("pwt", 2), ("scg", 2), ("gkj", 2), ("grv", 2), ("dfn", 2), ("svg", 2), ("fkd", 2), ("z40", 2), ("pdq", 2), ("hnt", 2), ("vpm", 2), ("z21", 2), ("dbp", 2), ("z26", 2), ("wdr", 2), ("z23", 2), ("wns", 2), ("btn", 2), ("z24", 2), ("wqt", 2), ("frw", 2), ("hdp", 2), ("hgq", 2), ("frk", 2), ("wpk", 2), ("jgm", 2), ("sdn", 2), ("kqk", 2), ("vjj", 2), ("thp", 2), ("ncw", 2), ("vvr", 2), ("kcs", 2), ("z27", 2), ("z01", 2), ("brk", 2), ("z06", 2), ("z25", 2), ("hsh", 2), ("bkv", 2), ("knh", 2), ("rps", 2), ("tqj", 2), ("tbb", 2), ("pjj", 2), ("ghn", 2), ("rrb", 2), ("rms", 2), ("bgt", 2), ("z17", 2), ("z16", 2), ("dvs", 2), ("fsb", 2), ("drv", 2), ("z29", 2), ("rpw", 2), ("fbq", 2), ("bmb", 2), ("fbm", 2), ("z13", 2), ("z28", 2), ("pqp", 2), ("njt", 2), ("z00", 2), ("z42", 2), ("nhk", 2), ("mbp", 2), ("shp", 2), ("pnw", 2), ("z33", 2), ("z44", 2), ("z39", 2), ("z38", 2), ("z35", 2), ("hbq", 2), ("gpb", 2), ("qnw", 2), ("z20", 2), ("ftf", 2), ("z43", 2), ("z11", 2), ("bfd", 2), ("z08", 2), ("dbt", 2)]
+njs AND pvb -> fjh
+y12 AND x12 -> dcm
+srv XOR dfc -> z22
+qwb XOR vmp -> z14
+njs XOR pvb -> z10
+cjn OR dfj -> fgc
+kpp XOR tvh -> z34
+tbq OR rdf -> frv
+y40 AND x40 -> drs
+pqh XOR mmh -> z05
+x26 XOR y26 -> jkt
+qqp AND dmw -> kqp
+qsh OR wfw -> qcr
+hvw AND qnn -> vgk
+bkc OR wsq -> ckv
+ckv XOR bbh -> z03
+frj XOR hqq -> z02
+qff OR stw -> wsv
+qpq XOR vnr -> z30
+pbk XOR kqc -> z15
+mvp OR pbv -> dbj
+x15 AND y15 -> qsh
+wcs OR cqk -> kpp
+bmr XOR fgc -> z32
+y42 XOR x42 -> qjf
+srv AND dfc -> rng
+rsq AND nts -> brq
+fhv AND hjw -> wwg
+x06 AND y06 -> phw
+vtf AND gdw -> kpc
+wvv AND wbf -> qdh
+y28 AND x28 -> nhs
+y04 AND x04 -> ttv
+cts XOR bcd -> qqp
+mmh AND pqh -> rkt
+hjw XOR fhv -> z37
+jdd AND rbm -> z36
+drt XOR tpt -> z31
+y20 XOR x20 -> gcf
+x27 AND y27 -> ptf
+qnn XOR hvw -> z41
+x13 AND y13 -> msq
+cbr XOR hjd -> z07
+mkv OR hgp -> z45
+y35 XOR x35 -> spp
+x08 XOR y08 -> nrk
+y03 XOR x03 -> bbh
+fhc OR ggh -> fwt
+whj AND vrh -> qpj
+x34 XOR y34 -> tvh
+y43 AND x43 -> mpm
+y15 XOR x15 -> pbk
+x23 XOR y23 -> bcd
+bwv AND tcd -> sgv
+bcd AND cts -> jcd
+ggs OR qmw -> tpt
+gdm XOR jkm -> z09
+y38 XOR x38 -> pgm
+x19 AND y19 -> vmc
+dtc OR ggg -> kqc
+hqq AND frj -> bkc
+smv OR wwg -> bhh
+y17 AND x17 -> tfq
+x14 AND y14 -> dtc
+y39 AND x39 -> ggh
+jmh AND cjc -> gfp
+mgj XOR wsv -> z12
+ftd AND wcw -> hjm
+y19 XOR x19 -> whj
+nrk AND ksd -> vwf
+fgq AND spp -> drp
+rsq XOR nts -> z18
+y10 XOR x10 -> njs
+frv XOR qdb -> z04
+wbk OR fcv -> fgq
+whj XOR vrh -> z19
+tvh AND kpp -> wbk
+y39 XOR x39 -> pwt
+scg OR gkj -> grv
+dfn XOR qcr -> pbv
+x27 XOR y27 -> ftd
+svg OR tfq -> rsq
+fkd XOR fwt -> z40
+x07 AND y07 -> pdq
+y13 XOR x13 -> hnt
+grv XOR vpm -> z21
+y02 XOR x02 -> frj
+jkt XOR dbp -> z26
+wdr OR jcd -> z23
+x21 AND y21 -> wns
+y08 AND x08 -> btn
+qqp XOR dmw -> z24
+x01 AND y01 -> wqt
+frw AND hdp -> hgq
+frk AND wpk -> hgp
+x07 XOR y07 -> cbr
+x29 AND y29 -> jgm
+sgv OR wqt -> hqq
+tpt AND drt -> dfj
+sdn OR rkt -> kqk
+frv AND qdb -> vjj
+fjh OR thp -> ncw
+y26 AND x26 -> vvr
+x25 AND y25 -> kcs
+ftd XOR wcw -> z27
+tcd XOR bwv -> z01
+brk XOR kqk -> z06
+x10 AND y10 -> thp
+frw XOR hdp -> z25
+pgm AND bhh -> hsh
+x24 XOR y24 -> dmw
+vmc OR qpj -> bkv
+x44 AND y44 -> mkv
+knh OR vgk -> rps
+dfn AND qcr -> mvp
+tqj OR rng -> cts
+tbb OR wns -> srv
+msq OR pjj -> vmp
+drs OR ghn -> hvw
+hsh OR rrb -> rms
+dbj XOR bgt -> z17
+mpm OR kpc -> frk
+bgt AND dbj -> svg
+x40 XOR y40 -> fkd
+x16 AND y16 -> z16
+cbr AND hjd -> dvs
+fsb OR drv -> gdw
+cjc XOR jmh -> z29
+pdq OR dvs -> ksd
+rpw OR fbq -> fhv
+y05 XOR x05 -> pqh
+x30 AND y30 -> ggs
+bmb OR drp -> jdd
+hnt XOR fbm -> z13
+y42 AND x42 -> fsb
+qpq AND vnr -> qmw
+x11 XOR y11 -> qff
+gcf AND bkv -> gkj
+wvv XOR wbf -> z28
+x05 AND y05 -> sdn
+pqp OR phw -> hjd
+jdd XOR rbm -> fbq
+njt OR kqp -> frw
+y00 XOR x00 -> z00
+y31 AND x31 -> cjn
+x32 XOR y32 -> bmr
+x34 AND y34 -> fcv
+y24 AND x24 -> njt
+y06 XOR x06 -> brk
+x12 XOR y12 -> mgj
+ckv AND bbh -> tbq
+rps XOR qjf -> z42
+x33 AND y33 -> cqk
+y09 AND x09 -> nhk
+y33 XOR x33 -> mbp
+x04 XOR y04 -> qdb
+x22 AND y22 -> tqj
+y20 AND x20 -> scg
+y01 XOR x01 -> tcd
+fgc AND bmr -> shp
+mbp XOR pnw -> z33
+frk XOR wpk -> z44
+y43 XOR x43 -> vtf
+x37 XOR y37 -> hjw
+y03 AND x03 -> rdf
+rms XOR pwt -> z39
+bhh XOR pgm -> z38
+spp XOR fgq -> z35
+y22 XOR x22 -> dfc
+qjf AND rps -> drv
+kcs OR hgq -> dbp
+y29 XOR x29 -> cjc
+x25 XOR y25 -> hdp
+hbq OR dcm -> fbm
+brk AND kqk -> pqp
+qwb AND vmp -> ggg
+gpb OR shp -> pnw
+y02 AND x02 -> wsq
+ptf OR hjm -> wvv
+x18 XOR y18 -> nts
+x23 AND y23 -> wdr
+x09 XOR y09 -> jkm
+x36 AND y36 -> rpw
+x32 AND y32 -> gpb
+mbp AND pnw -> wcs
+jgm OR gfp -> qpq
+x11 AND y11 -> qnw
+bkv XOR gcf -> z20
+nhk OR ftf -> pvb
+gdw XOR vtf -> z43
+vjj OR ttv -> mmh
+x41 AND y41 -> knh
+ncw XOR qnw -> z11
+y28 XOR x28 -> wbf
+y36 XOR x36 -> rbm
+mgj AND wsv -> hbq
+hnt AND fbm -> pjj
+brq OR bfd -> vrh
+x17 XOR y17 -> bgt
+ksd XOR nrk -> z08
+x38 AND y38 -> rrb
+fwt AND fkd -> ghn
+ncw AND qnw -> stw
+x18 AND y18 -> bfd
+y00 AND x00 -> bwv
+gdm AND jkm -> ftf
+rms AND pwt -> fhc
+x16 XOR y16 -> dfn
+y37 AND x37 -> smv
+x35 AND y35 -> bmb
+y30 XOR x30 -> vnr
+jkt AND dbp -> dbt
+y41 XOR x41 -> qnn
+x31 XOR y31 -> drt
+qdh OR nhs -> jmh
+vwf OR btn -> gdm
+y44 XOR x44 -> wpk
+x14 XOR y14 -> qwb
+x21 XOR y21 -> vpm
+pbk AND kqc -> wfw
+vvr OR dbt -> wcw
+grv AND vpm -> tbb
+--- Fan out
+qff -> @["wsv"]
+vvr -> @["wcw"]
+z42 -> @[]
+z25 -> @[]
+z11 -> @[]
+dfc -> @["z22", "rng"]
+z36 -> @[]
+kcs -> @["dbp"]
+nts -> @["brq", "z18"]
+y04 -> @["ttv", "qdb"]
+z13 -> @[]
+pnw -> @["z33", "wcs"]
+rpw -> @["fhv"]
+msq -> @["vmp"]
+z14 -> @[]
+rms -> @["z39", "fhc"]
+z31 -> @[]
+wsq -> @["ckv"]
+rkt -> @["kqk"]
+y07 -> @["pdq", "cbr"]
+dtc -> @["kqc"]
+gfp -> @["qpq"]
+phw -> @["hjd"]
+z24 -> @[]
+y23 -> @["bcd", "wdr"]
+ftf -> @["pvb"]
+x12 -> @["dcm", "mgj"]
+y06 -> @["phw", "brk"]
+thp -> @["ncw"]
+y16 -> @["z16", "dfn"]
+dmw -> @["kqp", "z24"]
+ptf -> @["wvv"]
+cqk -> @["kpp"]
+dfn -> @["pbv", "mvp"]
+mkv -> @["z45"]
+rdf -> @["frv"]
+vmp -> @["z14", "ggg"]
+vwf -> @["gdm"]
+z00 -> @[]
+z07 -> @[]
+wvv -> @["qdh", "z28"]
+y05 -> @["pqh", "sdn"]
+tpt -> @["z31", "dfj"]
+cjn -> @["fgc"]
+hjm -> @["wvv"]
+z33 -> @[]
+x35 -> @["spp", "bmb"]
+x07 -> @["pdq", "cbr"]
+mvp -> @["dbj"]
+ftd -> @["hjm", "z27"]
+z39 -> @[]
+frk -> @["hgp", "z44"]
+qsh -> @["qcr"]
+vpm -> @["z21", "tbb"]
+kqk -> @["z06", "pqp"]
+y19 -> @["vmc", "whj"]
+tvh -> @["z34", "wbk"]
+y32 -> @["bmr", "gpb"]
+qcr -> @["pbv", "mvp"]
+vnr -> @["z30", "qmw"]
+x17 -> @["tfq", "bgt"]
+x31 -> @["cjn", "drt"]
+mpm -> @["frk"]
+ggs -> @["tpt"]
+x18 -> @["nts", "bfd"]
+z04 -> @[]
+x34 -> @["tvh", "fcv"]
+x44 -> @["mkv", "wpk"]
+fhv -> @["wwg", "z37"]
+qwb -> @["z14", "ggg"]
+fgq -> @["drp", "z35"]
+x00 -> @["z00", "bwv"]
+y27 -> @["ptf", "ftd"]
+z34 -> @[]
+z41 -> @[]
+brk -> @["z06", "pqp"]
+y28 -> @["nhs", "wbf"]
+x23 -> @["bcd", "wdr"]
+dbj -> @["z17", "svg"]
+z32 -> @[]
+z02 -> @[]
+qnn -> @["vgk", "z41"]
+vrh -> @["qpj", "z19"]
+z19 -> @[]
+z26 -> @[]
+z45 -> @[]
+bkc -> @["ckv"]
+x04 -> @["ttv", "qdb"]
+spp -> @["drp", "z35"]
+y22 -> @["tqj", "dfc"]
+x05 -> @["pqh", "sdn"]
+y20 -> @["gcf", "scg"]
+wdr -> @["z23"]
+cbr -> @["z07", "dvs"]
+nhs -> @["jmh"]
+x11 -> @["qff", "qnw"]
+x39 -> @["ggh", "pwt"]
+pgm -> @["hsh", "z38"]
+hgq -> @["dbp"]
+fgc -> @["z32", "shp"]
+y25 -> @["kcs", "hdp"]
+ttv -> @["mmh"]
+z37 -> @[]
+y01 -> @["wqt", "tcd"]
+svg -> @["rsq"]
+x16 -> @["z16", "dfn"]
+y31 -> @["cjn", "drt"]
+y33 -> @["cqk", "mbp"]
+z22 -> @[]
+y18 -> @["nts", "bfd"]
+qdh -> @["jmh"]
+fjh -> @["ncw"]
+y44 -> @["mkv", "wpk"]
+wfw -> @["qcr"]
+gcf -> @["gkj", "z20"]
+pbk -> @["z15", "wfw"]
+x28 -> @["nhs", "wbf"]
+whj -> @["qpj", "z19"]
+jmh -> @["gfp", "z29"]
+mmh -> @["z05", "rkt"]
+qdb -> @["z04", "vjj"]
+z23 -> @[]
+rps -> @["z42", "drv"]
+kqc -> @["z15", "wfw"]
+tqj -> @["cts"]
+z17 -> @[]
+x30 -> @["ggs", "vnr"]
+hdp -> @["hgq", "z25"]
+z29 -> @[]
+z08 -> @[]
+dvs -> @["ksd"]
+bhh -> @["hsh", "z38"]
+y15 -> @["qsh", "pbk"]
+x20 -> @["gcf", "scg"]
+pbv -> @["dbj"]
+z03 -> @[]
+x09 -> @["nhk", "jkm"]
+y24 -> @["dmw", "njt"]
+frj -> @["z02", "bkc"]
+y14 -> @["dtc", "qwb"]
+qjf -> @["z42", "drv"]
+smv -> @["bhh"]
+z40 -> @[]
+pdq -> @["ksd"]
+fbm -> @["z13", "pjj"]
+pqp -> @["hjd"]
+z01 -> @[]
+shp -> @["pnw"]
+y26 -> @["jkt", "vvr"]
+x37 -> @["hjw", "smv"]
+fsb -> @["gdw"]
+x33 -> @["cqk", "mbp"]
+bfd -> @["vrh"]
+y30 -> @["ggs", "vnr"]
+nrk -> @["vwf", "z08"]
+bwv -> @["sgv", "z01"]
+vmc -> @["bkv"]
+fkd -> @["z40", "ghn"]
+hbq -> @["fbm"]
+z43 -> @[]
+x10 -> @["njs", "thp"]
+z06 -> @[]
+y21 -> @["wns", "vpm"]
+njt -> @["frw"]
+x15 -> @["qsh", "pbk"]
+y40 -> @["drs", "fkd"]
+hvw -> @["vgk", "z41"]
+wsv -> @["z12", "hbq"]
+x40 -> @["drs", "fkd"]
+x42 -> @["qjf", "fsb"]
+tfq -> @["rsq"]
+grv -> @["z21", "tbb"]
+srv -> @["z22", "rng"]
+jgm -> @["qpq"]
+btn -> @["gdm"]
+y42 -> @["qjf", "fsb"]
+y39 -> @["ggh", "pwt"]
+y00 -> @["z00", "bwv"]
+fbq -> @["fhv"]
+pwt -> @["z39", "fhc"]
+bgt -> @["z17", "svg"]
+y09 -> @["nhk", "jkm"]
+z28 -> @[]
+ckv -> @["z03", "tbq"]
+z16 -> @[]
+y37 -> @["hjw", "smv"]
+tbb -> @["srv"]
+hqq -> @["z02", "bkc"]
+x26 -> @["jkt", "vvr"]
+qpq -> @["z30", "qmw"]
+drt -> @["z31", "dfj"]
+vgk -> @["rps"]
+x19 -> @["vmc", "whj"]
+rrb -> @["rms"]
+x06 -> @["phw", "brk"]
+frw -> @["hgq", "z25"]
+y02 -> @["frj", "wsq"]
+y11 -> @["qff", "qnw"]
+bcd -> @["qqp", "jcd"]
+brq -> @["vrh"]
+stw -> @["wsv"]
+y35 -> @["spp", "bmb"]
+wqt -> @["hqq"]
+z38 -> @[]
+pvb -> @["fjh", "z10"]
+drs -> @["hvw"]
+rng -> @["cts"]
+ggg -> @["kqc"]
+z15 -> @[]
+wbf -> @["qdh", "z28"]
+hjd -> @["z07", "dvs"]
+hgp -> @["z45"]
+dbt -> @["wcw"]
+z21 -> @[]
+hnt -> @["z13", "pjj"]
+y10 -> @["njs", "thp"]
+tcd -> @["sgv", "z01"]
+mbp -> @["z33", "wcs"]
+rsq -> @["brq", "z18"]
+tbq -> @["frv"]
+x36 -> @["rpw", "rbm"]
+wns -> @["srv"]
+kpc -> @["frk"]
+gdm -> @["z09", "ftf"]
+y36 -> @["rpw", "rbm"]
+z44 -> @[]
+pjj -> @["vmp"]
+bmb -> @["jdd"]
+hsh -> @["rms"]
+x27 -> @["ptf", "ftd"]
+kpp -> @["z34", "wbk"]
+fwt -> @["z40", "ghn"]
+wcw -> @["hjm", "z27"]
+drv -> @["gdw"]
+y41 -> @["knh", "qnn"]
+dcm -> @["fbm"]
+jcd -> @["z23"]
+njs -> @["fjh", "z10"]
+sdn -> @["kqk"]
+x21 -> @["wns", "vpm"]
+x08 -> @["nrk", "btn"]
+y12 -> @["dcm", "mgj"]
+wcs -> @["kpp"]
+cts -> @["qqp", "jcd"]
+y08 -> @["nrk", "btn"]
+y34 -> @["tvh", "fcv"]
+knh -> @["rps"]
+gkj -> @["grv"]
+gdw -> @["kpc", "z43"]
+z10 -> @[]
+fhc -> @["fwt"]
+dfj -> @["fgc"]
+pqh -> @["z05", "rkt"]
+x03 -> @["bbh", "rdf"]
+x02 -> @["frj", "wsq"]
+x22 -> @["tqj", "dfc"]
+x38 -> @["pgm", "rrb"]
+cjc -> @["gfp", "z29"]
+jkt -> @["z26", "dbt"]
+x29 -> @["jgm", "cjc"]
+qqp -> @["kqp", "z24"]
+kqp -> @["frw"]
+x32 -> @["bmr", "gpb"]
+jkm -> @["z09", "ftf"]
+bbh -> @["z03", "tbq"]
+z30 -> @[]
+z12 -> @[]
+bmr -> @["z32", "shp"]
+y03 -> @["bbh", "rdf"]
+hjw -> @["wwg", "z37"]
+z35 -> @[]
+y38 -> @["pgm", "rrb"]
+x41 -> @["knh", "qnn"]
+x13 -> @["msq", "hnt"]
+ghn -> @["hvw"]
+wbk -> @["fgq"]
+z05 -> @[]
+x01 -> @["wqt", "tcd"]
+x43 -> @["mpm", "vtf"]
+x14 -> @["dtc", "qwb"]
+rbm -> @["z36", "fbq"]
+y43 -> @["mpm", "vtf"]
+dbp -> @["z26", "dbt"]
+z20 -> @[]
+qmw -> @["tpt"]
+ggh -> @["fwt"]
+wwg -> @["bhh"]
+gpb -> @["pnw"]
+scg -> @["grv"]
+bkv -> @["gkj", "z20"]
+jdd -> @["z36", "fbq"]
+nhk -> @["pvb"]
+x25 -> @["kcs", "hdp"]
+y17 -> @["tfq", "bgt"]
+wpk -> @["hgp", "z44"]
+z27 -> @[]
+z18 -> @[]
+qnw -> @["z11", "stw"]
+vtf -> @["kpc", "z43"]
+qpj -> @["bkv"]
+y29 -> @["jgm", "cjc"]
+sgv -> @["hqq"]
+ncw -> @["z11", "stw"]
+z09 -> @[]
+vjj -> @["mmh"]
+mgj -> @["z12", "hbq"]
+x24 -> @["dmw", "njt"]
+y13 -> @["msq", "hnt"]
+drp -> @["jdd"]
+fcv -> @["fgq"]
+ksd -> @["vwf", "z08"]
+frv -> @["z04", "vjj"]
+--- Fan out Op
+qff -> @[17]
+vvr -> @[220]
+z42 -> @[]
+z25 -> @[]
+z11 -> @[]
+dfc -> @[2, 25]
+z36 -> @[]
+kcs -> @[170]
+nts -> @[26, 71]
+y04 -> @[32, 155]
+z13 -> @[]
+pnw -> @[160, 184]
+rpw -> @[129]
+msq -> @[117]
+z14 -> @[]
+rms -> @[165, 206]
+z31 -> @[]
+wsq -> @[14]
+rkt -> @[99]
+y07 -> @[83, 95]
+dtc -> @[59]
+gfp -> @[185]
+phw -> @[140]
+z24 -> @[]
+y23 -> @[52, 180]
+ftf -> @[188]
+x12 -> @[1, 149]
+y06 -> @[28, 148]
+thp -> @[101]
+y16 -> @[124, 207]
+dmw -> @[11, 91]
+ptf -> @[178]
+cqk -> @[22]
+dfn -> @[79, 114]
+mkv -> @[43]
+rdf -> @[7]
+vmp -> @[3, 175]
+vwf -> @[215]
+z00 -> @[]
+z07 -> @[]
+wvv -> @[30, 138]
+y05 -> @[130, 139]
+tpt -> @[37, 98]
+cjn -> @[5]
+hjm -> @[178]
+z33 -> @[]
+x35 -> @[44, 209]
+x07 -> @[83, 95]
+mvp -> @[20]
+ftd -> @[67, 104]
+z39 -> @[]
+frk -> @[94, 161]
+qsh -> @[12]
+vpm -> @[85, 221]
+kqk -> @[106, 174]
+y19 -> @[58, 68]
+tvh -> @[6, 76]
+y32 -> @[145, 183]
+qcr -> @[79, 114]
+vnr -> @[18, 135]
+x17 -> @[62, 198]
+x31 -> @[144, 213]
+mpm -> @[121]
+ggs -> @[55]
+x18 -> @[179, 203]
+z04 -> @[]
+x34 -> @[49, 146]
+x44 -> @[112, 216]
+fhv -> @[27, 35]
+qwb -> @[3, 175]
+fgq -> @[70, 167]
+x00 -> @[143, 204]
+y27 -> @[39, 80]
+z34 -> @[]
+z41 -> @[]
+brk -> @[106, 174]
+y28 -> @[31, 193]
+x23 -> @[52, 180]
+dbj -> @[120, 122]
+z32 -> @[]
+z02 -> @[]
+qnn -> @[13, 40]
+vrh -> @[48, 75]
+z19 -> @[]
+z26 -> @[]
+z45 -> @[]
+bkc -> @[14]
+x04 -> @[32, 155]
+spp -> @[70, 167]
+y22 -> @[156, 168]
+x05 -> @[130, 139]
+y20 -> @[38, 157]
+wdr -> @[88]
+cbr -> @[42, 125]
+nhs -> @[214]
+x11 -> @[136, 186]
+x39 -> @[64, 77]
+pgm -> @[109, 166]
+hgq -> @[170]
+fgc -> @[23, 159]
+y25 -> @[103, 172]
+ttv -> @[190]
+z37 -> @[]
+y01 -> @[92, 158]
+svg -> @[81]
+x16 -> @[124, 207]
+y31 -> @[144, 213]
+y33 -> @[152, 154]
+z22 -> @[]
+y18 -> @[179, 203]
+qdh -> @[214]
+fjh -> @[101]
+y44 -> @[112, 216]
+wfw -> @[12]
+gcf -> @[137, 187]
+pbk -> @[19, 219]
+x28 -> @[31, 193]
+whj -> @[48, 75]
+jmh -> @[65, 127]
+mmh -> @[9, 34]
+qdb -> @[73, 100]
+z23 -> @[]
+rps -> @[151, 169]
+kqc -> @[19, 219]
+tqj -> @[115]
+z17 -> @[]
+x30 -> @[131, 210]
+hdp -> @[93, 108]
+z29 -> @[]
+z08 -> @[]
+dvs -> @[128]
+bhh -> @[109, 166]
+y15 -> @[21, 51]
+x20 -> @[38, 157]
+pbv -> @[20]
+z03 -> @[]
+x09 -> @[153, 181]
+y24 -> @[110, 147]
+frj -> @[16, 60]
+y14 -> @[63, 217]
+qjf -> @[151, 169]
+smv -> @[61]
+z40 -> @[]
+pdq -> @[128]
+fbm -> @[133, 196]
+pqp -> @[140]
+z01 -> @[]
+shp -> @[176]
+y26 -> @[10, 102]
+x37 -> @[163, 208]
+fsb -> @[126]
+x33 -> @[152, 154]
+bfd -> @[197]
+y30 -> @[131, 210]
+nrk -> @[69, 199]
+bwv -> @[53, 105]
+vmc -> @[111]
+fkd -> @[82, 201]
+hbq -> @[173]
+z43 -> @[]
+x10 -> @[72, 107]
+z06 -> @[]
+y21 -> @[89, 218]
+njt -> @[142]
+x15 -> @[21, 51]
+y40 -> @[8, 123]
+hvw -> @[13, 40]
+wsv -> @[66, 195]
+x40 -> @[8, 123]
+x42 -> @[24, 134]
+tfq -> @[81]
+grv -> @[85, 221]
+srv -> @[2, 25]
+jgm -> @[185]
+btn -> @[215]
+y42 -> @[24, 134]
+y39 -> @[64, 77]
+y00 -> @[143, 204]
+fbq -> @[129]
+pwt -> @[165, 206]
+bgt -> @[120, 122]
+y09 -> @[153, 181]
+z28 -> @[]
+ckv -> @[15, 150]
+z16 -> @[]
+y37 -> @[163, 208]
+tbb -> @[116]
+hqq -> @[16, 60]
+x26 -> @[10, 102]
+qpq -> @[18, 135]
+drt -> @[37, 98]
+vgk -> @[113]
+x19 -> @[58, 68]
+rrb -> @[119]
+x06 -> @[28, 148]
+frw -> @[93, 108]
+y02 -> @[86, 177]
+y11 -> @[136, 186]
+bcd -> @[33, 54]
+brq -> @[197]
+stw -> @[17]
+y35 -> @[44, 209]
+wqt -> @[97]
+z38 -> @[]
+pvb -> @[0, 4]
+drs -> @[118]
+rng -> @[115]
+ggg -> @[59]
+z15 -> @[]
+wbf -> @[30, 138]
+hjd -> @[42, 125]
+hgp -> @[43]
+dbt -> @[220]
+z21 -> @[]
+hnt -> @[133, 196]
+y10 -> @[72, 107]
+tcd -> @[53, 105]
+mbp -> @[160, 184]
+rsq -> @[26, 71]
+tbq -> @[7]
+x36 -> @[182, 194]
+wns -> @[116]
+kpc -> @[121]
+gdm -> @[56, 205]
+y36 -> @[182, 194]
+z44 -> @[]
+pjj -> @[117]
+bmb -> @[132]
+hsh -> @[119]
+x27 -> @[39, 80]
+kpp -> @[6, 76]
+fwt -> @[82, 201]
+wcw -> @[67, 104]
+drv -> @[126]
+y41 -> @[191, 212]
+dcm -> @[173]
+jcd -> @[88]
+njs -> @[0, 4]
+sdn -> @[99]
+x21 -> @[89, 218]
+x08 -> @[45, 90]
+y12 -> @[1, 149]
+wcs -> @[22]
+cts -> @[33, 54]
+y08 -> @[45, 90]
+y34 -> @[49, 146]
+knh -> @[113]
+gkj -> @[78]
+gdw -> @[29, 189]
+z10 -> @[]
+fhc -> @[47]
+dfj -> @[5]
+pqh -> @[9, 34]
+x03 -> @[46, 164]
+x02 -> @[86, 177]
+x22 -> @[156, 168]
+x38 -> @[57, 200]
+cjc -> @[65, 127]
+jkt -> @[87, 211]
+x29 -> @[96, 171]
+qqp -> @[11, 91]
+kqp -> @[142]
+x32 -> @[145, 183]
+jkm -> @[56, 205]
+bbh -> @[15, 150]
+z30 -> @[]
+z12 -> @[]
+bmr -> @[23, 159]
+y03 -> @[46, 164]
+hjw -> @[27, 35]
+z35 -> @[]
+y38 -> @[57, 200]
+x41 -> @[191, 212]
+x13 -> @[41, 84]
+ghn -> @[118]
+wbk -> @[74]
+z05 -> @[]
+x01 -> @[92, 158]
+x43 -> @[50, 162]
+x14 -> @[63, 217]
+rbm -> @[36, 141]
+y43 -> @[50, 162]
+dbp -> @[87, 211]
+z20 -> @[]
+qmw -> @[55]
+ggh -> @[47]
+wwg -> @[61]
+gpb -> @[176]
+scg -> @[78]
+bkv -> @[137, 187]
+jdd -> @[36, 141]
+nhk -> @[188]
+x25 -> @[103, 172]
+y17 -> @[62, 198]
+wpk -> @[94, 161]
+z27 -> @[]
+z18 -> @[]
+qnw -> @[192, 202]
+vtf -> @[29, 189]
+qpj -> @[111]
+y29 -> @[96, 171]
+sgv -> @[97]
+ncw -> @[192, 202]
+z09 -> @[]
+vjj -> @[190]
+mgj -> @[66, 195]
+x24 -> @[110, 147]
+y13 -> @[41, 84]
+drp -> @[132]
+fcv -> @[74]
+ksd -> @[69, 199]
+frv -> @[73, 100]
+--- Init values
+@[1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+--- ZIndices
+z0 = 291
+z1 = 262
+z2 = 131
+z3 = 128
+z4 = 224
+z5 = 113
+z6 = 264
+z7 = 181
+z8 = 310
+z9 = 202
+z10 = 100
+z11 = 308
+z12 = 214
+z13 = 287
+z14 = 99
+z15 = 140
+z16 = 278
+z17 = 277
+z18 = 222
+z19 = 227
+z20 = 305
+z21 = 239
+z22 = 96
+z23 = 243
+z24 = 246
+z25 = 265
+z26 = 241
+z27 = 261
+z28 = 288
+z29 = 282
+z30 = 137
+z31 = 174
+z32 = 147
+z33 = 297
+z34 = 106
+z35 = 301
+z36 = 171
+z37 = 168
+z38 = 300
+z39 = 299
+z40 = 235
+z41 = 177
+z42 = 292
+z43 = 307
+z44 = 298
+z45 = 184
+--- Fan in Op
+0: x00 -> None
+1: x01 -> None
+2: x02 -> None
+3: x03 -> None
+4: x04 -> None
+5: x05 -> None
+6: x06 -> None
+7: x07 -> None
+8: x08 -> None
+9: x09 -> None
+10: x10 -> None
+11: x11 -> None
+12: x12 -> None
+13: x13 -> None
+14: x14 -> None
+15: x15 -> None
+16: x16 -> None
+17: x17 -> None
+18: x18 -> None
+19: x19 -> None
+20: x20 -> None
+21: x21 -> None
+22: x22 -> None
+23: x23 -> None
+24: x24 -> None
+25: x25 -> None
+26: x26 -> None
+27: x27 -> None
+28: x28 -> None
+29: x29 -> None
+30: x30 -> None
+31: x31 -> None
+32: x32 -> None
+33: x33 -> None
+34: x34 -> None
+35: x35 -> None
+36: x36 -> None
+37: x37 -> None
+38: x38 -> None
+39: x39 -> None
+40: x40 -> None
+41: x41 -> None
+42: x42 -> None
+43: x43 -> None
+44: x44 -> None
+45: y00 -> None
+46: y01 -> None
+47: y02 -> None
+48: y03 -> None
+49: y04 -> None
+50: y05 -> None
+51: y06 -> None
+52: y07 -> None
+53: y08 -> None
+54: y09 -> None
+55: y10 -> None
+56: y11 -> None
+57: y12 -> None
+58: y13 -> None
+59: y14 -> None
+60: y15 -> None
+61: y16 -> None
+62: y17 -> None
+63: y18 -> None
+64: y19 -> None
+65: y20 -> None
+66: y21 -> None
+67: y22 -> None
+68: y23 -> None
+69: y24 -> None
+70: y25 -> None
+71: y26 -> None
+72: y27 -> None
+73: y28 -> None
+74: y29 -> None
+75: y30 -> None
+76: y31 -> None
+77: y32 -> None
+78: y33 -> None
+79: y34 -> None
+80: y35 -> None
+81: y36 -> None
+82: y37 -> None
+83: y38 -> None
+84: y39 -> None
+85: y40 -> None
+86: y41 -> None
+87: y42 -> None
+88: y43 -> None
+89: y44 -> None
+90: njs -> y10 XOR x10 -> njs
+91: pvb -> nhk OR ftf -> pvb
+92: fjh -> njs AND pvb -> fjh
+93: dcm -> y12 AND x12 -> dcm
+94: srv -> tbb OR wns -> srv
+95: dfc -> y22 XOR x22 -> dfc
+96: z22 -> srv XOR dfc -> z22
+97: qwb -> x14 XOR y14 -> qwb
+98: vmp -> msq OR pjj -> vmp
+99: z14 -> qwb XOR vmp -> z14
+100: z10 -> njs XOR pvb -> z10
+101: cjn -> y31 AND x31 -> cjn
+102: dfj -> tpt AND drt -> dfj
+103: fgc -> cjn OR dfj -> fgc
+104: kpp -> wcs OR cqk -> kpp
+105: tvh -> x34 XOR y34 -> tvh
+106: z34 -> kpp XOR tvh -> z34
+107: tbq -> ckv AND bbh -> tbq
+108: rdf -> y03 AND x03 -> rdf
+109: frv -> tbq OR rdf -> frv
+110: drs -> y40 AND x40 -> drs
+111: pqh -> y05 XOR x05 -> pqh
+112: mmh -> vjj OR ttv -> mmh
+113: z05 -> pqh XOR mmh -> z05
+114: jkt -> x26 XOR y26 -> jkt
+115: qqp -> cts XOR bcd -> qqp
+116: dmw -> x24 XOR y24 -> dmw
+117: kqp -> qqp AND dmw -> kqp
+118: qsh -> x15 AND y15 -> qsh
+119: wfw -> pbk AND kqc -> wfw
+120: qcr -> qsh OR wfw -> qcr
+121: hvw -> drs OR ghn -> hvw
+122: qnn -> y41 XOR x41 -> qnn
+123: vgk -> hvw AND qnn -> vgk
+124: bkc -> hqq AND frj -> bkc
+125: wsq -> y02 AND x02 -> wsq
+126: ckv -> bkc OR wsq -> ckv
+127: bbh -> y03 XOR x03 -> bbh
+128: z03 -> ckv XOR bbh -> z03
+129: frj -> y02 XOR x02 -> frj
+130: hqq -> sgv OR wqt -> hqq
+131: z02 -> frj XOR hqq -> z02
+132: qff -> x11 XOR y11 -> qff
+133: stw -> ncw AND qnw -> stw
+134: wsv -> qff OR stw -> wsv
+135: qpq -> jgm OR gfp -> qpq
+136: vnr -> y30 XOR x30 -> vnr
+137: z30 -> qpq XOR vnr -> z30
+138: pbk -> y15 XOR x15 -> pbk
+139: kqc -> dtc OR ggg -> kqc
+140: z15 -> pbk XOR kqc -> z15
+141: mvp -> dfn AND qcr -> mvp
+142: pbv -> dfn XOR qcr -> pbv
+143: dbj -> mvp OR pbv -> dbj
+144: wcs -> mbp AND pnw -> wcs
+145: cqk -> x33 AND y33 -> cqk
+146: bmr -> x32 XOR y32 -> bmr
+147: z32 -> bmr XOR fgc -> z32
+148: qjf -> y42 XOR x42 -> qjf
+149: rng -> srv AND dfc -> rng
+150: rsq -> svg OR tfq -> rsq
+151: nts -> x18 XOR y18 -> nts
+152: brq -> rsq AND nts -> brq
+153: fhv -> rpw OR fbq -> fhv
+154: hjw -> x37 XOR y37 -> hjw
+155: wwg -> fhv AND hjw -> wwg
+156: phw -> x06 AND y06 -> phw
+157: vtf -> y43 XOR x43 -> vtf
+158: gdw -> fsb OR drv -> gdw
+159: kpc -> vtf AND gdw -> kpc
+160: wvv -> ptf OR hjm -> wvv
+161: wbf -> y28 XOR x28 -> wbf
+162: qdh -> wvv AND wbf -> qdh
+163: nhs -> y28 AND x28 -> nhs
+164: ttv -> y04 AND x04 -> ttv
+165: cts -> tqj OR rng -> cts
+166: bcd -> x23 XOR y23 -> bcd
+167: rkt -> mmh AND pqh -> rkt
+168: z37 -> hjw XOR fhv -> z37
+169: jdd -> bmb OR drp -> jdd
+170: rbm -> y36 XOR x36 -> rbm
+171: z36 -> jdd AND rbm -> z36
+172: drt -> x31 XOR y31 -> drt
+173: tpt -> ggs OR qmw -> tpt
+174: z31 -> drt XOR tpt -> z31
+175: gcf -> y20 XOR x20 -> gcf
+176: ptf -> x27 AND y27 -> ptf
+177: z41 -> qnn XOR hvw -> z41
+178: msq -> x13 AND y13 -> msq
+179: cbr -> x07 XOR y07 -> cbr
+180: hjd -> pqp OR phw -> hjd
+181: z07 -> cbr XOR hjd -> z07
+182: mkv -> x44 AND y44 -> mkv
+183: hgp -> frk AND wpk -> hgp
+184: z45 -> mkv OR hgp -> z45
+185: spp -> y35 XOR x35 -> spp
+186: nrk -> x08 XOR y08 -> nrk
+187: fhc -> rms AND pwt -> fhc
+188: ggh -> y39 AND x39 -> ggh
+189: fwt -> fhc OR ggh -> fwt
+190: whj -> y19 XOR x19 -> whj
+191: vrh -> brq OR bfd -> vrh
+192: qpj -> whj AND vrh -> qpj
+193: mpm -> y43 AND x43 -> mpm
+194: bwv -> y00 AND x00 -> bwv
+195: tcd -> y01 XOR x01 -> tcd
+196: sgv -> bwv AND tcd -> sgv
+197: jcd -> bcd AND cts -> jcd
+198: ggs -> x30 AND y30 -> ggs
+199: qmw -> qpq AND vnr -> qmw
+200: gdm -> vwf OR btn -> gdm
+201: jkm -> x09 XOR y09 -> jkm
+202: z09 -> gdm XOR jkm -> z09
+203: pgm -> y38 XOR x38 -> pgm
+204: vmc -> x19 AND y19 -> vmc
+205: dtc -> x14 AND y14 -> dtc
+206: ggg -> qwb AND vmp -> ggg
+207: smv -> y37 AND x37 -> smv
+208: bhh -> smv OR wwg -> bhh
+209: tfq -> y17 AND x17 -> tfq
+210: jmh -> qdh OR nhs -> jmh
+211: cjc -> y29 XOR x29 -> cjc
+212: gfp -> jmh AND cjc -> gfp
+213: mgj -> x12 XOR y12 -> mgj
+214: z12 -> mgj XOR wsv -> z12
+215: ftd -> x27 XOR y27 -> ftd
+216: wcw -> vvr OR dbt -> wcw
+217: hjm -> ftd AND wcw -> hjm
+218: ksd -> pdq OR dvs -> ksd
+219: vwf -> nrk AND ksd -> vwf
+220: fgq -> wbk OR fcv -> fgq
+221: drp -> fgq AND spp -> drp
+222: z18 -> rsq XOR nts -> z18
+223: qdb -> x04 XOR y04 -> qdb
+224: z04 -> frv XOR qdb -> z04
+225: wbk -> tvh AND kpp -> wbk
+226: fcv -> x34 AND y34 -> fcv
+227: z19 -> whj XOR vrh -> z19
+228: pwt -> y39 XOR x39 -> pwt
+229: scg -> y20 AND x20 -> scg
+230: gkj -> gcf AND bkv -> gkj
+231: grv -> scg OR gkj -> grv
+232: dfn -> x16 XOR y16 -> dfn
+233: svg -> bgt AND dbj -> svg
+234: fkd -> x40 XOR y40 -> fkd
+235: z40 -> fkd XOR fwt -> z40
+236: pdq -> x07 AND y07 -> pdq
+237: hnt -> y13 XOR x13 -> hnt
+238: vpm -> x21 XOR y21 -> vpm
+239: z21 -> grv XOR vpm -> z21
+240: dbp -> kcs OR hgq -> dbp
+241: z26 -> jkt XOR dbp -> z26
+242: wdr -> x23 AND y23 -> wdr
+243: z23 -> wdr OR jcd -> z23
+244: wns -> x21 AND y21 -> wns
+245: btn -> y08 AND x08 -> btn
+246: z24 -> qqp XOR dmw -> z24
+247: wqt -> x01 AND y01 -> wqt
+248: frw -> njt OR kqp -> frw
+249: hdp -> x25 XOR y25 -> hdp
+250: hgq -> frw AND hdp -> hgq
+251: frk -> mpm OR kpc -> frk
+252: wpk -> y44 XOR x44 -> wpk
+253: jgm -> x29 AND y29 -> jgm
+254: sdn -> x05 AND y05 -> sdn
+255: kqk -> sdn OR rkt -> kqk
+256: vjj -> frv AND qdb -> vjj
+257: thp -> x10 AND y10 -> thp
+258: ncw -> fjh OR thp -> ncw
+259: vvr -> y26 AND x26 -> vvr
+260: kcs -> x25 AND y25 -> kcs
+261: z27 -> ftd XOR wcw -> z27
+262: z01 -> tcd XOR bwv -> z01
+263: brk -> y06 XOR x06 -> brk
+264: z06 -> brk XOR kqk -> z06
+265: z25 -> frw XOR hdp -> z25
+266: hsh -> pgm AND bhh -> hsh
+267: bkv -> vmc OR qpj -> bkv
+268: knh -> x41 AND y41 -> knh
+269: rps -> knh OR vgk -> rps
+270: tqj -> x22 AND y22 -> tqj
+271: tbb -> grv AND vpm -> tbb
+272: pjj -> hnt AND fbm -> pjj
+273: ghn -> fwt AND fkd -> ghn
+274: rrb -> x38 AND y38 -> rrb
+275: rms -> hsh OR rrb -> rms
+276: bgt -> x17 XOR y17 -> bgt
+277: z17 -> dbj XOR bgt -> z17
+278: z16 -> x16 AND y16 -> z16
+279: dvs -> cbr AND hjd -> dvs
+280: fsb -> y42 AND x42 -> fsb
+281: drv -> qjf AND rps -> drv
+282: z29 -> cjc XOR jmh -> z29
+283: rpw -> x36 AND y36 -> rpw
+284: fbq -> jdd XOR rbm -> fbq
+285: bmb -> x35 AND y35 -> bmb
+286: fbm -> hbq OR dcm -> fbm
+287: z13 -> hnt XOR fbm -> z13
+288: z28 -> wvv XOR wbf -> z28
+289: pqp -> brk AND kqk -> pqp
+290: njt -> y24 AND x24 -> njt
+291: z00 -> y00 XOR x00 -> z00
+292: z42 -> rps XOR qjf -> z42
+293: nhk -> y09 AND x09 -> nhk
+294: mbp -> y33 XOR x33 -> mbp
+295: shp -> fgc AND bmr -> shp
+296: pnw -> gpb OR shp -> pnw
+297: z33 -> mbp XOR pnw -> z33
+298: z44 -> frk XOR wpk -> z44
+299: z39 -> rms XOR pwt -> z39
+300: z38 -> bhh XOR pgm -> z38
+301: z35 -> spp XOR fgq -> z35
+302: hbq -> mgj AND wsv -> hbq
+303: gpb -> x32 AND y32 -> gpb
+304: qnw -> x11 AND y11 -> qnw
+305: z20 -> bkv XOR gcf -> z20
+306: ftf -> gdm AND jkm -> ftf
+307: z43 -> gdw XOR vtf -> z43
+308: z11 -> ncw XOR qnw -> z11
+309: bfd -> x18 AND y18 -> bfd
+310: z08 -> ksd XOR nrk -> z08
+311: dbt -> jkt AND dbp -> dbt
+CHECKING (badIdx: 0, sw: @[])
+Bad zIdx: 11
+count: 90
+count: 91
+count: 92
+count: 93
+count: 94
+count: 95
+count: 96
+count: 97
+count: 98
+count: 99
+count: 100
+count: 101
+count: 102
+count: 103
+count: 104
+count: 105
+count: 106
+count: 107
+count: 108
+count: 109
+count: 110
+count: 111
+count: 112
+count: 113
+count: 114
+count: 115
+count: 116
+count: 117
+count: 118
+count: 119
+count: 120
+count: 121
+count: 122
+count: 123
+count: 124
+count: 125
+count: 126
+count: 127
+count: 128
+count: 129
+count: 130
+count: 131
+count: 132
+count: 133
+count: 134
+count: 135
+count: 136
+count: 137
+count: 138
+count: 139
+count: 140
+count: 141
+count: 142
+count: 143
+count: 144
+count: 145
+count: 146
+count: 147
+count: 148
+count: 149
+count: 150
+count: 151
+count: 152
+count: 153
+count: 154
+count: 155
+count: 156
+count: 157
+count: 158
+count: 159
+count: 160
+count: 161
+count: 162
+count: 163
+count: 164
+count: 165
+count: 166
+count: 167
+count: 168
+count: 169
+count: 170
+count: 171
+count: 172
+count: 173
+count: 174
+count: 175
+count: 176
+count: 177
+count: 178
+count: 179
+count: 180
+count: 181
+count: 182
+count: 183
+count: 184
+count: 185
+count: 186
+count: 187
+count: 188
+count: 189
+count: 190
+count: 191
+count: 192
+count: 193
+count: 194
+count: 195
+count: 196
+count: 197
+count: 198
+count: 199
+count: 200
+count: 201
+count: 202
+count: 203
+count: 204
+count: 205
+count: 206
+count: 207
+count: 208
+count: 209
+count: 210
+count: 211
+count: 212
+count: 213
+count: 214
+count: 215
+count: 216
+count: 217
+count: 218
+count: 219
+count: 220
+count: 221
+count: 222
+count: 223
+count: 224
+count: 225
+count: 226
+count: 227
+count: 228
+count: 229
+count: 230
+count: 231
+count: 232
+count: 233
+count: 234
+count: 235
+count: 236
+count: 237
+count: 238
+count: 239
+count: 240
+count: 241
+count: 242
+count: 243
+count: 244
+count: 245
+count: 246
+count: 247
+count: 248
+count: 249
+count: 250
+count: 251
+count: 252
+count: 253
+count: 254
+count: 255
+count: 256
+count: 257
+count: 258
+count: 259
+count: 260
+count: 261
+count: 262
+count: 263
+count: 264
+count: 265
+count: 266
+count: 267
+count: 268
+count: 269
+count: 270
+count: 271
+count: 272
+count: 273
+count: 274
+count: 275
+count: 276
+count: 277
+count: 278
+count: 279
+count: 280
+count: 281
+count: 282
+count: 283
+count: 284
+count: 285
+count: 286
+count: 287
+count: 288
+count: 289
+count: 290
+count: 291
+count: 292
+count: 293
+count: 294
+count: 295
+count: 296
+count: 297
+count: 298
+count: 299
+count: 300
+count: 301
+count: 302
+count: 303
+count: 304
+count: 305
+count: 306
+count: 307
+count: 308
+count: 309
+count: 310
+WILL CHECK (badIdx: 15, sw: @[(a: "qff", b: "qnw", zbi: 15)])
+CHECKING (badIdx: 15, sw: @[(a: "qff", b: "qnw", zbi: 15)])
+Bad zIdx: 15
+count: 90
+count: 91
+count: 92
+count: 93
+count: 94
+count: 95
+count: 96
+count: 97
+count: 98
+count: 99
+count: 100
+count: 101
+count: 102
+count: 103
+count: 104
+count: 105
+count: 106
+count: 107
+count: 108
+count: 109
+count: 110
+count: 111
+count: 112
+count: 113
+count: 114
+count: 115
+count: 116
+count: 117
+count: 118
+count: 119
+count: 120
+count: 121
+count: 122
+count: 123
+count: 124
+count: 125
+count: 126
+count: 127
+count: 128
+count: 129
+count: 130
+count: 131
+count: 132
+count: 133
+count: 134
+count: 135
+count: 136
+count: 137
+count: 138
+count: 139
+count: 140
+count: 141
+count: 142
+count: 143
+count: 144
+count: 145
+count: 146
+count: 147
+count: 148
+count: 149
+count: 150
+count: 151
+count: 152
+count: 153
+count: 154
+count: 155
+count: 156
+count: 157
+count: 158
+count: 159
+count: 160
+count: 161
+count: 162
+count: 163
+count: 164
+count: 165
+count: 166
+count: 167
+count: 168
+count: 169
+count: 170
+count: 171
+count: 172
+count: 173
+count: 174
+count: 175
+count: 176
+count: 177
+count: 178
+count: 179
+count: 180
+count: 181
+count: 182
+count: 183
+count: 184
+count: 185
+count: 186
+count: 187
+count: 188
+count: 189
+count: 190
+count: 191
+count: 192
+count: 193
+count: 194
+count: 195
+count: 196
+count: 197
+count: 198
+count: 199
+count: 200
+count: 201
+count: 202
+count: 203
+count: 204
+count: 205
+count: 206
+count: 207
+count: 208
+count: 209
+count: 210
+count: 211
+count: 212
+count: 213
+count: 214
+count: 215
+count: 216
+count: 217
+count: 218
+count: 219
+count: 220
+count: 221
+count: 222
+count: 223
+count: 224
+count: 225
+count: 226
+count: 227
+count: 228
+count: 229
+count: 230
+count: 231
+count: 232
+count: 233
+count: 234
+count: 235
+count: 236
+count: 237
+count: 238
+count: 239
+count: 240
+count: 241
+count: 242
+count: 243
+count: 244
+count: 245
+count: 246
+count: 247
+count: 248
+count: 249
+count: 250
+count: 251
+count: 252
+count: 253
+count: 254
+count: 255
+count: 256
+count: 257
+count: 258
+count: 259
+count: 260
+count: 261
+count: 262
+count: 263
+count: 264
+count: 265
+count: 266
+count: 267
+count: 268
+count: 269
+count: 270
+count: 271
+count: 272
+count: 273
+count: 274
+count: 275
+count: 276
+count: 277
+count: 278
+count: 279
+count: 280
+count: 281
+count: 282
+count: 283
+count: 284
+count: 285
+count: 286
+count: 287
+count: 288
+count: 289
+count: 290
+count: 291
+count: 292
+count: 293
+count: 294
+count: 295
+count: 296
+count: 297
+count: 298
+count: 299
+count: 300
+count: 301
+count: 302
+count: 303
+count: 304
+count: 305
+count: 306
+count: 307
+count: 308
+count: 309
+count: 310
+WILL CHECK (badIdx: 16, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "qsh", b: "z16", zbi: 16)])
+WILL CHECK (badIdx: 16, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "qcr", b: "z16", zbi: 16)])
+WILL CHECK (badIdx: 22, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22)])
+WILL CHECK (badIdx: 22, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22)])
+WILL CHECK (badIdx: 17, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "z17", b: "z16", zbi: 17)])
+CHECKING (badIdx: 22, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22)])
+Bad zIdx: 22
+count: 90
+count: 91
+count: 92
+count: 93
+count: 94
+count: 95
+count: 96
+count: 97
+count: 98
+count: 99
+count: 100
+count: 101
+count: 102
+count: 103
+count: 104
+count: 105
+count: 106
+count: 107
+count: 108
+count: 109
+count: 110
+count: 111
+count: 112
+count: 113
+count: 114
+count: 115
+count: 116
+count: 117
+count: 118
+count: 119
+count: 120
+count: 121
+count: 122
+count: 123
+count: 124
+count: 125
+count: 126
+count: 127
+count: 128
+count: 129
+count: 130
+count: 131
+count: 132
+count: 133
+count: 134
+count: 135
+count: 136
+count: 137
+count: 138
+count: 139
+count: 140
+count: 141
+count: 142
+count: 143
+count: 144
+count: 145
+count: 146
+count: 147
+count: 148
+count: 149
+count: 150
+count: 151
+count: 152
+count: 153
+count: 154
+count: 155
+count: 156
+count: 157
+count: 158
+count: 159
+count: 160
+count: 161
+count: 162
+count: 163
+count: 164
+count: 165
+count: 166
+count: 167
+count: 168
+count: 169
+count: 170
+count: 171
+count: 172
+count: 173
+count: 174
+count: 175
+count: 176
+count: 177
+count: 178
+count: 179
+count: 180
+count: 181
+count: 182
+count: 183
+count: 184
+count: 185
+count: 186
+count: 187
+count: 188
+count: 189
+count: 190
+count: 191
+count: 192
+count: 193
+count: 194
+count: 195
+count: 196
+count: 197
+count: 198
+count: 199
+count: 200
+count: 201
+count: 202
+count: 203
+count: 204
+count: 205
+count: 206
+count: 207
+count: 208
+count: 209
+count: 210
+count: 211
+count: 212
+count: 213
+count: 214
+count: 215
+count: 216
+count: 217
+count: 218
+count: 219
+count: 220
+count: 221
+count: 222
+count: 223
+count: 224
+count: 225
+count: 226
+count: 227
+count: 228
+count: 229
+count: 230
+count: 231
+count: 232
+count: 233
+count: 234
+count: 235
+count: 236
+count: 237
+count: 238
+count: 239
+count: 240
+count: 241
+count: 242
+count: 243
+count: 244
+count: 245
+count: 246
+count: 247
+count: 248
+count: 249
+count: 250
+count: 251
+count: 252
+count: 253
+count: 254
+count: 255
+count: 256
+count: 257
+count: 258
+count: 259
+count: 260
+count: 261
+count: 262
+count: 263
+count: 264
+count: 265
+count: 266
+count: 267
+count: 268
+count: 269
+count: 270
+count: 271
+count: 272
+count: 273
+count: 274
+count: 275
+count: 276
+count: 277
+count: 278
+count: 279
+count: 280
+count: 281
+count: 282
+count: 283
+count: 284
+count: 285
+count: 286
+count: 287
+count: 288
+count: 289
+count: 290
+count: 291
+count: 292
+count: 293
+count: 294
+count: 295
+count: 296
+count: 297
+count: 298
+count: 299
+count: 300
+count: 301
+count: 302
+count: 303
+count: 304
+count: 305
+count: 306
+count: 307
+count: 308
+count: 309
+count: 310
+WILL CHECK (badIdx: 23, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "qqp", b: "jcd", zbi: 23)])
+WILL CHECK (badIdx: 35, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "qqp", b: "wdr", zbi: 35)])
+WILL CHECK (badIdx: 35, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "qqp", b: "z23", zbi: 35)])
+WILL CHECK (badIdx: 23, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "cts", b: "wdr", zbi: 23)])
+WILL CHECK (badIdx: 23, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "jcd", b: "z24", zbi: 23)])
+WILL CHECK (badIdx: 24, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "wdr", b: "z24", zbi: 24)])
+WILL CHECK (badIdx: 23, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "wdr", b: "tqj", zbi: 23)])
+WILL CHECK (badIdx: 24, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "z23", b: "z24", zbi: 24)])
+CHECKING (badIdx: 35, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "qqp", b: "wdr", zbi: 35)])
+Bad zIdx: 35
+count: 90
+count: 91
+count: 92
+count: 93
+count: 94
+count: 95
+count: 96
+count: 97
+count: 98
+count: 99
+count: 100
+count: 101
+count: 102
+count: 103
+count: 104
+count: 105
+count: 106
+count: 107
+count: 108
+count: 109
+count: 110
+count: 111
+count: 112
+count: 113
+count: 114
+count: 115
+count: 116
+count: 117
+count: 118
+count: 119
+count: 120
+count: 121
+count: 122
+count: 123
+count: 124
+count: 125
+count: 126
+count: 127
+count: 128
+count: 129
+count: 130
+count: 131
+count: 132
+count: 133
+count: 134
+count: 135
+count: 136
+count: 137
+count: 138
+count: 139
+count: 140
+count: 141
+count: 142
+count: 143
+count: 144
+count: 145
+count: 146
+count: 147
+count: 148
+count: 149
+count: 150
+count: 151
+count: 152
+count: 153
+count: 154
+count: 155
+count: 156
+count: 157
+count: 158
+count: 159
+count: 160
+count: 161
+count: 162
+count: 163
+count: 164
+count: 165
+count: 166
+count: 167
+count: 168
+count: 169
+count: 170
+count: 171
+count: 172
+count: 173
+count: 174
+count: 175
+count: 176
+count: 177
+count: 178
+count: 179
+count: 180
+count: 181
+count: 182
+count: 183
+count: 184
+count: 185
+count: 186
+count: 187
+count: 188
+count: 189
+count: 190
+count: 191
+count: 192
+count: 193
+count: 194
+count: 195
+count: 196
+count: 197
+count: 198
+count: 199
+count: 200
+count: 201
+count: 202
+count: 203
+count: 204
+count: 205
+count: 206
+count: 207
+count: 208
+count: 209
+count: 210
+count: 211
+count: 212
+count: 213
+count: 214
+count: 215
+count: 216
+count: 217
+count: 218
+count: 219
+count: 220
+count: 221
+count: 222
+count: 223
+count: 224
+count: 225
+count: 226
+count: 227
+count: 228
+count: 229
+count: 230
+count: 231
+count: 232
+count: 233
+count: 234
+count: 235
+count: 236
+count: 237
+count: 238
+count: 239
+count: 240
+count: 241
+count: 242
+count: 243
+count: 244
+count: 245
+count: 246
+count: 247
+count: 248
+count: 249
+count: 250
+count: 251
+count: 252
+count: 253
+count: 254
+count: 255
+count: 256
+count: 257
+count: 258
+count: 259
+count: 260
+count: 261
+count: 262
+count: 263
+count: 264
+count: 265
+count: 266
+count: 267
+count: 268
+count: 269
+count: 270
+count: 271
+count: 272
+count: 273
+count: 274
+count: 275
+count: 276
+count: 277
+count: 278
+count: 279
+count: 280
+count: 281
+count: 282
+count: 283
+count: 284
+count: 285
+count: 286
+count: 287
+count: 288
+count: 289
+count: 290
+count: 291
+count: 292
+count: 293
+count: 294
+count: 295
+count: 296
+count: 297
+count: 298
+count: 299
+count: 300
+count: 301
+count: 302
+count: 303
+count: 304
+count: 305
+count: 306
+count: 307
+count: 308
+count: 309
+count: 310
+FAILURE for (badIdx: 36, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "qqp", b: "wdr", zbi: 35), (a: "fhv", b: "z36", zbi: 36)])
+FAILURE for (badIdx: 36, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "qqp", b: "wdr", zbi: 35), (a: "z37", b: "z36", zbi: 36)])
+SUCCESS for (badIdx: 100, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "qqp", b: "wdr", zbi: 35), (a: "z36", b: "fbq", zbi: 100)])
+CHECKING (badIdx: 35, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "qqp", b: "z23", zbi: 35)])
+Bad zIdx: 35
+count: 90
+count: 91
+count: 92
+count: 93
+count: 94
+count: 95
+count: 96
+count: 97
+count: 98
+count: 99
+count: 100
+count: 101
+count: 102
+count: 103
+count: 104
+count: 105
+count: 106
+count: 107
+count: 108
+count: 109
+count: 110
+count: 111
+count: 112
+count: 113
+count: 114
+count: 115
+count: 116
+count: 117
+count: 118
+count: 119
+count: 120
+count: 121
+count: 122
+count: 123
+count: 124
+count: 125
+count: 126
+count: 127
+count: 128
+count: 129
+count: 130
+count: 131
+count: 132
+count: 133
+count: 134
+count: 135
+count: 136
+count: 137
+count: 138
+count: 139
+count: 140
+count: 141
+count: 142
+count: 143
+count: 144
+count: 145
+count: 146
+count: 147
+count: 148
+count: 149
+count: 150
+count: 151
+count: 152
+count: 153
+count: 154
+count: 155
+count: 156
+count: 157
+count: 158
+count: 159
+count: 160
+count: 161
+count: 162
+count: 163
+count: 164
+count: 165
+count: 166
+count: 167
+count: 168
+count: 169
+count: 170
+count: 171
+count: 172
+count: 173
+count: 174
+count: 175
+count: 176
+count: 177
+count: 178
+count: 179
+count: 180
+count: 181
+count: 182
+count: 183
+count: 184
+count: 185
+count: 186
+count: 187
+count: 188
+count: 189
+count: 190
+count: 191
+count: 192
+count: 193
+count: 194
+count: 195
+count: 196
+count: 197
+count: 198
+count: 199
+count: 200
+count: 201
+count: 202
+count: 203
+count: 204
+count: 205
+count: 206
+count: 207
+count: 208
+count: 209
+count: 210
+count: 211
+count: 212
+count: 213
+count: 214
+count: 215
+count: 216
+count: 217
+count: 218
+count: 219
+count: 220
+count: 221
+count: 222
+count: 223
+count: 224
+count: 225
+count: 226
+count: 227
+count: 228
+count: 229
+count: 230
+count: 231
+count: 232
+count: 233
+count: 234
+count: 235
+count: 236
+count: 237
+count: 238
+count: 239
+count: 240
+count: 241
+count: 242
+count: 243
+count: 244
+count: 245
+count: 246
+count: 247
+count: 248
+count: 249
+count: 250
+count: 251
+count: 252
+count: 253
+count: 254
+count: 255
+count: 256
+count: 257
+count: 258
+count: 259
+count: 260
+count: 261
+count: 262
+count: 263
+count: 264
+count: 265
+count: 266
+count: 267
+count: 268
+count: 269
+count: 270
+count: 271
+count: 272
+count: 273
+count: 274
+count: 275
+count: 276
+count: 277
+count: 278
+count: 279
+count: 280
+count: 281
+count: 282
+count: 283
+count: 284
+count: 285
+count: 286
+count: 287
+count: 288
+count: 289
+count: 290
+count: 291
+count: 292
+count: 293
+count: 294
+count: 295
+count: 296
+count: 297
+count: 298
+count: 299
+count: 300
+count: 301
+count: 302
+count: 303
+count: 304
+count: 305
+count: 306
+count: 307
+count: 308
+count: 309
+count: 310
+FAILURE for (badIdx: 36, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "qqp", b: "z23", zbi: 35), (a: "fhv", b: "z36", zbi: 36)])
+FAILURE for (badIdx: 36, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "qqp", b: "z23", zbi: 35), (a: "z37", b: "z36", zbi: 36)])
+SUCCESS for (badIdx: 100, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "qqp", b: "z23", zbi: 35), (a: "z36", b: "fbq", zbi: 100)])
+CHECKING (badIdx: 24, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "z23", b: "z24", zbi: 24)])
+Bad zIdx: 24
+count: 90
+count: 91
+count: 92
+count: 93
+count: 94
+count: 95
+count: 96
+count: 97
+count: 98
+count: 99
+count: 100
+count: 101
+count: 102
+count: 103
+count: 104
+count: 105
+count: 106
+count: 107
+count: 108
+count: 109
+count: 110
+count: 111
+count: 112
+count: 113
+count: 114
+count: 115
+count: 116
+count: 117
+count: 118
+count: 119
+count: 120
+count: 121
+count: 122
+count: 123
+count: 124
+count: 125
+count: 126
+count: 127
+count: 128
+count: 129
+count: 130
+count: 131
+count: 132
+count: 133
+count: 134
+count: 135
+count: 136
+count: 137
+count: 138
+count: 139
+count: 140
+count: 141
+count: 142
+count: 143
+count: 144
+count: 145
+count: 146
+count: 147
+count: 148
+count: 149
+count: 150
+count: 151
+count: 152
+count: 153
+count: 154
+count: 155
+count: 156
+count: 157
+count: 158
+count: 159
+count: 160
+count: 161
+count: 162
+count: 163
+count: 164
+count: 165
+count: 166
+count: 167
+count: 168
+count: 169
+count: 170
+count: 171
+count: 172
+count: 173
+count: 174
+count: 175
+count: 176
+count: 177
+count: 178
+count: 179
+count: 180
+count: 181
+count: 182
+count: 183
+count: 184
+count: 185
+count: 186
+count: 187
+count: 188
+count: 189
+count: 190
+count: 191
+count: 192
+count: 193
+count: 194
+count: 195
+count: 196
+count: 197
+count: 198
+count: 199
+count: 200
+count: 201
+count: 202
+count: 203
+count: 204
+count: 205
+count: 206
+count: 207
+count: 208
+count: 209
+count: 210
+count: 211
+count: 212
+count: 213
+count: 214
+count: 215
+count: 216
+count: 217
+count: 218
+count: 219
+count: 220
+count: 221
+count: 222
+count: 223
+count: 224
+count: 225
+count: 226
+count: 227
+count: 228
+count: 229
+count: 230
+count: 231
+count: 232
+count: 233
+count: 234
+count: 235
+count: 236
+count: 237
+count: 238
+count: 239
+count: 240
+count: 241
+count: 242
+count: 243
+count: 244
+count: 245
+count: 246
+count: 247
+count: 248
+count: 249
+count: 250
+count: 251
+count: 252
+count: 253
+count: 254
+count: 255
+count: 256
+count: 257
+count: 258
+count: 259
+count: 260
+count: 261
+count: 262
+count: 263
+count: 264
+count: 265
+count: 266
+count: 267
+count: 268
+count: 269
+count: 270
+count: 271
+count: 272
+count: 273
+count: 274
+count: 275
+count: 276
+count: 277
+count: 278
+count: 279
+count: 280
+count: 281
+count: 282
+count: 283
+count: 284
+count: 285
+count: 286
+count: 287
+count: 288
+count: 289
+count: 290
+count: 291
+count: 292
+count: 293
+count: 294
+count: 295
+count: 296
+count: 297
+count: 298
+count: 299
+count: 300
+count: 301
+count: 302
+count: 303
+count: 304
+count: 305
+count: 306
+count: 307
+count: 308
+count: 309
+count: 310
+FAILURE for (badIdx: 35, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "z23", b: "z24", zbi: 24), (a: "dmw", b: "jcd", zbi: 35)])
+CHECKING (badIdx: 24, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "wdr", b: "z24", zbi: 24)])
+Bad zIdx: 24
+count: 90
+count: 91
+count: 92
+count: 93
+count: 94
+count: 95
+count: 96
+count: 97
+count: 98
+count: 99
+count: 100
+count: 101
+count: 102
+count: 103
+count: 104
+count: 105
+count: 106
+count: 107
+count: 108
+count: 109
+count: 110
+count: 111
+count: 112
+count: 113
+count: 114
+count: 115
+count: 116
+count: 117
+count: 118
+count: 119
+count: 120
+count: 121
+count: 122
+count: 123
+count: 124
+count: 125
+count: 126
+count: 127
+count: 128
+count: 129
+count: 130
+count: 131
+count: 132
+count: 133
+count: 134
+count: 135
+count: 136
+count: 137
+count: 138
+count: 139
+count: 140
+count: 141
+count: 142
+count: 143
+count: 144
+count: 145
+count: 146
+count: 147
+count: 148
+count: 149
+count: 150
+count: 151
+count: 152
+count: 153
+count: 154
+count: 155
+count: 156
+count: 157
+count: 158
+count: 159
+count: 160
+count: 161
+count: 162
+count: 163
+count: 164
+count: 165
+count: 166
+count: 167
+count: 168
+count: 169
+count: 170
+count: 171
+count: 172
+count: 173
+count: 174
+count: 175
+count: 176
+count: 177
+count: 178
+count: 179
+count: 180
+count: 181
+count: 182
+count: 183
+count: 184
+count: 185
+count: 186
+count: 187
+count: 188
+count: 189
+count: 190
+count: 191
+count: 192
+count: 193
+count: 194
+count: 195
+count: 196
+count: 197
+count: 198
+count: 199
+count: 200
+count: 201
+count: 202
+count: 203
+count: 204
+count: 205
+count: 206
+count: 207
+count: 208
+count: 209
+count: 210
+count: 211
+count: 212
+count: 213
+count: 214
+count: 215
+count: 216
+count: 217
+count: 218
+count: 219
+count: 220
+count: 221
+count: 222
+count: 223
+count: 224
+count: 225
+count: 226
+count: 227
+count: 228
+count: 229
+count: 230
+count: 231
+count: 232
+count: 233
+count: 234
+count: 235
+count: 236
+count: 237
+count: 238
+count: 239
+count: 240
+count: 241
+count: 242
+count: 243
+count: 244
+count: 245
+count: 246
+count: 247
+count: 248
+count: 249
+count: 250
+count: 251
+count: 252
+count: 253
+count: 254
+count: 255
+count: 256
+count: 257
+count: 258
+count: 259
+count: 260
+count: 261
+count: 262
+count: 263
+count: 264
+count: 265
+count: 266
+count: 267
+count: 268
+count: 269
+count: 270
+count: 271
+count: 272
+count: 273
+count: 274
+count: 275
+count: 276
+count: 277
+count: 278
+count: 279
+count: 280
+count: 281
+count: 282
+count: 283
+count: 284
+count: 285
+count: 286
+count: 287
+count: 288
+count: 289
+count: 290
+count: 291
+count: 292
+count: 293
+count: 294
+count: 295
+count: 296
+count: 297
+count: 298
+count: 299
+count: 300
+count: 301
+count: 302
+count: 303
+count: 304
+count: 305
+count: 306
+count: 307
+count: 308
+count: 309
+count: 310
+CHECKING (badIdx: 23, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "qqp", b: "jcd", zbi: 23)])
+Bad zIdx: 23
+count: 90
+count: 91
+count: 92
+count: 93
+count: 94
+count: 95
+count: 96
+count: 97
+count: 98
+count: 99
+count: 100
+count: 101
+count: 102
+count: 103
+count: 104
+count: 105
+count: 106
+count: 107
+count: 108
+count: 109
+count: 110
+count: 111
+count: 112
+count: 113
+count: 114
+count: 115
+count: 116
+count: 117
+count: 118
+count: 119
+count: 120
+count: 121
+count: 122
+count: 123
+count: 124
+count: 125
+count: 126
+count: 127
+count: 128
+count: 129
+count: 130
+count: 131
+count: 132
+count: 133
+count: 134
+count: 135
+count: 136
+count: 137
+count: 138
+count: 139
+count: 140
+count: 141
+count: 142
+count: 143
+count: 144
+count: 145
+count: 146
+count: 147
+count: 148
+count: 149
+count: 150
+count: 151
+count: 152
+count: 153
+count: 154
+count: 155
+count: 156
+count: 157
+count: 158
+count: 159
+count: 160
+count: 161
+count: 162
+count: 163
+count: 164
+count: 165
+count: 166
+count: 167
+count: 168
+count: 169
+count: 170
+count: 171
+count: 172
+count: 173
+count: 174
+count: 175
+count: 176
+count: 177
+count: 178
+count: 179
+count: 180
+count: 181
+count: 182
+count: 183
+count: 184
+count: 185
+count: 186
+count: 187
+count: 188
+count: 189
+count: 190
+count: 191
+count: 192
+count: 193
+count: 194
+count: 195
+count: 196
+count: 197
+count: 198
+count: 199
+count: 200
+count: 201
+count: 202
+count: 203
+count: 204
+count: 205
+count: 206
+count: 207
+count: 208
+count: 209
+count: 210
+count: 211
+count: 212
+count: 213
+count: 214
+count: 215
+count: 216
+count: 217
+count: 218
+count: 219
+count: 220
+count: 221
+count: 222
+count: 223
+count: 224
+count: 225
+count: 226
+count: 227
+count: 228
+count: 229
+count: 230
+count: 231
+count: 232
+count: 233
+count: 234
+count: 235
+count: 236
+count: 237
+count: 238
+count: 239
+count: 240
+count: 241
+count: 242
+count: 243
+count: 244
+count: 245
+count: 246
+count: 247
+count: 248
+count: 249
+count: 250
+count: 251
+count: 252
+count: 253
+count: 254
+count: 255
+count: 256
+count: 257
+count: 258
+count: 259
+count: 260
+count: 261
+count: 262
+count: 263
+count: 264
+count: 265
+count: 266
+count: 267
+count: 268
+count: 269
+count: 270
+count: 271
+count: 272
+count: 273
+count: 274
+count: 275
+count: 276
+count: 277
+count: 278
+count: 279
+count: 280
+count: 281
+count: 282
+count: 283
+count: 284
+count: 285
+count: 286
+count: 287
+count: 288
+count: 289
+count: 290
+count: 291
+count: 292
+count: 293
+count: 294
+count: 295
+count: 296
+count: 297
+count: 298
+count: 299
+count: 300
+count: 301
+count: 302
+count: 303
+count: 304
+count: 305
+count: 306
+count: 307
+count: 308
+count: 309
+count: 310
+FAILURE for (badIdx: 24, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "qqp", b: "jcd", zbi: 23), (a: "dmw", b: "wdr", zbi: 24)])
+CHECKING (badIdx: 23, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "wdr", b: "tqj", zbi: 23)])
+Bad zIdx: 23
+count: 90
+count: 91
+count: 92
+count: 93
+count: 94
+count: 95
+count: 96
+count: 97
+count: 98
+count: 99
+count: 100
+count: 101
+count: 102
+count: 103
+count: 104
+count: 105
+count: 106
+count: 107
+count: 108
+count: 109
+count: 110
+count: 111
+count: 112
+count: 113
+count: 114
+count: 115
+count: 116
+count: 117
+count: 118
+count: 119
+count: 120
+count: 121
+count: 122
+count: 123
+count: 124
+count: 125
+count: 126
+count: 127
+count: 128
+count: 129
+count: 130
+count: 131
+count: 132
+count: 133
+count: 134
+count: 135
+count: 136
+count: 137
+count: 138
+count: 139
+count: 140
+count: 141
+count: 142
+count: 143
+count: 144
+count: 145
+count: 146
+count: 147
+count: 148
+count: 149
+count: 150
+count: 151
+count: 152
+count: 153
+count: 154
+count: 155
+count: 156
+count: 157
+count: 158
+count: 159
+count: 160
+count: 161
+count: 162
+count: 163
+count: 164
+count: 165
+count: 166
+count: 167
+count: 168
+count: 169
+count: 170
+count: 171
+count: 172
+count: 173
+count: 174
+count: 175
+count: 176
+count: 177
+count: 178
+count: 179
+count: 180
+count: 181
+count: 182
+count: 183
+count: 184
+count: 185
+count: 186
+count: 187
+count: 188
+count: 189
+count: 190
+count: 191
+count: 192
+count: 193
+count: 194
+count: 195
+count: 196
+count: 197
+count: 198
+count: 199
+count: 200
+count: 201
+count: 202
+count: 203
+count: 204
+count: 205
+count: 206
+count: 207
+count: 208
+count: 209
+count: 210
+count: 211
+count: 212
+count: 213
+count: 214
+count: 215
+count: 216
+count: 217
+count: 218
+count: 219
+count: 220
+count: 221
+count: 222
+count: 223
+count: 224
+count: 225
+count: 226
+count: 227
+count: 228
+count: 229
+count: 230
+count: 231
+count: 232
+count: 233
+count: 234
+count: 235
+count: 236
+count: 237
+count: 238
+count: 239
+count: 240
+count: 241
+count: 242
+count: 243
+count: 244
+count: 245
+count: 246
+count: 247
+count: 248
+count: 249
+count: 250
+count: 251
+count: 252
+count: 253
+count: 254
+count: 255
+count: 256
+count: 257
+count: 258
+count: 259
+count: 260
+count: 261
+count: 262
+count: 263
+count: 264
+count: 265
+count: 266
+count: 267
+count: 268
+count: 269
+count: 270
+count: 271
+count: 272
+count: 273
+count: 274
+count: 275
+count: 276
+count: 277
+count: 278
+count: 279
+count: 280
+count: 281
+count: 282
+count: 283
+count: 284
+count: 285
+count: 286
+count: 287
+count: 288
+count: 289
+count: 290
+count: 291
+count: 292
+count: 293
+count: 294
+count: 295
+count: 296
+count: 297
+count: 298
+count: 299
+count: 300
+count: 301
+count: 302
+count: 303
+count: 304
+count: 305
+count: 306
+count: 307
+count: 308
+count: 309
+count: 310
+CHECKING (badIdx: 23, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "cts", b: "wdr", zbi: 23)])
+Bad zIdx: 23
+count: 90
+count: 91
+count: 92
+count: 93
+count: 94
+count: 95
+count: 96
+count: 97
+count: 98
+count: 99
+count: 100
+count: 101
+count: 102
+count: 103
+count: 104
+count: 105
+count: 106
+count: 107
+count: 108
+count: 109
+count: 110
+count: 111
+count: 112
+count: 113
+count: 114
+count: 115
+count: 116
+count: 117
+count: 118
+count: 119
+count: 120
+count: 121
+count: 122
+count: 123
+count: 124
+count: 125
+count: 126
+count: 127
+count: 128
+count: 129
+count: 130
+count: 131
+count: 132
+count: 133
+count: 134
+count: 135
+count: 136
+count: 137
+count: 138
+count: 139
+count: 140
+count: 141
+count: 142
+count: 143
+count: 144
+count: 145
+count: 146
+count: 147
+count: 148
+count: 149
+count: 150
+count: 151
+count: 152
+count: 153
+count: 154
+count: 155
+count: 156
+count: 157
+count: 158
+count: 159
+count: 160
+count: 161
+count: 162
+count: 163
+count: 164
+count: 165
+count: 166
+count: 167
+count: 168
+count: 169
+count: 170
+count: 171
+count: 172
+count: 173
+count: 174
+count: 175
+count: 176
+count: 177
+count: 178
+count: 179
+count: 180
+count: 181
+count: 182
+count: 183
+count: 184
+count: 185
+count: 186
+count: 187
+count: 188
+count: 189
+count: 190
+count: 191
+count: 192
+count: 193
+count: 194
+count: 195
+count: 196
+count: 197
+count: 198
+count: 199
+count: 200
+count: 201
+count: 202
+count: 203
+count: 204
+count: 205
+count: 206
+count: 207
+count: 208
+count: 209
+count: 210
+count: 211
+count: 212
+count: 213
+count: 214
+count: 215
+count: 216
+count: 217
+count: 218
+count: 219
+count: 220
+count: 221
+count: 222
+count: 223
+count: 224
+count: 225
+count: 226
+count: 227
+count: 228
+count: 229
+count: 230
+count: 231
+count: 232
+count: 233
+count: 234
+count: 235
+count: 236
+count: 237
+count: 238
+count: 239
+count: 240
+count: 241
+count: 242
+count: 243
+count: 244
+count: 245
+count: 246
+count: 247
+count: 248
+count: 249
+count: 250
+count: 251
+count: 252
+count: 253
+count: 254
+count: 255
+count: 256
+count: 257
+count: 258
+count: 259
+count: 260
+count: 261
+count: 262
+count: 263
+count: 264
+count: 265
+count: 266
+count: 267
+count: 268
+count: 269
+count: 270
+count: 271
+count: 272
+count: 273
+count: 274
+count: 275
+count: 276
+count: 277
+count: 278
+count: 279
+count: 280
+count: 281
+count: 282
+count: 283
+count: 284
+count: 285
+count: 286
+count: 287
+count: 288
+count: 289
+count: 290
+count: 291
+count: 292
+count: 293
+count: 294
+count: 295
+count: 296
+count: 297
+count: 298
+count: 299
+count: 300
+count: 301
+count: 302
+count: 303
+count: 304
+count: 305
+count: 306
+count: 307
+count: 308
+count: 309
+count: 310
+FAILURE for (badIdx: 35, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "cts", b: "wdr", zbi: 23), (a: "rng", b: "bcd", zbi: 35)])
+CHECKING (badIdx: 23, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "jcd", b: "z24", zbi: 23)])
+Bad zIdx: 23
+count: 90
+count: 91
+count: 92
+count: 93
+count: 94
+count: 95
+count: 96
+count: 97
+count: 98
+count: 99
+count: 100
+count: 101
+count: 102
+count: 103
+count: 104
+count: 105
+count: 106
+count: 107
+count: 108
+count: 109
+count: 110
+count: 111
+count: 112
+count: 113
+count: 114
+count: 115
+count: 116
+count: 117
+count: 118
+count: 119
+count: 120
+count: 121
+count: 122
+count: 123
+count: 124
+count: 125
+count: 126
+count: 127
+count: 128
+count: 129
+count: 130
+count: 131
+count: 132
+count: 133
+count: 134
+count: 135
+count: 136
+count: 137
+count: 138
+count: 139
+count: 140
+count: 141
+count: 142
+count: 143
+count: 144
+count: 145
+count: 146
+count: 147
+count: 148
+count: 149
+count: 150
+count: 151
+count: 152
+count: 153
+count: 154
+count: 155
+count: 156
+count: 157
+count: 158
+count: 159
+count: 160
+count: 161
+count: 162
+count: 163
+count: 164
+count: 165
+count: 166
+count: 167
+count: 168
+count: 169
+count: 170
+count: 171
+count: 172
+count: 173
+count: 174
+count: 175
+count: 176
+count: 177
+count: 178
+count: 179
+count: 180
+count: 181
+count: 182
+count: 183
+count: 184
+count: 185
+count: 186
+count: 187
+count: 188
+count: 189
+count: 190
+count: 191
+count: 192
+count: 193
+count: 194
+count: 195
+count: 196
+count: 197
+count: 198
+count: 199
+count: 200
+count: 201
+count: 202
+count: 203
+count: 204
+count: 205
+count: 206
+count: 207
+count: 208
+count: 209
+count: 210
+count: 211
+count: 212
+count: 213
+count: 214
+count: 215
+count: 216
+count: 217
+count: 218
+count: 219
+count: 220
+count: 221
+count: 222
+count: 223
+count: 224
+count: 225
+count: 226
+count: 227
+count: 228
+count: 229
+count: 230
+count: 231
+count: 232
+count: 233
+count: 234
+count: 235
+count: 236
+count: 237
+count: 238
+count: 239
+count: 240
+count: 241
+count: 242
+count: 243
+count: 244
+count: 245
+count: 246
+count: 247
+count: 248
+count: 249
+count: 250
+count: 251
+count: 252
+count: 253
+count: 254
+count: 255
+count: 256
+count: 257
+count: 258
+count: 259
+count: 260
+count: 261
+count: 262
+count: 263
+count: 264
+count: 265
+count: 266
+count: 267
+count: 268
+count: 269
+count: 270
+count: 271
+count: 272
+count: 273
+count: 274
+count: 275
+count: 276
+count: 277
+count: 278
+count: 279
+count: 280
+count: 281
+count: 282
+count: 283
+count: 284
+count: 285
+count: 286
+count: 287
+count: 288
+count: 289
+count: 290
+count: 291
+count: 292
+count: 293
+count: 294
+count: 295
+count: 296
+count: 297
+count: 298
+count: 299
+count: 300
+count: 301
+count: 302
+count: 303
+count: 304
+count: 305
+count: 306
+count: 307
+count: 308
+count: 309
+count: 310
+CHECKING (badIdx: 22, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22)])
+Bad zIdx: 22
+count: 90
+count: 91
+count: 92
+count: 93
+count: 94
+count: 95
+count: 96
+count: 97
+count: 98
+count: 99
+count: 100
+count: 101
+count: 102
+count: 103
+count: 104
+count: 105
+count: 106
+count: 107
+count: 108
+count: 109
+count: 110
+count: 111
+count: 112
+count: 113
+count: 114
+count: 115
+count: 116
+count: 117
+count: 118
+count: 119
+count: 120
+count: 121
+count: 122
+count: 123
+count: 124
+count: 125
+count: 126
+count: 127
+count: 128
+count: 129
+count: 130
+count: 131
+count: 132
+count: 133
+count: 134
+count: 135
+count: 136
+count: 137
+count: 138
+count: 139
+count: 140
+count: 141
+count: 142
+count: 143
+count: 144
+count: 145
+count: 146
+count: 147
+count: 148
+count: 149
+count: 150
+count: 151
+count: 152
+count: 153
+count: 154
+count: 155
+count: 156
+count: 157
+count: 158
+count: 159
+count: 160
+count: 161
+count: 162
+count: 163
+count: 164
+count: 165
+count: 166
+count: 167
+count: 168
+count: 169
+count: 170
+count: 171
+count: 172
+count: 173
+count: 174
+count: 175
+count: 176
+count: 177
+count: 178
+count: 179
+count: 180
+count: 181
+count: 182
+count: 183
+count: 184
+count: 185
+count: 186
+count: 187
+count: 188
+count: 189
+count: 190
+count: 191
+count: 192
+count: 193
+count: 194
+count: 195
+count: 196
+count: 197
+count: 198
+count: 199
+count: 200
+count: 201
+count: 202
+count: 203
+count: 204
+count: 205
+count: 206
+count: 207
+count: 208
+count: 209
+count: 210
+count: 211
+count: 212
+count: 213
+count: 214
+count: 215
+count: 216
+count: 217
+count: 218
+count: 219
+count: 220
+count: 221
+count: 222
+count: 223
+count: 224
+count: 225
+count: 226
+count: 227
+count: 228
+count: 229
+count: 230
+count: 231
+count: 232
+count: 233
+count: 234
+count: 235
+count: 236
+count: 237
+count: 238
+count: 239
+count: 240
+count: 241
+count: 242
+count: 243
+count: 244
+count: 245
+count: 246
+count: 247
+count: 248
+count: 249
+count: 250
+count: 251
+count: 252
+count: 253
+count: 254
+count: 255
+count: 256
+count: 257
+count: 258
+count: 259
+count: 260
+count: 261
+count: 262
+count: 263
+count: 264
+count: 265
+count: 266
+count: 267
+count: 268
+count: 269
+count: 270
+count: 271
+count: 272
+count: 273
+count: 274
+count: 275
+count: 276
+count: 277
+count: 278
+count: 279
+count: 280
+count: 281
+count: 282
+count: 283
+count: 284
+count: 285
+count: 286
+count: 287
+count: 288
+count: 289
+count: 290
+count: 291
+count: 292
+count: 293
+count: 294
+count: 295
+count: 296
+count: 297
+count: 298
+count: 299
+count: 300
+count: 301
+count: 302
+count: 303
+count: 304
+count: 305
+count: 306
+count: 307
+count: 308
+count: 309
+count: 310
+WILL CHECK (badIdx: 23, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22), (a: "qqp", b: "jcd", zbi: 23)])
+WILL CHECK (badIdx: 35, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22), (a: "qqp", b: "wdr", zbi: 35)])
+WILL CHECK (badIdx: 23, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22), (a: "cts", b: "wdr", zbi: 23)])
+WILL CHECK (badIdx: 23, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22), (a: "jcd", b: "z24", zbi: 23)])
+WILL CHECK (badIdx: 23, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22), (a: "wdr", b: "tqj", zbi: 23)])
+WILL CHECK (badIdx: 24, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22), (a: "z23", b: "z24", zbi: 24)])
+CHECKING (badIdx: 35, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22), (a: "qqp", b: "wdr", zbi: 35)])
+Bad zIdx: 35
+count: 90
+count: 91
+count: 92
+count: 93
+count: 94
+count: 95
+count: 96
+count: 97
+count: 98
+count: 99
+count: 100
+count: 101
+count: 102
+count: 103
+count: 104
+count: 105
+count: 106
+count: 107
+count: 108
+count: 109
+count: 110
+count: 111
+count: 112
+count: 113
+count: 114
+count: 115
+count: 116
+count: 117
+count: 118
+count: 119
+count: 120
+count: 121
+count: 122
+count: 123
+count: 124
+count: 125
+count: 126
+count: 127
+count: 128
+count: 129
+count: 130
+count: 131
+count: 132
+count: 133
+count: 134
+count: 135
+count: 136
+count: 137
+count: 138
+count: 139
+count: 140
+count: 141
+count: 142
+count: 143
+count: 144
+count: 145
+count: 146
+count: 147
+count: 148
+count: 149
+count: 150
+count: 151
+count: 152
+count: 153
+count: 154
+count: 155
+count: 156
+count: 157
+count: 158
+count: 159
+count: 160
+count: 161
+count: 162
+count: 163
+count: 164
+count: 165
+count: 166
+count: 167
+count: 168
+count: 169
+count: 170
+count: 171
+count: 172
+count: 173
+count: 174
+count: 175
+count: 176
+count: 177
+count: 178
+count: 179
+count: 180
+count: 181
+count: 182
+count: 183
+count: 184
+count: 185
+count: 186
+count: 187
+count: 188
+count: 189
+count: 190
+count: 191
+count: 192
+count: 193
+count: 194
+count: 195
+count: 196
+count: 197
+count: 198
+count: 199
+count: 200
+count: 201
+count: 202
+count: 203
+count: 204
+count: 205
+count: 206
+count: 207
+count: 208
+count: 209
+count: 210
+count: 211
+count: 212
+count: 213
+count: 214
+count: 215
+count: 216
+count: 217
+count: 218
+count: 219
+count: 220
+count: 221
+count: 222
+count: 223
+count: 224
+count: 225
+count: 226
+count: 227
+count: 228
+count: 229
+count: 230
+count: 231
+count: 232
+count: 233
+count: 234
+count: 235
+count: 236
+count: 237
+count: 238
+count: 239
+count: 240
+count: 241
+count: 242
+count: 243
+count: 244
+count: 245
+count: 246
+count: 247
+count: 248
+count: 249
+count: 250
+count: 251
+count: 252
+count: 253
+count: 254
+count: 255
+count: 256
+count: 257
+count: 258
+count: 259
+count: 260
+count: 261
+count: 262
+count: 263
+count: 264
+count: 265
+count: 266
+count: 267
+count: 268
+count: 269
+count: 270
+count: 271
+count: 272
+count: 273
+count: 274
+count: 275
+count: 276
+count: 277
+count: 278
+count: 279
+count: 280
+count: 281
+count: 282
+count: 283
+count: 284
+count: 285
+count: 286
+count: 287
+count: 288
+count: 289
+count: 290
+count: 291
+count: 292
+count: 293
+count: 294
+count: 295
+count: 296
+count: 297
+count: 298
+count: 299
+count: 300
+count: 301
+count: 302
+count: 303
+count: 304
+count: 305
+count: 306
+count: 307
+count: 308
+count: 309
+count: 310
+FAILURE for (badIdx: 36, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22), (a: "qqp", b: "wdr", zbi: 35), (a: "fhv", b: "z36", zbi: 36)])
+FAILURE for (badIdx: 36, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22), (a: "qqp", b: "wdr", zbi: 35), (a: "z37", b: "z36", zbi: 36)])
+SUCCESS for (badIdx: 100, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22), (a: "qqp", b: "wdr", zbi: 35), (a: "z36", b: "fbq", zbi: 100)])
+CHECKING (badIdx: 24, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22), (a: "z23", b: "z24", zbi: 24)])
+Bad zIdx: 24
+count: 90
+count: 91
+count: 92
+count: 93
+count: 94
+count: 95
+count: 96
+count: 97
+count: 98
+count: 99
+count: 100
+count: 101
+count: 102
+count: 103
+count: 104
+count: 105
+count: 106
+count: 107
+count: 108
+count: 109
+count: 110
+count: 111
+count: 112
+count: 113
+count: 114
+count: 115
+count: 116
+count: 117
+count: 118
+count: 119
+count: 120
+count: 121
+count: 122
+count: 123
+count: 124
+count: 125
+count: 126
+count: 127
+count: 128
+count: 129
+count: 130
+count: 131
+count: 132
+count: 133
+count: 134
+count: 135
+count: 136
+count: 137
+count: 138
+count: 139
+count: 140
+count: 141
+count: 142
+count: 143
+count: 144
+count: 145
+count: 146
+count: 147
+count: 148
+count: 149
+count: 150
+count: 151
+count: 152
+count: 153
+count: 154
+count: 155
+count: 156
+count: 157
+count: 158
+count: 159
+count: 160
+count: 161
+count: 162
+count: 163
+count: 164
+count: 165
+count: 166
+count: 167
+count: 168
+count: 169
+count: 170
+count: 171
+count: 172
+count: 173
+count: 174
+count: 175
+count: 176
+count: 177
+count: 178
+count: 179
+count: 180
+count: 181
+count: 182
+count: 183
+count: 184
+count: 185
+count: 186
+count: 187
+count: 188
+count: 189
+count: 190
+count: 191
+count: 192
+count: 193
+count: 194
+count: 195
+count: 196
+count: 197
+count: 198
+count: 199
+count: 200
+count: 201
+count: 202
+count: 203
+count: 204
+count: 205
+count: 206
+count: 207
+count: 208
+count: 209
+count: 210
+count: 211
+count: 212
+count: 213
+count: 214
+count: 215
+count: 216
+count: 217
+count: 218
+count: 219
+count: 220
+count: 221
+count: 222
+count: 223
+count: 224
+count: 225
+count: 226
+count: 227
+count: 228
+count: 229
+count: 230
+count: 231
+count: 232
+count: 233
+count: 234
+count: 235
+count: 236
+count: 237
+count: 238
+count: 239
+count: 240
+count: 241
+count: 242
+count: 243
+count: 244
+count: 245
+count: 246
+count: 247
+count: 248
+count: 249
+count: 250
+count: 251
+count: 252
+count: 253
+count: 254
+count: 255
+count: 256
+count: 257
+count: 258
+count: 259
+count: 260
+count: 261
+count: 262
+count: 263
+count: 264
+count: 265
+count: 266
+count: 267
+count: 268
+count: 269
+count: 270
+count: 271
+count: 272
+count: 273
+count: 274
+count: 275
+count: 276
+count: 277
+count: 278
+count: 279
+count: 280
+count: 281
+count: 282
+count: 283
+count: 284
+count: 285
+count: 286
+count: 287
+count: 288
+count: 289
+count: 290
+count: 291
+count: 292
+count: 293
+count: 294
+count: 295
+count: 296
+count: 297
+count: 298
+count: 299
+count: 300
+count: 301
+count: 302
+count: 303
+count: 304
+count: 305
+count: 306
+count: 307
+count: 308
+count: 309
+count: 310
+FAILURE for (badIdx: 35, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22), (a: "z23", b: "z24", zbi: 24), (a: "dmw", b: "jcd", zbi: 35)])
+CHECKING (badIdx: 23, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22), (a: "cts", b: "wdr", zbi: 23)])
+Bad zIdx: 23
+count: 90
+count: 91
+count: 92
+count: 93
+count: 94
+count: 95
+count: 96
+count: 97
+count: 98
+count: 99
+count: 100
+count: 101
+count: 102
+count: 103
+count: 104
+count: 105
+count: 106
+count: 107
+count: 108
+count: 109
+count: 110
+count: 111
+count: 112
+count: 113
+count: 114
+count: 115
+count: 116
+count: 117
+count: 118
+count: 119
+count: 120
+count: 121
+count: 122
+count: 123
+count: 124
+count: 125
+count: 126
+count: 127
+count: 128
+count: 129
+count: 130
+count: 131
+count: 132
+count: 133
+count: 134
+count: 135
+count: 136
+count: 137
+count: 138
+count: 139
+count: 140
+count: 141
+count: 142
+count: 143
+count: 144
+count: 145
+count: 146
+count: 147
+count: 148
+count: 149
+count: 150
+count: 151
+count: 152
+count: 153
+count: 154
+count: 155
+count: 156
+count: 157
+count: 158
+count: 159
+count: 160
+count: 161
+count: 162
+count: 163
+count: 164
+count: 165
+count: 166
+count: 167
+count: 168
+count: 169
+count: 170
+count: 171
+count: 172
+count: 173
+count: 174
+count: 175
+count: 176
+count: 177
+count: 178
+count: 179
+count: 180
+count: 181
+count: 182
+count: 183
+count: 184
+count: 185
+count: 186
+count: 187
+count: 188
+count: 189
+count: 190
+count: 191
+count: 192
+count: 193
+count: 194
+count: 195
+count: 196
+count: 197
+count: 198
+count: 199
+count: 200
+count: 201
+count: 202
+count: 203
+count: 204
+count: 205
+count: 206
+count: 207
+count: 208
+count: 209
+count: 210
+count: 211
+count: 212
+count: 213
+count: 214
+count: 215
+count: 216
+count: 217
+count: 218
+count: 219
+count: 220
+count: 221
+count: 222
+count: 223
+count: 224
+count: 225
+count: 226
+count: 227
+count: 228
+count: 229
+count: 230
+count: 231
+count: 232
+count: 233
+count: 234
+count: 235
+count: 236
+count: 237
+count: 238
+count: 239
+count: 240
+count: 241
+count: 242
+count: 243
+count: 244
+count: 245
+count: 246
+count: 247
+count: 248
+count: 249
+count: 250
+count: 251
+count: 252
+count: 253
+count: 254
+count: 255
+count: 256
+count: 257
+count: 258
+count: 259
+count: 260
+count: 261
+count: 262
+count: 263
+count: 264
+count: 265
+count: 266
+count: 267
+count: 268
+count: 269
+count: 270
+count: 271
+count: 272
+count: 273
+count: 274
+count: 275
+count: 276
+count: 277
+count: 278
+count: 279
+count: 280
+count: 281
+count: 282
+count: 283
+count: 284
+count: 285
+count: 286
+count: 287
+count: 288
+count: 289
+count: 290
+count: 291
+count: 292
+count: 293
+count: 294
+count: 295
+count: 296
+count: 297
+count: 298
+count: 299
+count: 300
+count: 301
+count: 302
+count: 303
+count: 304
+count: 305
+count: 306
+count: 307
+count: 308
+count: 309
+count: 310
+FAILURE for (badIdx: 35, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22), (a: "cts", b: "wdr", zbi: 23), (a: "rng", b: "bcd", zbi: 35)])
+CHECKING (badIdx: 23, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22), (a: "jcd", b: "z24", zbi: 23)])
+Bad zIdx: 23
+count: 90
+count: 91
+count: 92
+count: 93
+count: 94
+count: 95
+count: 96
+count: 97
+count: 98
+count: 99
+count: 100
+count: 101
+count: 102
+count: 103
+count: 104
+count: 105
+count: 106
+count: 107
+count: 108
+count: 109
+count: 110
+count: 111
+count: 112
+count: 113
+count: 114
+count: 115
+count: 116
+count: 117
+count: 118
+count: 119
+count: 120
+count: 121
+count: 122
+count: 123
+count: 124
+count: 125
+count: 126
+count: 127
+count: 128
+count: 129
+count: 130
+count: 131
+count: 132
+count: 133
+count: 134
+count: 135
+count: 136
+count: 137
+count: 138
+count: 139
+count: 140
+count: 141
+count: 142
+count: 143
+count: 144
+count: 145
+count: 146
+count: 147
+count: 148
+count: 149
+count: 150
+count: 151
+count: 152
+count: 153
+count: 154
+count: 155
+count: 156
+count: 157
+count: 158
+count: 159
+count: 160
+count: 161
+count: 162
+count: 163
+count: 164
+count: 165
+count: 166
+count: 167
+count: 168
+count: 169
+count: 170
+count: 171
+count: 172
+count: 173
+count: 174
+count: 175
+count: 176
+count: 177
+count: 178
+count: 179
+count: 180
+count: 181
+count: 182
+count: 183
+count: 184
+count: 185
+count: 186
+count: 187
+count: 188
+count: 189
+count: 190
+count: 191
+count: 192
+count: 193
+count: 194
+count: 195
+count: 196
+count: 197
+count: 198
+count: 199
+count: 200
+count: 201
+count: 202
+count: 203
+count: 204
+count: 205
+count: 206
+count: 207
+count: 208
+count: 209
+count: 210
+count: 211
+count: 212
+count: 213
+count: 214
+count: 215
+count: 216
+count: 217
+count: 218
+count: 219
+count: 220
+count: 221
+count: 222
+count: 223
+count: 224
+count: 225
+count: 226
+count: 227
+count: 228
+count: 229
+count: 230
+count: 231
+count: 232
+count: 233
+count: 234
+count: 235
+count: 236
+count: 237
+count: 238
+count: 239
+count: 240
+count: 241
+count: 242
+count: 243
+count: 244
+count: 245
+count: 246
+count: 247
+count: 248
+count: 249
+count: 250
+count: 251
+count: 252
+count: 253
+count: 254
+count: 255
+count: 256
+count: 257
+count: 258
+count: 259
+count: 260
+count: 261
+count: 262
+count: 263
+count: 264
+count: 265
+count: 266
+count: 267
+count: 268
+count: 269
+count: 270
+count: 271
+count: 272
+count: 273
+count: 274
+count: 275
+count: 276
+count: 277
+count: 278
+count: 279
+count: 280
+count: 281
+count: 282
+count: 283
+count: 284
+count: 285
+count: 286
+count: 287
+count: 288
+count: 289
+count: 290
+count: 291
+count: 292
+count: 293
+count: 294
+count: 295
+count: 296
+count: 297
+count: 298
+count: 299
+count: 300
+count: 301
+count: 302
+count: 303
+count: 304
+count: 305
+count: 306
+count: 307
+count: 308
+count: 309
+count: 310
+CHECKING (badIdx: 23, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22), (a: "qqp", b: "jcd", zbi: 23)])
+Bad zIdx: 23
+count: 90
+count: 91
+count: 92
+count: 93
+count: 94
+count: 95
+count: 96
+count: 97
+count: 98
+count: 99
+count: 100
+count: 101
+count: 102
+count: 103
+count: 104
+count: 105
+count: 106
+count: 107
+count: 108
+count: 109
+count: 110
+count: 111
+count: 112
+count: 113
+count: 114
+count: 115
+count: 116
+count: 117
+count: 118
+count: 119
+count: 120
+count: 121
+count: 122
+count: 123
+count: 124
+count: 125
+count: 126
+count: 127
+count: 128
+count: 129
+count: 130
+count: 131
+count: 132
+count: 133
+count: 134
+count: 135
+count: 136
+count: 137
+count: 138
+count: 139
+count: 140
+count: 141
+count: 142
+count: 143
+count: 144
+count: 145
+count: 146
+count: 147
+count: 148
+count: 149
+count: 150
+count: 151
+count: 152
+count: 153
+count: 154
+count: 155
+count: 156
+count: 157
+count: 158
+count: 159
+count: 160
+count: 161
+count: 162
+count: 163
+count: 164
+count: 165
+count: 166
+count: 167
+count: 168
+count: 169
+count: 170
+count: 171
+count: 172
+count: 173
+count: 174
+count: 175
+count: 176
+count: 177
+count: 178
+count: 179
+count: 180
+count: 181
+count: 182
+count: 183
+count: 184
+count: 185
+count: 186
+count: 187
+count: 188
+count: 189
+count: 190
+count: 191
+count: 192
+count: 193
+count: 194
+count: 195
+count: 196
+count: 197
+count: 198
+count: 199
+count: 200
+count: 201
+count: 202
+count: 203
+count: 204
+count: 205
+count: 206
+count: 207
+count: 208
+count: 209
+count: 210
+count: 211
+count: 212
+count: 213
+count: 214
+count: 215
+count: 216
+count: 217
+count: 218
+count: 219
+count: 220
+count: 221
+count: 222
+count: 223
+count: 224
+count: 225
+count: 226
+count: 227
+count: 228
+count: 229
+count: 230
+count: 231
+count: 232
+count: 233
+count: 234
+count: 235
+count: 236
+count: 237
+count: 238
+count: 239
+count: 240
+count: 241
+count: 242
+count: 243
+count: 244
+count: 245
+count: 246
+count: 247
+count: 248
+count: 249
+count: 250
+count: 251
+count: 252
+count: 253
+count: 254
+count: 255
+count: 256
+count: 257
+count: 258
+count: 259
+count: 260
+count: 261
+count: 262
+count: 263
+count: 264
+count: 265
+count: 266
+count: 267
+count: 268
+count: 269
+count: 270
+count: 271
+count: 272
+count: 273
+count: 274
+count: 275
+count: 276
+count: 277
+count: 278
+count: 279
+count: 280
+count: 281
+count: 282
+count: 283
+count: 284
+count: 285
+count: 286
+count: 287
+count: 288
+count: 289
+count: 290
+count: 291
+count: 292
+count: 293
+count: 294
+count: 295
+count: 296
+count: 297
+count: 298
+count: 299
+count: 300
+count: 301
+count: 302
+count: 303
+count: 304
+count: 305
+count: 306
+count: 307
+count: 308
+count: 309
+count: 310
+FAILURE for (badIdx: 24, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22), (a: "qqp", b: "jcd", zbi: 23), (a: "dmw", b: "wdr", zbi: 24)])
+CHECKING (badIdx: 23, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22), (a: "wdr", b: "tqj", zbi: 23)])
+Bad zIdx: 23
+count: 90
+count: 91
+count: 92
+count: 93
+count: 94
+count: 95
+count: 96
+count: 97
+count: 98
+count: 99
+count: 100
+count: 101
+count: 102
+count: 103
+count: 104
+count: 105
+count: 106
+count: 107
+count: 108
+count: 109
+count: 110
+count: 111
+count: 112
+count: 113
+count: 114
+count: 115
+count: 116
+count: 117
+count: 118
+count: 119
+count: 120
+count: 121
+count: 122
+count: 123
+count: 124
+count: 125
+count: 126
+count: 127
+count: 128
+count: 129
+count: 130
+count: 131
+count: 132
+count: 133
+count: 134
+count: 135
+count: 136
+count: 137
+count: 138
+count: 139
+count: 140
+count: 141
+count: 142
+count: 143
+count: 144
+count: 145
+count: 146
+count: 147
+count: 148
+count: 149
+count: 150
+count: 151
+count: 152
+count: 153
+count: 154
+count: 155
+count: 156
+count: 157
+count: 158
+count: 159
+count: 160
+count: 161
+count: 162
+count: 163
+count: 164
+count: 165
+count: 166
+count: 167
+count: 168
+count: 169
+count: 170
+count: 171
+count: 172
+count: 173
+count: 174
+count: 175
+count: 176
+count: 177
+count: 178
+count: 179
+count: 180
+count: 181
+count: 182
+count: 183
+count: 184
+count: 185
+count: 186
+count: 187
+count: 188
+count: 189
+count: 190
+count: 191
+count: 192
+count: 193
+count: 194
+count: 195
+count: 196
+count: 197
+count: 198
+count: 199
+count: 200
+count: 201
+count: 202
+count: 203
+count: 204
+count: 205
+count: 206
+count: 207
+count: 208
+count: 209
+count: 210
+count: 211
+count: 212
+count: 213
+count: 214
+count: 215
+count: 216
+count: 217
+count: 218
+count: 219
+count: 220
+count: 221
+count: 222
+count: 223
+count: 224
+count: 225
+count: 226
+count: 227
+count: 228
+count: 229
+count: 230
+count: 231
+count: 232
+count: 233
+count: 234
+count: 235
+count: 236
+count: 237
+count: 238
+count: 239
+count: 240
+count: 241
+count: 242
+count: 243
+count: 244
+count: 245
+count: 246
+count: 247
+count: 248
+count: 249
+count: 250
+count: 251
+count: 252
+count: 253
+count: 254
+count: 255
+count: 256
+count: 257
+count: 258
+count: 259
+count: 260
+count: 261
+count: 262
+count: 263
+count: 264
+count: 265
+count: 266
+count: 267
+count: 268
+count: 269
+count: 270
+count: 271
+count: 272
+count: 273
+count: 274
+count: 275
+count: 276
+count: 277
+count: 278
+count: 279
+count: 280
+count: 281
+count: 282
+count: 283
+count: 284
+count: 285
+count: 286
+count: 287
+count: 288
+count: 289
+count: 290
+count: 291
+count: 292
+count: 293
+count: 294
+count: 295
+count: 296
+count: 297
+count: 298
+count: 299
+count: 300
+count: 301
+count: 302
+count: 303
+count: 304
+count: 305
+count: 306
+count: 307
+count: 308
+count: 309
+count: 310
+CHECKING (badIdx: 17, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "z17", b: "z16", zbi: 17)])
+Bad zIdx: 17
+count: 90
+count: 91
+count: 92
+count: 93
+count: 94
+count: 95
+count: 96
+count: 97
+count: 98
+count: 99
+count: 100
+count: 101
+count: 102
+count: 103
+count: 104
+count: 105
+count: 106
+count: 107
+count: 108
+count: 109
+count: 110
+count: 111
+count: 112
+count: 113
+count: 114
+count: 115
+count: 116
+count: 117
+count: 118
+count: 119
+count: 120
+count: 121
+count: 122
+count: 123
+count: 124
+count: 125
+count: 126
+count: 127
+count: 128
+count: 129
+count: 130
+count: 131
+count: 132
+count: 133
+count: 134
+count: 135
+count: 136
+count: 137
+count: 138
+count: 139
+count: 140
+count: 141
+count: 142
+count: 143
+count: 144
+count: 145
+count: 146
+count: 147
+count: 148
+count: 149
+count: 150
+count: 151
+count: 152
+count: 153
+count: 154
+count: 155
+count: 156
+count: 157
+count: 158
+count: 159
+count: 160
+count: 161
+count: 162
+count: 163
+count: 164
+count: 165
+count: 166
+count: 167
+count: 168
+count: 169
+count: 170
+count: 171
+count: 172
+count: 173
+count: 174
+count: 175
+count: 176
+count: 177
+count: 178
+count: 179
+count: 180
+count: 181
+count: 182
+count: 183
+count: 184
+count: 185
+count: 186
+count: 187
+count: 188
+count: 189
+count: 190
+count: 191
+count: 192
+count: 193
+count: 194
+count: 195
+count: 196
+count: 197
+count: 198
+count: 199
+count: 200
+count: 201
+count: 202
+count: 203
+count: 204
+count: 205
+count: 206
+count: 207
+count: 208
+count: 209
+count: 210
+count: 211
+count: 212
+count: 213
+count: 214
+count: 215
+count: 216
+count: 217
+count: 218
+count: 219
+count: 220
+count: 221
+count: 222
+count: 223
+count: 224
+count: 225
+count: 226
+count: 227
+count: 228
+count: 229
+count: 230
+count: 231
+count: 232
+count: 233
+count: 234
+count: 235
+count: 236
+count: 237
+count: 238
+count: 239
+count: 240
+count: 241
+count: 242
+count: 243
+count: 244
+count: 245
+count: 246
+count: 247
+count: 248
+count: 249
+count: 250
+count: 251
+count: 252
+count: 253
+count: 254
+count: 255
+count: 256
+count: 257
+count: 258
+count: 259
+count: 260
+count: 261
+count: 262
+count: 263
+count: 264
+count: 265
+count: 266
+count: 267
+count: 268
+count: 269
+count: 270
+count: 271
+count: 272
+count: 273
+count: 274
+count: 275
+count: 276
+count: 277
+count: 278
+count: 279
+count: 280
+count: 281
+count: 282
+count: 283
+count: 284
+count: 285
+count: 286
+count: 287
+count: 288
+count: 289
+count: 290
+count: 291
+count: 292
+count: 293
+count: 294
+count: 295
+count: 296
+count: 297
+count: 298
+count: 299
+count: 300
+count: 301
+count: 302
+count: 303
+count: 304
+count: 305
+count: 306
+count: 307
+count: 308
+count: 309
+count: 310
+CHECKING (badIdx: 16, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "qcr", b: "z16", zbi: 16)])
+Bad zIdx: 16
+count: 90
+count: 91
+count: 92
+count: 93
+count: 94
+count: 95
+count: 96
+count: 97
+count: 98
+count: 99
+count: 100
+count: 101
+count: 102
+count: 103
+count: 104
+count: 105
+count: 106
+count: 107
+count: 108
+count: 109
+count: 110
+count: 111
+count: 112
+count: 113
+count: 114
+count: 115
+count: 116
+count: 117
+count: 118
+count: 119
+count: 120
+count: 121
+count: 122
+count: 123
+count: 124
+count: 125
+count: 126
+count: 127
+count: 128
+count: 129
+count: 130
+count: 131
+count: 132
+count: 133
+count: 134
+count: 135
+count: 136
+count: 137
+count: 138
+count: 139
+count: 140
+count: 141
+count: 142
+count: 143
+count: 144
+count: 145
+count: 146
+count: 147
+count: 148
+count: 149
+count: 150
+count: 151
+count: 152
+count: 153
+count: 154
+count: 155
+count: 156
+count: 157
+count: 158
+count: 159
+count: 160
+count: 161
+count: 162
+count: 163
+count: 164
+count: 165
+count: 166
+count: 167
+count: 168
+count: 169
+count: 170
+count: 171
+count: 172
+count: 173
+count: 174
+count: 175
+count: 176
+count: 177
+count: 178
+count: 179
+count: 180
+count: 181
+count: 182
+count: 183
+count: 184
+count: 185
+count: 186
+count: 187
+count: 188
+count: 189
+count: 190
+count: 191
+count: 192
+count: 193
+count: 194
+count: 195
+count: 196
+count: 197
+count: 198
+count: 199
+count: 200
+count: 201
+count: 202
+count: 203
+count: 204
+count: 205
+count: 206
+count: 207
+count: 208
+count: 209
+count: 210
+count: 211
+count: 212
+count: 213
+count: 214
+count: 215
+count: 216
+count: 217
+count: 218
+count: 219
+count: 220
+count: 221
+count: 222
+count: 223
+count: 224
+count: 225
+count: 226
+count: 227
+count: 228
+count: 229
+count: 230
+count: 231
+count: 232
+count: 233
+count: 234
+count: 235
+count: 236
+count: 237
+count: 238
+count: 239
+count: 240
+count: 241
+count: 242
+count: 243
+count: 244
+count: 245
+count: 246
+count: 247
+count: 248
+count: 249
+count: 250
+count: 251
+count: 252
+count: 253
+count: 254
+count: 255
+count: 256
+count: 257
+count: 258
+count: 259
+count: 260
+count: 261
+count: 262
+count: 263
+count: 264
+count: 265
+count: 266
+count: 267
+count: 268
+count: 269
+count: 270
+count: 271
+count: 272
+count: 273
+count: 274
+count: 275
+count: 276
+count: 277
+count: 278
+count: 279
+count: 280
+count: 281
+count: 282
+count: 283
+count: 284
+count: 285
+count: 286
+count: 287
+count: 288
+count: 289
+count: 290
+count: 291
+count: 292
+count: 293
+count: 294
+count: 295
+count: 296
+count: 297
+count: 298
+count: 299
+count: 300
+count: 301
+count: 302
+count: 303
+count: 304
+count: 305
+count: 306
+count: 307
+count: 308
+count: 309
+count: 310
+WILL CHECK (badIdx: 22, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "qcr", b: "z16", zbi: 16), (a: "wfw", b: "dfn", zbi: 22)])
+CHECKING (badIdx: 22, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "qcr", b: "z16", zbi: 16), (a: "wfw", b: "dfn", zbi: 22)])
+Bad zIdx: 22
+count: 90
+count: 91
+count: 92
+count: 93
+count: 94
+count: 95
+count: 96
+count: 97
+count: 98
+count: 99
+count: 100
+count: 101
+count: 102
+count: 103
+count: 104
+count: 105
+count: 106
+count: 107
+count: 108
+count: 109
+count: 110
+count: 111
+count: 112
+count: 113
+count: 114
+count: 115
+count: 116
+count: 117
+count: 118
+count: 119
+count: 120
+count: 121
+count: 122
+count: 123
+count: 124
+count: 125
+count: 126
+count: 127
+count: 128
+count: 129
+count: 130
+count: 131
+count: 132
+count: 133
+count: 134
+count: 135
+count: 136
+count: 137
+count: 138
+count: 139
+count: 140
+count: 141
+count: 142
+count: 143
+count: 144
+count: 145
+count: 146
+count: 147
+count: 148
+count: 149
+count: 150
+count: 151
+count: 152
+count: 153
+count: 154
+count: 155
+count: 156
+count: 157
+count: 158
+count: 159
+count: 160
+count: 161
+count: 162
+count: 163
+count: 164
+count: 165
+count: 166
+count: 167
+count: 168
+count: 169
+count: 170
+count: 171
+count: 172
+count: 173
+count: 174
+count: 175
+count: 176
+count: 177
+count: 178
+count: 179
+count: 180
+count: 181
+count: 182
+count: 183
+count: 184
+count: 185
+count: 186
+count: 187
+count: 188
+count: 189
+count: 190
+count: 191
+count: 192
+count: 193
+count: 194
+count: 195
+count: 196
+count: 197
+count: 198
+count: 199
+count: 200
+count: 201
+count: 202
+count: 203
+count: 204
+count: 205
+count: 206
+count: 207
+count: 208
+count: 209
+count: 210
+count: 211
+count: 212
+count: 213
+count: 214
+count: 215
+count: 216
+count: 217
+count: 218
+count: 219
+count: 220
+count: 221
+count: 222
+count: 223
+count: 224
+count: 225
+count: 226
+count: 227
+count: 228
+count: 229
+count: 230
+count: 231
+count: 232
+count: 233
+count: 234
+count: 235
+count: 236
+count: 237
+count: 238
+count: 239
+count: 240
+count: 241
+count: 242
+count: 243
+count: 244
+count: 245
+count: 246
+count: 247
+count: 248
+count: 249
+count: 250
+count: 251
+count: 252
+count: 253
+count: 254
+count: 255
+count: 256
+count: 257
+count: 258
+count: 259
+count: 260
+count: 261
+count: 262
+count: 263
+count: 264
+count: 265
+count: 266
+count: 267
+count: 268
+count: 269
+count: 270
+count: 271
+count: 272
+count: 273
+count: 274
+count: 275
+count: 276
+count: 277
+count: 278
+count: 279
+count: 280
+count: 281
+count: 282
+count: 283
+count: 284
+count: 285
+count: 286
+count: 287
+count: 288
+count: 289
+count: 290
+count: 291
+count: 292
+count: 293
+count: 294
+count: 295
+count: 296
+count: 297
+count: 298
+count: 299
+count: 300
+count: 301
+count: 302
+count: 303
+count: 304
+count: 305
+count: 306
+count: 307
+count: 308
+count: 309
+count: 310
+FAILURE for (badIdx: 23, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "qcr", b: "z16", zbi: 16), (a: "wfw", b: "dfn", zbi: 22), (a: "qqp", b: "jcd", zbi: 23)])
+FAILURE for (badIdx: 35, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "qcr", b: "z16", zbi: 16), (a: "wfw", b: "dfn", zbi: 22), (a: "qqp", b: "wdr", zbi: 35)])
+FAILURE for (badIdx: 23, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "qcr", b: "z16", zbi: 16), (a: "wfw", b: "dfn", zbi: 22), (a: "cts", b: "wdr", zbi: 23)])
+FAILURE for (badIdx: 23, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "qcr", b: "z16", zbi: 16), (a: "wfw", b: "dfn", zbi: 22), (a: "jcd", b: "z24", zbi: 23)])
+FAILURE for (badIdx: 23, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "qcr", b: "z16", zbi: 16), (a: "wfw", b: "dfn", zbi: 22), (a: "wdr", b: "tqj", zbi: 23)])
+FAILURE for (badIdx: 24, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "qcr", b: "z16", zbi: 16), (a: "wfw", b: "dfn", zbi: 22), (a: "z23", b: "z24", zbi: 24)])
+CHECKING (badIdx: 16, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "qsh", b: "z16", zbi: 16)])
+Bad zIdx: 16
+count: 90
+count: 91
+count: 92
+count: 93
+count: 94
+count: 95
+count: 96
+count: 97
+count: 98
+count: 99
+count: 100
+count: 101
+count: 102
+count: 103
+count: 104
+count: 105
+count: 106
+count: 107
+count: 108
+count: 109
+count: 110
+count: 111
+count: 112
+count: 113
+count: 114
+count: 115
+count: 116
+count: 117
+count: 118
+count: 119
+count: 120
+count: 121
+count: 122
+count: 123
+count: 124
+count: 125
+count: 126
+count: 127
+count: 128
+count: 129
+count: 130
+count: 131
+count: 132
+count: 133
+count: 134
+count: 135
+count: 136
+count: 137
+count: 138
+count: 139
+count: 140
+count: 141
+count: 142
+count: 143
+count: 144
+count: 145
+count: 146
+count: 147
+count: 148
+count: 149
+count: 150
+count: 151
+count: 152
+count: 153
+count: 154
+count: 155
+count: 156
+count: 157
+count: 158
+count: 159
+count: 160
+count: 161
+count: 162
+count: 163
+count: 164
+count: 165
+count: 166
+count: 167
+count: 168
+count: 169
+count: 170
+count: 171
+count: 172
+count: 173
+count: 174
+count: 175
+count: 176
+count: 177
+count: 178
+count: 179
+count: 180
+count: 181
+count: 182
+count: 183
+count: 184
+count: 185
+count: 186
+count: 187
+count: 188
+count: 189
+count: 190
+count: 191
+count: 192
+count: 193
+count: 194
+count: 195
+count: 196
+count: 197
+count: 198
+count: 199
+count: 200
+count: 201
+count: 202
+count: 203
+count: 204
+count: 205
+count: 206
+count: 207
+count: 208
+count: 209
+count: 210
+count: 211
+count: 212
+count: 213
+count: 214
+count: 215
+count: 216
+count: 217
+count: 218
+count: 219
+count: 220
+count: 221
+count: 222
+count: 223
+count: 224
+count: 225
+count: 226
+count: 227
+count: 228
+count: 229
+count: 230
+count: 231
+count: 232
+count: 233
+count: 234
+count: 235
+count: 236
+count: 237
+count: 238
+count: 239
+count: 240
+count: 241
+count: 242
+count: 243
+count: 244
+count: 245
+count: 246
+count: 247
+count: 248
+count: 249
+count: 250
+count: 251
+count: 252
+count: 253
+count: 254
+count: 255
+count: 256
+count: 257
+count: 258
+count: 259
+count: 260
+count: 261
+count: 262
+count: 263
+count: 264
+count: 265
+count: 266
+count: 267
+count: 268
+count: 269
+count: 270
+count: 271
+count: 272
+count: 273
+count: 274
+count: 275
+count: 276
+count: 277
+count: 278
+count: 279
+count: 280
+count: 281
+count: 282
+count: 283
+count: 284
+count: 285
+count: 286
+count: 287
+count: 288
+count: 289
+count: 290
+count: 291
+count: 292
+count: 293
+count: 294
+count: 295
+count: 296
+count: 297
+count: 298
+count: 299
+count: 300
+count: 301
+count: 302
+count: 303
+count: 304
+count: 305
+count: 306
+count: 307
+count: 308
+count: 309
+count: 310
+@[(badIdx: 100, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "qqp", b: "wdr", zbi: 35), (a: "z36", b: "fbq", zbi: 100)]), (badIdx: 100, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "qqp", b: "z23", zbi: 35), (a: "z36", b: "fbq", zbi: 100)]), (badIdx: 100, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22), (a: "qqp", b: "wdr", zbi: 35), (a: "z36", b: "fbq", zbi: 100)])]
+@[(badIdx: 100, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "qqp", b: "wdr", zbi: 35), (a: "z36", b: "fbq", zbi: 100)]), (badIdx: 100, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "qqp", b: "z23", zbi: 35), (a: "z36", b: "fbq", zbi: 100)]), (badIdx: 100, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22), (a: "qqp", b: "wdr", zbi: 35), (a: "z36", b: "fbq", zbi: 100)])]
+@[(badIdx: 100, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "qqp", b: "wdr", zbi: 35), (a: "z36", b: "fbq", zbi: 100)]), (badIdx: 100, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "pbv", b: "z16", zbi: 22), (a: "qqp", b: "z23", zbi: 35), (a: "z36", b: "fbq", zbi: 100)]), (badIdx: 100, sw: @[(a: "qff", b: "qnw", zbi: 15), (a: "dbj", b: "z16", zbi: 22), (a: "qqp", b: "wdr", zbi: 35), (a: "z36", b: "fbq", zbi: 100)])]
+Part1: 49430469426918
+Part2: 0
