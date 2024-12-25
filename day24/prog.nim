@@ -294,7 +294,7 @@ proc getLevels() =
 # getLevels()
 
 proc simulateGridWithXY(fname: string, x, y: int, swaps: Table[string,
-    string] = initTable[string, string]()): int =
+    string]): int =
   # echo "--- Simulate"
   let d = getInput(fname, swaps)
   var grid = getInitValuesForXY(d, x = x, y = y)
@@ -305,7 +305,8 @@ proc simulateGridWithXY(fname: string, x, y: int, swaps: Table[string,
   return getZValue(d, grid)
 
 proc tryVal(x, y: int): bool =
-  let z = simulateGridWithXY("input.txt", x = x, y = y)
+  var swaps: Table[string, string]
+  let z = simulateGridWithXY("input.txt", x = x, y = y, swaps)
   var ok = ""
   if z != x + y:
     ok = " ERR"
@@ -343,7 +344,92 @@ proc tryStuff() =
       echo "zab1=", toBin(zab1, 45)
     n *= 2
 
-tryStuff()
+# tryStuff()
+
+proc getWireValue2(d: Data, idx: int, s: var seq[int], ids: var HashSet[string],
+    depth: int = 0): int =
+  if depth > 50:
+    return 0
+  if s[idx] != 2:
+    return s[idx]
+  ids.incl(d.vseq[idx][0])
+  let op = d.ops[d.fan_in_ops[idx]]
+  let aIdx = op.a
+  let bIdx = op.b
+  let a = getWireValue2(d, aIdx, s, ids, depth + 1)
+  let b = getWireValue2(d, bIdx, s, ids, depth + 1)
+  var c: int
+  case op.op
+  of AND:
+    c = a and b
+  of OR:
+    c = a or b
+  of XOR:
+    c = a xor b
+  s[idx] = c
+  return c
+
+proc simulateGridWithXY2(fname: string, x, y: int, swaps: Table[string, string],
+    maxZIdx: int, wires: var HashSet[string]): int =
+  # echo "--- Simulate"
+  let d = getInput(fname, swaps)
+  var grid = getInitValuesForXY(d, x = x, y = y)
+  var zIdx = getZIndices(d)
+  for i in 0..maxZIdx:
+    let zi = zIdx[i]
+    let v = getWireValue2(d, zi, grid, wires)
+    # echo d.vseq[zi][0], " = ", v
+  return getZValue(d, grid)
+
+proc getFirstBadZindex(swaps: Table[string, string], wires: var HashSet[string]): int =
+  # swaps["z12"] = "hbq"
+  # swaps["hbq"] = "z12"
+  var n = 1
+  for i in 0..44:
+    let za = simulateGridWithXY2("input.txt", x = n, y = 0, swaps, i + 1, wires)
+    let zb = simulateGridWithXY2("input.txt", x = 0, y = n, swaps, i + 1, wires)
+    let zab = simulateGridWithXY2("input.txt", x = n, y = n, swaps, i + 1, wires)
+    if za != n or zb != n or zab != 2 * n:
+      return i
+      # echo "z", i, ":"
+      # echo "  n0=", toBin(n, 45)
+      # echo " za0=", toBin(za, 45)
+      # echo " zb0=", toBin(za, 45)
+      # echo "zab0=", toBin(zab, 45)
+      # echo wires.len
+    let nn = 1 shl 44 - 1
+    let nMask = (1 shl (i + 1)) - 1
+    let nnn = (n xor nn) and nMask
+    let za1 = simulateGridWithXY2("input.txt", x = nnn, y = 0, swaps, i + 1, wires)
+    let zb1 = simulateGridWithXY2("input.txt", x = 0, y = nnn, swaps, i + 1, wires)
+    let zab1 = simulateGridWithXY2("input.txt", x = nnn, y = nnn, swaps, i + 1, wires)
+    if (za1 != (nnn)) or (zb1 != nnn) or (zab1 != 2 * (nnn)):
+      return i
+      # echo "z", i, ":"
+      # echo "  n1=", toBin(nnn, 45)
+      # echo " za1=", toBin(za1, 45)
+      # echo " zb1=", toBin(za1, 45)
+      # echo "zab1=", toBin(zab1, 45)
+    n *= 2
+  return 100
+
+proc knas() =
+  var swaps: Table[string, string]
+  var wires: HashSet[string]
+  let zBadIdx = getFirstBadZIndex(swaps, wires)
+  let w = wires.toseq
+  echo "Bad zIdx: ", zBadIdx
+  for i in 0..<w.len - 1:
+    for j in i + 1..<w.len:
+      var sw = swaps
+      sw[w[i]] = w[j]
+      sw[w[j]] = w[i]
+      var wDummy: HashSet[string]
+      let zbi = getFirstBadZIndex(sw, wDummy)
+      if zbi > zBadIdx:
+        echo w[i], " <-> ", w[j], " => ", zbi
+
+knas()
 
 # type CacheKey = tuple[opIdx: int, ]
 # type Cache = Table[CacheKey, int]
