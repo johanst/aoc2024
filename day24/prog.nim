@@ -38,7 +38,8 @@ proc addVal(d: var Data, id: string, initVal: int) =
     d.vseq.add((id, initVal))
     d.v2idx[id] = d.vseq.len - 1
 
-proc getInput(fname: string): Data =
+proc getInput(fname: string, swaps: Table[string, string] = initTable[string,
+    string]()): Data =
   var d: Data
   var ops: seq[seq[string]]
   var reading_ops = false
@@ -65,8 +66,11 @@ proc getInput(fname: string): Data =
       op = XOR
     else:
       assert false, "Illegal operation"
+    var cSwapped = w[4]
+    if swaps.contains(cSwapped):
+      cSwapped = swaps[cSwapped]
     d.ops.add(Operation(
-      a: d.v2idx[w[0]], b: d.v2idx[w[2]], c: d.v2idx[w[4]], op: op))
+      a: d.v2idx[w[0]], b: d.v2idx[w[2]], c: d.v2idx[cSwapped], op: op))
   for v in 0..<d.vseq.len:
     var r: seq[int]
     var ro: seq[int]
@@ -259,7 +263,7 @@ proc getWireValueNoteLevel(d: Data, idx: int, base_level: int,
   if not levels.contains(idx):
     levels[idx] = initHashSet[int]()
   if d.fan_in_ops[idx] == -1:
-    levels[idx].incl(0)
+    levels[idx].incl(0 + base_level)
     var hs: HashSet[int]
     hs.incl(0 + base_level)
     return hs
@@ -280,12 +284,65 @@ proc getLevels() =
   let zIdxs = getZIndices(d)
   var levels: Table[int, HashSet[int]]
   for base_level, zIdx in zIdxs:
+    if base_level > 1:
+      break
     discard getWireValueNoteLevel(d, zIdx, base_level, levels)
   echo "--- Levels ---"
   for i, v in d.vseq:
     echo v[0] & " -> ", levels[i]
 
 # getLevels()
+
+proc simulateGridWithXY(fname: string, x, y: int, swaps: Table[string,
+    string] = initTable[string, string]()): int =
+  # echo "--- Simulate"
+  let d = getInput(fname, swaps)
+  var grid = getInitValuesForXY(d, x = x, y = y)
+  var zIdx = getZIndices(d)
+  for zi in zIdx:
+    let v = getWireValue(d, zi, grid)
+    # echo d.vseq[zi][0], " = ", v
+  return getZValue(d, grid)
+
+proc tryVal(x, y: int): bool =
+  let z = simulateGridWithXY("input.txt", x = x, y = y)
+  var ok = ""
+  if z != x + y:
+    ok = " ERR"
+  echo toBin(z, 45) & ok
+
+# mgj XOR wsv -> z12
+# hbq -> z12 = bad swap (+1 error)
+# ? mgj AND wsv -> hbq
+proc tryStuff() =
+  var swaps: Table[string, string]
+  # swaps["z12"] = "hbq"
+  # swaps["hbq"] = "z12"
+  var n = 1
+  for i in 0..44:
+    let za = simulateGridWithXY("input.txt", x = n, y = 0, swaps)
+    let zb = simulateGridWithXY("input.txt", x = 0, y = n, swaps)
+    let zab = simulateGridWithXY("input.txt", x = n, y = n, swaps)
+    if za != n or zb != n or zab != 2 * n:
+      echo "z", i, ":"
+      echo "  n0=", toBin(n, 45)
+      echo " za0=", toBin(za, 45)
+      echo " zb0=", toBin(za, 45)
+      echo "zab0=", toBin(zab, 45)
+    let nn = 1 shl 44 - 1
+    let nnn = n xor nn
+    let za1 = simulateGridWithXY("input.txt", x = nnn, y = 0, swaps)
+    let zb1 = simulateGridWithXY("input.txt", x = 0, y = nnn, swaps)
+    let zab1 = simulateGridWithXY("input.txt", x = nnn, y = nnn, swaps)
+    if (za1 != (nnn)) or (zb1 != nnn) or (zab1 != 2 * (nnn)):
+      echo "z", i, ":"
+      echo "  n1=", toBin(nnn, 45)
+      echo " za1=", toBin(za1, 45)
+      echo " zb1=", toBin(za1, 45)
+      echo "zab1=", toBin(zab1, 45)
+    n *= 2
+
+tryStuff()
 
 # type CacheKey = tuple[opIdx: int, ]
 # type Cache = Table[CacheKey, int]
