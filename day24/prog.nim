@@ -413,6 +413,10 @@ proc getFirstBadZindex(swaps: Table[string, string], wires: var HashSet[string])
     n *= 2
   return 100
 
+# Bad zIdx: 11
+# qnw <-> wsv => 15
+# qnw <-> z12 => 12
+# qnw <-> qff => 15
 proc knas() =
   var swaps: Table[string, string]
   var wires: HashSet[string]
