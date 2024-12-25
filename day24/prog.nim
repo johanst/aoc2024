@@ -96,6 +96,37 @@ proc getZIndices(d: Data): seq[int] =
     result.add(d.v2idx[zName])
     cnt += 1
 
+proc getXIndices(d: Data): seq[int] =
+  var cnt = 0
+  while true:
+    let xName = "x" & intToStr(cnt, 2)
+    if not d.v2idx.contains(xName):
+      break
+    result.add(d.v2idx[xName])
+    cnt += 1
+
+proc getYIndices(d: Data): seq[int] =
+  var cnt = 0
+  while true:
+    let yName = "y" & intToStr(cnt, 2)
+    if not d.v2idx.contains(yName):
+      break
+    result.add(d.v2idx[yName])
+    cnt += 1
+
+proc getInitValuesForXY(d: Data, x, y: int): seq[int] =
+  for v in d.vseq:
+    result.add(v[1])
+  var xx = x
+  for xIdx in getXIndices(d):
+    result[xIdx] = xx and 1
+    xx = xx shr 1
+  var yy = y
+  for yIdx in getYIndices(d):
+    result[yIdx] = yy and 1
+    yy = yy shr 1
+
+
 proc getZValue(d: Data, v: openArray[int]): int =
   var zseq: seq[int]
   let zidx = d.getZIndices()
@@ -148,11 +179,11 @@ proc printStuff(fname: string) =
   echo "--- Fan in Op"
   for i, opId in d.fan_in_ops:
     if opId == -1:
-      echo d.opId(i), " -> ", "None"
+      echo i, ": ", d.opId(i), " -> ", "None"
     else:
       let op = d.ops[opId]
-      echo d.opId(i), " -> ", d.opId(op.a), " ", op.op, " ", d.opId(op.b),
-          " -> ", d.opId(op.c)
+      echo i, ": ", d.opId(i), " -> ", d.opId(op.a), " ", op.op, " ", d.opId(
+          op.b), " -> ", d.opId(op.c)
 
 proc getWireValue(d: Data, idx: int, s: var seq[int]): int =
   if s[idx] != 2:
@@ -174,7 +205,7 @@ proc getWireValue(d: Data, idx: int, s: var seq[int]): int =
   return c
 
 # printStuff("ex0.txt")
-# printStuff("input.txt")
+printStuff("input.txt")
 
 proc simulateGrid(fname: string): int =
   # echo "--- Simulate"
@@ -186,38 +217,101 @@ proc simulateGrid(fname: string): int =
     # echo d.vseq[zi][0], " = ", v
   return getZValue(d, grid)
 
-  # var zRcvd: HashSet[int]
-  # var dq: Deque[int] # Operations that should be performed
-  # for idx, v in grid:
-  #   if v != 2:
-  #     dq.addLast(idx)
-  #     dq.addLast((origin: idx, val: v))
-  # while dq.len > 0:
-  #   let s = dq.popFirst()
-  #   echo d.vseq[s.origin][0], " -> ", s.val
-  #   grid[s.origin] = s.val
-  #   if s.origin in zIdx:
-  #     zRcvd.incl(s.origin)
-  #     if zIdx.len == zRcvd.len:
-  #       return getZValue(d, grid)
-  #   for op in d.fan_out_ops[s.origin]:
-  #     echo op
-  #     let a = grid[d.ops[op].a]
-  #     let b = grid[d.ops[op].b]
-  #     assert a < 2
-  #     assert b < 2
-  #     var c: int
-  #     case d.ops[op].op
-  #     of AND:
-  #       c = a and b
-  #     of OR:
-  #       c = a or b
-  #     of XOR:
-  #       c = a xor b
-  #     grid[d.ops[p].c] = c
-  #     dq.addLast((origin: d.ops[op].c, val: c))
-
 assert simulateGrid("ex0.txt") == 2024
+
+proc getWireValueNoCache(d: Data, idx: int, depth: int): int =
+  if d.fan_in_ops[idx] == -1:
+    echo " ".repeat(depth) & d.vseq[idx][0]
+    return 0
+  let op = d.ops[d.fan_in_ops[idx]]
+  let aIdx = op.a
+  let bIdx = op.b
+  let a = getWireValueNoCache(d, aIdx, depth + 1)
+  let b = getWireValueNoCache(d, bIdx, depth + 1)
+  var c: int
+  case op.op
+  of AND:
+    c = a and b
+    echo " ".repeat(depth) & d.opId(idx) & " = " & d.opId(aIdx) & " AND " &
+        d.opId(bIdx)
+  of OR:
+    c = a or b
+    echo " ".repeat(depth) & d.opId(idx) & " = " & d.opId(aIdx) & " OR " &
+        d.opId(bIdx)
+  of XOR:
+    c = a xor b
+    echo " ".repeat(depth) & d.opId(idx) & " = " & d.opId(aIdx) & " XOR " &
+        d.opId(bIdx)
+  return c
+
+proc followZ() =
+  let d = getInput("input.txt")
+  let zIdxs = getZIndices(d)
+  for zIdx in zIdxs:
+    echo "----- "
+    discard getWireValueNoCache(d, zIdx, 0)
+    echo "----- "
+    echo ""
+
+# levels = opIdx -> set[levels]
+proc getWireValueNoteLevel(d: Data, idx: int, base_level: int,
+    levels: var Table[int, HashSet[int]]): HashSet[int] =
+  if not levels.contains(idx):
+    levels[idx] = initHashSet[int]()
+  if d.fan_in_ops[idx] == -1:
+    levels[idx].incl(0)
+    var hs: HashSet[int]
+    hs.incl(0 + base_level)
+    return hs
+  let op = d.ops[d.fan_in_ops[idx]]
+  let aIdx = op.a
+  let bIdx = op.b
+  var aLvls = getWireValueNoteLevel(d, aIdx, base_level, levels)
+  var bLvls = getWireValueNoteLevel(d, bIdx, base_level, levels)
+  for aLvl in aLvls:
+    levels[idx].incl(aLvl + 1)
+    result.incl(aLvl + 1)
+  for bLvl in bLvls:
+    levels[idx].incl(bLvl + 1)
+    result.incl(bLvl + 1)
+
+proc getLevels() =
+  let d = getInput("input.txt")
+  let zIdxs = getZIndices(d)
+  var levels: Table[int, HashSet[int]]
+  for base_level, zIdx in zIdxs:
+    discard getWireValueNoteLevel(d, zIdx, base_level, levels)
+  echo "--- Levels ---"
+  for i, v in d.vseq:
+    echo v[0] & " -> ", levels[i]
+
+# getLevels()
+
+# type CacheKey = tuple[opIdx: int, ]
+# type Cache = Table[CacheKey, int]
+
+# proc getWireValueWithCache(d: Data, idx: int, s: var seq[int], cache_ok: Cache,
+#     cache_maybe: var Cache): int =
+#   if s[idx] != 2:
+#     return s[idx]
+#   let opIdx = d.fan_in_ops[idx]
+#   let op = d.ops[opIdx]
+#   let aIdx = op.a
+#   let bIdx = op.b
+#   let a = getWireValueWithCache(d, aIdx, s)
+#   let b = getWireValueWithCache(d, bIdx, s)
+#   var c: int
+#   case op.op
+#   of AND:
+#     c = a and b
+#   of OR:
+#     c = a or b
+#   of XOR:
+#     c = a xor b
+#   s[idx] = c
+#   return c
+
+# followZ()
 
 proc part1(fname: string): int =
   return simulateGrid(fname)
