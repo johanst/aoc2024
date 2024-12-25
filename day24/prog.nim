@@ -330,7 +330,8 @@ proc tryStuff() =
       echo " zb0=", toBin(za, 45)
       echo "zab0=", toBin(zab, 45)
     let nn = 1 shl 44 - 1
-    let nnn = n xor nn
+    let nMask = (1 shl (i + 1)) - 1
+    let nnn = (n xor nn) and nMask
     let za1 = simulateGridWithXY("input.txt", x = nnn, y = 0, swaps)
     let zb1 = simulateGridWithXY("input.txt", x = 0, y = nnn, swaps)
     let zab1 = simulateGridWithXY("input.txt", x = nnn, y = nnn, swaps)
