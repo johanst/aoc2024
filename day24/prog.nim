@@ -80,6 +80,7 @@ proc getInput(fname: string, swaps: Table[string, string] = initTable[string,
         ro.add(opIdx)
       if op.c == v:
         if fop != -1:
+          echo swaps
           echo d.vseq[fop][0]
           echo d.vseq[opIdx][0]
         assert fop == -1
@@ -159,6 +160,11 @@ proc testGetZValue() =
 testGetZValue()
 
 proc printStuff(fname: string) =
+  # below worked
+  # var swaps: Table[string, string]
+  # swaps["qff"] = "qnw"
+  # swaps["qnw"] = "qff"
+  # let d = getInput(fname, swaps)
   let d = getInput(fname)
   echo d.vseq
   echo d.vseq.len
