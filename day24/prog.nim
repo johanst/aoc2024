@@ -512,9 +512,36 @@ proc burk(): seq[SwapCands] =
         echo "WILL CHECK ", sNext
         hq.push(sNext)
 
-let successCands = burk()
-for s in successCands:
-  echo successCands
+# let successCands: seq[SwapCands] = burk()
+# for s in successCands:
+#   echo successCands
+
+var successCands: seq[seq[string]] = @[]
+successCands.add(@["qff", "qnw", "pbv", "z16", "qqp", "wdr", "z36", "fbq"])
+successCands.add(@["qff", "qnw", "pbv", "z16", "qqp", "z23", "z36", "fbq"])
+successCands.add(@["qff", "qnw", "dbj", "z16", "qqp", "wdr", "z36", "fbq"])
+successCands.add(@["qff", "qnw", "pbv", "z16", "qqp", "wdr", "z36", "fbq"])
+successCands.add(@["qff", "qnw", "pbv", "z16", "qqp", "z23", "z36", "fbq"])
+successCands.add(@["qff", "qnw", "dbj", "z16", "qqp", "wdr", "z36", "fbq"])
+successCands.add(@["qff", "qnw", "pbv", "z16", "qqp", "wdr", "z36", "fbq"])
+successCands.add(@["qff", "qnw", "pbv", "z16", "qqp", "z23", "z36", "fbq"])
+successCands.add(@["qff", "qnw", "dbj", "z16", "qqp", "wdr", "z36", "fbq"])
+
+var scset: HashSet[seq[string]]
+for sc in successCands:
+  var s = sc
+  sort(s)
+  scset.incl(s)
+
+for s in scset:
+  echo s
+# @["dbj", "fbq", "qff", "qnw", "qqp", "wdr", "z16", "z36"]
+# @["fbq", "pbv", "qff", "qnw", "qqp", "wdr", "z16", "z36"]
+
+
+# AND THERE IT IS !!!!!!!
+# @["fbq", "pbv", "qff", "qnw", "qqp", "z16", "z23", "z36"]
+# AND THERE IT IS !!!!!!!
 
 # type CacheKey = tuple[opIdx: int, ]
 # type Cache = Table[CacheKey, int]
