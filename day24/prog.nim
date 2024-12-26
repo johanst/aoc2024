@@ -347,8 +347,9 @@ proc tryStuff() =
 # tryStuff()
 
 proc getWireValue2(d: Data, idx: int, s: var seq[int], ids: var HashSet[string],
-    depth: int = 0): int =
-  if depth > 50:
+    bad_swap: var bool, depth: int = 0): int =
+  if depth > 100:
+    bad_swap = true
     return 0
   if s[idx] != 2:
     return s[idx]
@@ -356,8 +357,8 @@ proc getWireValue2(d: Data, idx: int, s: var seq[int], ids: var HashSet[string],
   let op = d.ops[d.fan_in_ops[idx]]
   let aIdx = op.a
   let bIdx = op.b
-  let a = getWireValue2(d, aIdx, s, ids, depth + 1)
-  let b = getWireValue2(d, bIdx, s, ids, depth + 1)
+  let a = getWireValue2(d, aIdx, s, ids, bad_swap, depth + 1)
+  let b = getWireValue2(d, bIdx, s, ids, bad_swap, depth + 1)
   var c: int
   case op.op
   of AND:
@@ -370,25 +371,27 @@ proc getWireValue2(d: Data, idx: int, s: var seq[int], ids: var HashSet[string],
   return c
 
 proc simulateGridWithXY2(fname: string, x, y: int, swaps: Table[string, string],
-    maxZIdx: int, wires: var HashSet[string]): int =
+     maxZIdx: int, wires: var HashSet[string], bad_swap: var bool): int =
   # echo "--- Simulate"
   let d = getInput(fname, swaps)
   var grid = getInitValuesForXY(d, x = x, y = y)
   var zIdx = getZIndices(d)
   for i in 0..maxZIdx:
     let zi = zIdx[i]
-    let v = getWireValue2(d, zi, grid, wires)
+    let v = getWireValue2(d, zi, grid, wires, bad_swap)
     # echo d.vseq[zi][0], " = ", v
   return getZValue(d, grid)
 
-proc getFirstBadZindex(swaps: Table[string, string], wires: var HashSet[string]): int =
+proc getFirstBadZindex(swaps: Table[string, string], wires: var HashSet[string],
+    bad_swap: var bool): int =
   # swaps["z12"] = "hbq"
   # swaps["hbq"] = "z12"
   var n = 1
   for i in 0..44:
-    let za = simulateGridWithXY2("input.txt", x = n, y = 0, swaps, i + 1, wires)
-    let zb = simulateGridWithXY2("input.txt", x = 0, y = n, swaps, i + 1, wires)
-    let zab = simulateGridWithXY2("input.txt", x = n, y = n, swaps, i + 1, wires)
+    let za = simulateGridWithXY2("input.txt", x = n, y = 0, swaps, i + 1, wires, bad_swap)
+    let zb = simulateGridWithXY2("input.txt", x = 0, y = n, swaps, i + 1, wires, bad_swap)
+    let zab = simulateGridWithXY2("input.txt", x = n, y = n, swaps, i + 1,
+        wires, bad_swap)
     if za != n or zb != n or zab != 2 * n:
       return i
       # echo "z", i, ":"
@@ -400,9 +403,12 @@ proc getFirstBadZindex(swaps: Table[string, string], wires: var HashSet[string])
     let nn = 1 shl 44 - 1
     let nMask = (1 shl (i + 1)) - 1
     let nnn = (n xor nn) and nMask
-    let za1 = simulateGridWithXY2("input.txt", x = nnn, y = 0, swaps, i + 1, wires)
-    let zb1 = simulateGridWithXY2("input.txt", x = 0, y = nnn, swaps, i + 1, wires)
-    let zab1 = simulateGridWithXY2("input.txt", x = nnn, y = nnn, swaps, i + 1, wires)
+    let za1 = simulateGridWithXY2("input.txt", x = nnn, y = 0, swaps, i + 1,
+        wires, bad_swap)
+    let zb1 = simulateGridWithXY2("input.txt", x = 0, y = nnn, swaps, i + 1,
+        wires, bad_swap)
+    let zab1 = simulateGridWithXY2("input.txt", x = nnn, y = nnn, swaps, i + 1,
+        wires, bad_swap)
     if (za1 != (nnn)) or (zb1 != nnn) or (zab1 != 2 * (nnn)):
       return i
       # echo "z", i, ":"
@@ -413,27 +419,52 @@ proc getFirstBadZindex(swaps: Table[string, string], wires: var HashSet[string])
     n *= 2
   return 100
 
+type SwapCand = tuple[a: string, b: string, zbi: int]
 # Bad zIdx: 11
 # qnw <-> wsv => 15
 # qnw <-> z12 => 12
 # qnw <-> qff => 15
-proc knas() =
-  var swaps: Table[string, string]
+proc knas(swaps: Table[string, string], bad_swaps: var Table[string, HashSet[
+    string]]): seq[SwapCand] =
+  let d = getInput("input.txt")
   var wires: HashSet[string]
-  let zBadIdx = getFirstBadZIndex(swaps, wires)
+  var dummyBadSwap: bool = false
+  let zBadIdx = getFirstBadZIndex(swaps, wires, dummyBadSwap)
+  assert not dummyBadSwap # should already be tested
   let w = wires.toseq
   echo "Bad zIdx: ", zBadIdx
-  for i in 0..<w.len - 1:
-    for j in i + 1..<w.len:
+  # 90 marks start of gates
+  for i in 90..<d.vseq.len - 1:
+    echo "count: ", i
+    for j in i + 1..<d.vseq.len:
+      let a = d.vseq[i][0]
+      let b = d.vseq[j][0]
+      if not bad_swaps.contains(a):
+        bad_swaps[a] = initHashSet[string]()
+      if not bad_swaps.contains(b):
+        bad_swaps[b] = initHashSet[string]()
+      if bad_swaps[a].contains(b) or bad_swaps[b].contains(a):
+        continue
       var sw = swaps
-      sw[w[i]] = w[j]
-      sw[w[j]] = w[i]
+      sw[a] = b
+      sw[b] = a
       var wDummy: HashSet[string]
-      let zbi = getFirstBadZIndex(sw, wDummy)
+      var bad_swap = false
+      let zbi = getFirstBadZIndex(sw, wDummy, bad_swap)
       if zbi > zBadIdx:
-        echo w[i], " <-> ", w[j], " => ", zbi
+        result.add((a: a, b: b, zbi: zbi))
+      elif bad_swap:
+        bad_swaps[a].incl(b)
+        bad_swaps[b].incl(a)
 
-knas()
+proc burk() =
+  var swaps: Table[string, string]
+  var bad_swaps: Table[string, HashSet[string]]
+  let cands = knas(swaps, bad_swaps)
+  for cand in cands:
+    echo cand.a, " <-> ", cand.b, " => ", cand.zbi
+
+burk()
 
 # type CacheKey = tuple[opIdx: int, ]
 # type Cache = Table[CacheKey, int]
