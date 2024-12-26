@@ -389,9 +389,15 @@ proc getFirstBadZindex(swaps: Table[string, string], wires: var HashSet[string],
   var n = 1
   for i in 0..44:
     let za = simulateGridWithXY2("input.txt", x = n, y = 0, swaps, i + 1, wires, bad_swap)
+    if bad_swap:
+      return 0
     let zb = simulateGridWithXY2("input.txt", x = 0, y = n, swaps, i + 1, wires, bad_swap)
+    if bad_swap:
+      return 0
     let zab = simulateGridWithXY2("input.txt", x = n, y = n, swaps, i + 1,
         wires, bad_swap)
+    if bad_swap:
+      return 0
     if za != n or zb != n or zab != 2 * n:
       return i
       # echo "z", i, ":"
@@ -405,10 +411,16 @@ proc getFirstBadZindex(swaps: Table[string, string], wires: var HashSet[string],
     let nnn = (n xor nn) and nMask
     let za1 = simulateGridWithXY2("input.txt", x = nnn, y = 0, swaps, i + 1,
         wires, bad_swap)
+    if bad_swap:
+      return 0
     let zb1 = simulateGridWithXY2("input.txt", x = 0, y = nnn, swaps, i + 1,
         wires, bad_swap)
+    if bad_swap:
+      return 0
     let zab1 = simulateGridWithXY2("input.txt", x = nnn, y = nnn, swaps, i + 1,
         wires, bad_swap)
+    if bad_swap:
+      return 0
     if (za1 != (nnn)) or (zb1 != nnn) or (zab1 != 2 * (nnn)):
       return i
       # echo "z", i, ":"
@@ -451,20 +463,23 @@ proc knas(swaps: Table[string, string], bad_swaps: var Table[string, HashSet[
       var wDummy: HashSet[string]
       var bad_swap = false
       let zbi = getFirstBadZIndex(sw, wDummy, bad_swap)
-      if zbi > zBadIdx:
-        result.add((a: a, b: b, zbi: zbi))
-      elif bad_swap:
+      if bad_swap:
         bad_swaps[a].incl(b)
         bad_swaps[b].incl(a)
+      elif zbi >= zBadIdx:
+        result.add((a: a, b: b, zbi: zbi))
 
-proc burk() =
+proc burk(): seq[(int, int)] =
+  var dq: Deque[seq[SwapCand]]
+  while dq.len > 0:
+    discard
   var swaps: Table[string, string]
   var bad_swaps: Table[string, HashSet[string]]
   let cands = knas(swaps, bad_swaps)
   for cand in cands:
     echo cand.a, " <-> ", cand.b, " => ", cand.zbi
 
-burk()
+echo burk()
 
 # type CacheKey = tuple[opIdx: int, ]
 # type Cache = Table[CacheKey, int]
