@@ -45,7 +45,7 @@ proc getInput(fname: string, swaps: Table[string, string] = initTable[string,
   var reading_ops = false
   for line in lines(fname):
     let l = line.strip()
-    let w = l.splitWhitespace()
+    var w = l.splitWhitespace()
     if not reading_ops:
       if l.len == 0:
         reading_ops = true
@@ -54,6 +54,8 @@ proc getInput(fname: string, swaps: Table[string, string] = initTable[string,
     else:
       d.addVal(w[0], 2)
       d.addVal(w[2], 2)
+      if swaps.contains(w[4]):
+        w[4] = swaps[w[4]]
       d.addVal(w[4], 2)
       ops.add(w)
   for w in ops:
@@ -66,11 +68,8 @@ proc getInput(fname: string, swaps: Table[string, string] = initTable[string,
       op = XOR
     else:
       assert false, "Illegal operation"
-    var cSwapped = w[4]
-    if swaps.contains(cSwapped):
-      cSwapped = swaps[cSwapped]
     d.ops.add(Operation(
-      a: d.v2idx[w[0]], b: d.v2idx[w[2]], c: d.v2idx[cSwapped], op: op))
+      a: d.v2idx[w[0]], b: d.v2idx[w[2]], c: d.v2idx[w[4]], op: op))
   for v in 0..<d.vseq.len:
     var r: seq[int]
     var ro: seq[int]
@@ -80,6 +79,9 @@ proc getInput(fname: string, swaps: Table[string, string] = initTable[string,
         r.add(op.c)
         ro.add(opIdx)
       if op.c == v:
+        if fop != -1:
+          echo d.vseq[fop][0]
+          echo d.vseq[opIdx][0]
         assert fop == -1
         fop = opIdx
     d.fan_in_ops.add(fop)
