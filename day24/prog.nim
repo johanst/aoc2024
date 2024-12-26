@@ -472,8 +472,7 @@ proc knas(swaps: Table[string, string], bad_swaps: var Table[string, HashSet[
         bad_swaps[b] = initHashSet[string]()
       if bad_swaps[a].contains(b) or bad_swaps[b].contains(a):
         continue
-      if swaps.contains(a) and swaps[a] == b:
-        assert swaps[b] == a
+      if swaps.contains(a) or swaps.contains(b):
         continue
       var sw = swaps
       sw[a] = b
