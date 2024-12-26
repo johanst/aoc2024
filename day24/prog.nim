@@ -432,10 +432,17 @@ proc getFirstBadZindex(swaps: Table[string, string], wires: var HashSet[string],
   return 100
 
 type SwapCand = tuple[a: string, b: string, zbi: int]
+type
+  SwapCands = object
+    badIdx: int
+    sw: seq[SwapCand]
+
+proc `<`(a, b: SwapCands): bool =
+  a.badIdx > b.badIdx
 # Bad zIdx: 11
-# qnw <-> wsv => 15
-# qnw <-> z12 => 12
-# qnw <-> qff => 15
+  # qnw <-> wsv => 15
+  # qnw <-> z12 => 12
+  # qnw <-> qff => 15
 proc knas(swaps: Table[string, string], bad_swaps: var Table[string, HashSet[
     string]]): seq[SwapCand] =
   let d = getInput("input.txt")
@@ -457,6 +464,9 @@ proc knas(swaps: Table[string, string], bad_swaps: var Table[string, HashSet[
         bad_swaps[b] = initHashSet[string]()
       if bad_swaps[a].contains(b) or bad_swaps[b].contains(a):
         continue
+      if swaps.contains(a) and swaps[a] == b:
+        assert swaps[b] == a
+        continue
       var sw = swaps
       sw[a] = b
       sw[b] = a
@@ -466,20 +476,38 @@ proc knas(swaps: Table[string, string], bad_swaps: var Table[string, HashSet[
       if bad_swap:
         bad_swaps[a].incl(b)
         bad_swaps[b].incl(a)
-      elif zbi >= zBadIdx:
+      elif zbi > zBadIdx: # always look for something better
         result.add((a: a, b: b, zbi: zbi))
 
-proc burk(): seq[(int, int)] =
-  var dq: Deque[seq[SwapCand]]
-  while dq.len > 0:
-    discard
-  var swaps: Table[string, string]
+proc burk(): seq[SwapCands] =
+  var hq: HeapQueue[SwapCands]
   var bad_swaps: Table[string, HashSet[string]]
-  let cands = knas(swaps, bad_swaps)
-  for cand in cands:
-    echo cand.a, " <-> ", cand.b, " => ", cand.zbi
+  let sc0 = SwapCands(badIdx: 0, sw: @[])
+  hq.push(sc0)
+  while hq.len > 0:
+    let s = hq.pop()
+    echo "CHECKING ", s
+    var swaps: Table[string, string]
+    for sw in s.sw:
+      swaps[sw[0]] = sw[1]
+      swaps[sw[1]] = sw[0]
+    let nsws = knas(swaps, bad_swaps)
+    for nsw in nsws:
+      var sNext = s
+      sNext.sw.add(nsw)
+      sNext.badIdx = nsw.zbi
+      if nsw.zbi == 100:
+        echo "SUCCESS for ", sNext
+        result.add(sNext)
+      elif sNext.sw.len >= 4:
+        echo "FAILURE for ", sNext
+      else:
+        echo "WILL CHECK ", sNext
+        hq.push(sNext)
 
-echo burk()
+let successCands = burk()
+for s in successCands:
+  echo successCands
 
 # type CacheKey = tuple[opIdx: int, ]
 # type Cache = Table[CacheKey, int]
