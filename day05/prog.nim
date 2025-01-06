@@ -2,6 +2,7 @@ import strutils
 import sequtils
 import algorithm
 import tables
+import deques
 
 type
   Data = object
@@ -72,6 +73,34 @@ proc getMiddleSum2(fname: string): int =
 
 assert getMiddleSum2("ex0.txt") == 123
 
+# For fun trying topological sort as described in Introduction to Algorithms.
+proc topoVisit(d: Data, p: int, v: var Table[int, bool], sl: var Deque[int]) =
+  v[p] = true
+  if d.before.contains(p):
+    for pa in d.before[p]:
+      if v.contains(pa) and not v[pa]:
+        topoVisit(d, pa, v, sl)
+  sl.addFirst(p)
+
+proc topologicalSort(d: Data, l: seq[int]): seq[int] =
+  var sl: Deque[int]
+  var v: Table[int, bool]
+  for p in l:
+    v[p] = false
+  for p in l:
+    if not v[p]:
+      topoVisit(d, p, v, sl)
+  return sl.toSeq()
+
+proc getMiddleSum3(fname: string): int =
+  let d = getInput(fname)
+  for l in d.lines:
+    let ls = topologicalSort(d, l)
+    if l != ls:
+      result += ls[ls.len div 2]
+
+assert getMiddleSum3("ex0.txt") == 123
+
 proc part1(fname: string): int =
   return getMiddleSum("input.txt")
 
@@ -80,3 +109,4 @@ proc part2(fname: string): int =
 
 echo "Part1: ", part1("input.txt")
 echo "Part2: ", part2("input.txt")
+echo "Part2: (using topological sort): ", getMiddleSum3("input.txt")
